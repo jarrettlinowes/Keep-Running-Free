@@ -1,0 +1,17 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      %a.btn.btn-navbar{ 'data-toggle' => 'collapse', 'data-target' => ".nav-collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %h1 Keep Running Free
+      .nav-collapse
+        %ul.nav
+          %li= link_to "Home", root_path
+          %li= link_to "Journal", ''
+          %li= link_to 'Hikes', ''
+          %li= link_to 'Mountains', ''
+          %li= link_to "Maps", ''

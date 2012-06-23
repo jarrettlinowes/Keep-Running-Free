@@ -1,0 +1,12 @@
+$baseFontSize: 16px;
+$baseFontFamily: Georgia,Cambria,"Times New Roman",Times,serif; // $serifFontFamily;
+
+$navbarText: #eee;
+$navbarLinkColor: #eee;
+$navbarLinkColorHover: #4a4;
+
+@import "bootstrap";
+
+body { padding-top: 70px; }
+
+@import "bootstrap-responsive";

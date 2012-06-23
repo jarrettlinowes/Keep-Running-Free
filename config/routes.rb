@@ -1,4 +1,7 @@
 KRF::Application.routes.draw do
+
+  match 'about' => 'pages#about'
+  root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
