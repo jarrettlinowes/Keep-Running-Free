@@ -1,10 +1,10 @@
 %h1 Listing posts
+%p
 
-%table
+%table.table.table-bordered.table-striped
   %tr
     %th Title
     %th Intro
-    %th Body
     %th Status
     %th Author
     %th
@@ -15,9 +15,8 @@
     %tr
       %td= post.title
       %td= post.intro
-      %td= post.body
       %td= post.status
-      %td= post.author_id
+      %td= post.author.name
       %td= link_to 'Show', post
       %td= link_to 'Edit', edit_post_path(post)
       %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete

@@ -7,6 +7,9 @@ $navbarLinkColorHover: #4a4;
 
 @import "bootstrap";
 
-body { padding-top: 80px; }
+/*body { padding-top: 80px; }*/
 
-@import "bootstrap-responsive";
+/*@import "bootstrap-responsive";*/
+.navbar-inner {
+	@include border-radius(0);
+}

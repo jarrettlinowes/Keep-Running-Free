@@ -1,5 +1,13 @@
 KRF::Application.routes.draw do
 
+  resources :sessions
+  match 'login' => 'sessions#new'
+
+
+  resources :users
+
+  resources :authors
+
   resources :posts
 
   match 'about' => 'pages#about'
