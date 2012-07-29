@@ -8,6 +8,9 @@ $ rails console
 TODO
 
 admin - active_admin 
+  move active_admin.scss and .js into vendor/assets
+  admin@example.com / password
+  TODO: merge authentication
 
 edior - ckeditor
 
