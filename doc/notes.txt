@@ -1,0 +1,20 @@
+
+To create admin user
+$ rails console
+> user = User.create name:"jarrett@linowes.com", password:"secret"
+
+
+===========================
+TODO
+
+admin - active_admin 
+
+edior - ckeditor
+
+image upload - carrierwave
+
+main layout - 
+
+
+-----------------
+Can't delete an author if there are posts associated with it.
