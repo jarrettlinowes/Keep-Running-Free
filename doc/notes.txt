@@ -13,8 +13,49 @@ edior - ckeditor
 
 image upload - carrierwave
 
+--------
 main layout - 
+  main navbar
+    site navbar
+    logo, banner image with name
+    blog navbar
 
+  footer
+    copyright, links, logged in
+    main links on the website
+    opt in to mailing list
+
+----
+home page
+  carosel 
+      featured post
+      store
+      reviews promo
+      mailing list signup
+
+  list of recents posts
+      inifinite scroll
+
+  About section
+  Social icons
+
+
+----  
+posts page
+  
+  about author
+
+
+Right Side panel
+    3 tabs
+        most recent
+        most popular
+        what's on
+
+    google ad
+    sign up form, rss link
+
+    (vertical scroll stops at top)
 
 -----------------
 Can't delete an author if there are posts associated with it.

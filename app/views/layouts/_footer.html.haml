@@ -1,7 +1,8 @@
-#footer
-	.container-fluid
-		.align_right
-			Copyright &copy; 2012 Keep Running Free
-			%br
-			-if current_user
-				Logged in as #{current_user.email} #{link_to 'logout', session_path("current"), method: "delete"}
+#site_footer.clearfix
+  .span6
+    Copyright &copy; 2012 Keep Running Free
+    %br
+    -if current_user
+      Logged in as #{current_user.email} #{link_to 'logout', session_path("current"), method: "delete"}
+  .span6
+    OPT IN FORM
