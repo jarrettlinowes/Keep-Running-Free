@@ -22,13 +22,53 @@
 
 #content {
   min-height: 400px;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
 }
 
 #site_footer {
-  padding: 5px 0;
-  background-color: #aaa;
+  padding: 10px 0;
+  padding-left: 3000px;
+  padding-right:3000px;
+  margin-left: -3000px;
+  margin-right: -3000px;
+  background: url(footer.jpg) 0 0 repeat-x;
   font-size: 90%;
+  width: 100%;
+}
+
+#link_footer1 {
+  padding-top: 3px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  height: 150px;
+}
+
+#link_footer1b {
+  background: url(footer_link.png) 0 0 repeat-x;
+  height: 75px;
+  border-radius: 5px;
+}
+
+#link_footer2 {
+  border: 1px solid #fff;
+  margin-left: 24px;
+  border-radius: 5px;
+}
+
+#link_footer3 {
+  border: 1px solid #fff;
+  margin-left: 24px;
+  border-radius: 5px;
+}
+
+#link_footer4 {
+  border: 1px solid #fff;
+  margin-left: 24px;
+  border-radius: 5px;
+}
+
+#copyright {
+  color: #fff;
 }
 
 /* -------- home page ------- */
@@ -38,7 +78,6 @@
 }
 #recent_posts {
   border: 1px solid #ddd;
-  background-color: #eee;
 }
 
 #about {

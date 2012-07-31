@@ -14,3 +14,18 @@ $navbarLinkColorHover: #4a4;
 .navbar-inner {
   @include border-radius(0);
 }
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 960px;
+}
+
+.row {
+  margin-left: 0px;
+  *zoom: 1;
+  width: 960px;
+}
+
+[class*="span"] {
+  float: left;
+  margin-left: 0px;
+}

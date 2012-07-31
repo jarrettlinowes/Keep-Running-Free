@@ -1,8 +1,23 @@
 #site_footer.clearfix
-  .span6
+  .row{style:"text-align: center"}
+    #link_footer1.span3
+      = image_tag("about.png")
+      .row
+        #link_footer1b.span3
+          %center
+          %h3{style:"padding-top: 5px"} About Us
+          %h6 Check out who we are
+          %h6 and send us a note!
+    #link_footer2.span3
+      %h2 reviews
+    #link_footer3.span3
+      %h2 facebook
+    #link_footer4.span3.last
+      %h2 twitter
+  .row{style:"margin-left:10px"} 
+    This is a navbar size bar that holds the opt-in mailing list option
+  #copyright.row{style:"margin-left:10px"}
     Copyright &copy; 2012 Keep Running Free
     %br
     -if current_user
       Logged in as #{current_user.email} #{link_to 'logout', session_path("current"), method: "delete"}
-  .span6
-    OPT IN FORM
