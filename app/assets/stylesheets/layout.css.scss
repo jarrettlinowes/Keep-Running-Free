@@ -1,37 +1,42 @@
 
-#site_navbar.navbar {
-  margin-bottom: 0;
-}
-
-#banner {
-  height: 100px;
-  background: url(banner.jpg) no-repeat;
-}
-
-#blog_navbar {
-  padding: 3px 1em;
-  a {
-    color: white;
-    text-decoration: none;
+#site_navbar {
+  .navbar {
+    height: 57px;
   }
-  margin-bottom: 18px;
-  .btn {
-    margin-right: 18px;
+  li {
+    border-top: 3px #333 solid;
+  }
+  li:hover{
+    border-top-color: #000;
+  }
+}
+
+#nav_button.active {
+  border-top-color: #000;
+  a {
+    background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(#600), to(#222));
   }
 }
 
 #content {
-  min-height: 400px;
+  min-height: 800px;
   border: 0px solid #ddd;
+}
+#side_bar {
+  height: 600px;
+  background-color: #f0f0f0;
 }
 
 #site_footer {
   padding: 10px 0;
-  padding-left: 3000px;
-  padding-right:3000px;
-  margin-left: -3000px;
-  margin-right: -3000px;
-  background: url(footer.jpg) 0 0 repeat-x;
+//  padding-left: 3000px;
+//  padding-right:3000px;
+//  margin-left: -3000px;
+//  margin-right: -3000px;
+//  background: url(footer.jpg) 0 0 repeat-x;
+  background-image: -webkit-linear-gradient(top, #333, #222);
+  height: 300px;
+  border-top: 5px solid #ccc;
   font-size: 90%;
   width: 100%;
 }
@@ -58,7 +63,7 @@
   border-radius: 5px;
   height: 150px;
 
-  margin-left: 24px;
+  margin-left: 24px; 
 }
 
 #link_footer4 {
@@ -71,7 +76,9 @@
 }
 
 #link_footer_text {
-  background: url(footer_link.png) 0 0 repeat-x;
+//  background: url(footer_link.png) 0 0 repeat-x;
+  background-color: #ccc;
+  border-top: 5px solid #303030;
   height: 75px;
   border-radius: 5px;
   width: 220px;
@@ -80,7 +87,7 @@
 #mailing_footer {
   margin-top: 20px;
   margin-left: 2px;
-  background: url(ribbon_footer.png) no-repeat;
+  background: url(ribbon_footer_darkred.png) no-repeat;
   height: 50px;
 }
 
@@ -90,9 +97,7 @@
   background-color: #eea;
 }
 #recent_posts {
-  border: 1px solid #ddd;
 }
 
 #about {
-  
 }

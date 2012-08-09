@@ -1,6 +1,18 @@
-#site_navbar.navbar
-  .navbar-inner
-    .container
-      %ul.nav
-        %li= link_to 'Who Are We?', ''
-        %li= link_to 'KRF Store', ''
+#site_navbar
+  .navbar
+    .navbar-inner
+      .container
+        %a.brand{:href => "/"}
+          = image_tag("header_logo_black.png", size:"226x39")
+        %ul.nav
+          %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
+          %li#nav_button{class: @current_section=='running' && 'active'}= link_to 'Running', '/running'
+          %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/reviews'
+          %li#nav_button{class: @current_section=='entertainment' && 'active'}= link_to 'Entertainment', '/entertainment'
+        / .input-append.pull-right{style:"padding-top: 8px"}
+        /   %input.span2{:placeholder => "Search..."}
+        /   %button.btn.add-on
+        /     %i.icon-search
+        %ul.nav.pull-right
+          %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'Who Are We?', '/about'
+          %li#nav_button{class: @current_section=='krf store' && 'active'}= link_to 'KRF Store', '/store'

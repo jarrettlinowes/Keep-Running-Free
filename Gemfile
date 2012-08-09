@@ -13,6 +13,8 @@ gem 'jquery-rails'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'activeadmin'
+gem "ckeditor", "3.7.1"
+gem "paperclip"
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -56,6 +56,10 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.2)
       ffi (~> 1.0.6)
+    ckeditor (3.7.1)
+      mime-types
+      orm_adapter
+    cocaine (0.2.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -144,6 +148,12 @@ GEM
     nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     orm_adapter (0.4.0)
+    paperclip (3.1.4)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (>= 0.0.2)
+      mime-types
     pg (0.14.0)
     pg (0.14.0-x86-mingw32)
     polyamorous (0.5.0)
@@ -243,6 +253,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass
   capybara
+  ckeditor (= 3.7.1)
   coffee-rails (~> 3.2.1)
   database_cleaner
   debugger
@@ -253,6 +264,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   launchy
+  paperclip
   pg
   rails (= 3.2.1)
   rspec-instafail

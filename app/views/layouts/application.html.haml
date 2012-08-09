@@ -20,12 +20,14 @@
     #container.container
       .row{style:"margin-left: 0"}
         = render 'layouts/site_navbar'
-        = render 'layouts/banner'
-        = render 'layouts/blog_navbar'
+        / = render 'layouts/blog_navbar'
       #content.row{style:"margin-left: 0"}
         = render 'layouts/flash', flash: flash
         - if show_title?
           %h1= yield(:title)
-        = content_for?(:content) ? yield(:content) : yield
-      .row{style:"margin-left: 0"}
-        = render 'layouts/footer'
+        .span9= content_for?(:content) ? yield(:content) : yield
+        .span3.offset9{style:"margin-left: 40px"}
+          = render 'layouts/side_bar'
+      -#.row{style:"margin-left: 0"}
+      -#  = render 'layouts/footer'
+    =render 'layouts/footer'
