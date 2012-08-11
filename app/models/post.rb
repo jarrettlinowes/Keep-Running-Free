@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	attr_accessible :title, :intro, :body, :status, :author_id
+	attr_accessible :title, :intro, :body, :status, :author_id, :category, :published_on, :views
 
 	validates :title, presence: true
 	validates :intro, presence: true
@@ -7,4 +7,5 @@ class Post < ActiveRecord::Base
 
 	belongs_to :author
 
+	scope :published, where{{ status.in => ['published', 'p-featured'] }}
 end

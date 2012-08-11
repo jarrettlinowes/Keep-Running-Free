@@ -6,8 +6,8 @@
           = image_tag("header_logo_black.png", size:"226x39")
         %ul.nav
           %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
-          %li#nav_button{class: @current_section=='running' && 'active'}= link_to 'Running', '/running'
-          %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/reviews'
+          %li#nav_button{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
+          %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
           %li#nav_button{class: @current_section=='entertainment' && 'active'}= link_to 'Entertainment', '/entertainment'
         / .input-append.pull-right{style:"padding-top: 8px"}
         /   %input.span2{:placeholder => "Search..."}

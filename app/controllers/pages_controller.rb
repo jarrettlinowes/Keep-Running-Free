@@ -22,4 +22,8 @@ class PagesController < ApplicationController
 	def store
 		@current_section = 'krf store'
 	end
+
+	def test
+		render layout: 'test'
+	end
 end

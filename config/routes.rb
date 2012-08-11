@@ -22,6 +22,8 @@ KRF::Application.routes.draw do
   match 'running' => 'pages#running'
   match 'reviews' => 'pages#reviews'
   match 'entertainment' => 'pages#entertainment'
+  match 'test' => 'pages#test'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

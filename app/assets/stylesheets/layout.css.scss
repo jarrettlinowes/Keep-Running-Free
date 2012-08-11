@@ -9,6 +9,7 @@
   li:hover{
     border-top-color: #000;
   }
+  min-width: 775px;
 }
 
 #nav_button.active {
@@ -26,6 +27,31 @@
   height: 600px;
   background-color: #f0f0f0;
 }
+#whatsnew_part {
+  width: 200px;
+  padding: 0 10px;
+}
+
+
+#post_title {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+#post_author {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+#post_related {
+  margin: 15px 0;
+  background-color: #eee;
+}
+#post_author_bottom {
+  border: 1px solid #ccc;
+}
+#author_about {
+  margin: 0 10px 10px;
+}
+
 
 #site_footer {
   padding: 10px 0;
@@ -34,11 +60,13 @@
 //  margin-left: -3000px;
 //  margin-right: -3000px;
 //  background: url(footer.jpg) 0 0 repeat-x;
+  .container {background-image: -webkit-linear-gradient(top, #333, #222);}
   background-image: -webkit-linear-gradient(top, #333, #222);
   height: 300px;
   border-top: 5px solid #ccc;
   font-size: 90%;
   width: 100%;
+  min-width: 960px; // fixed shortened background
 }
 
 #link_footer1 {
@@ -93,11 +121,23 @@
 
 /* -------- home page ------- */
 #carousel {
-  height: 300px;
-  background-color: #eea;
+  height: 319px;
 }
 #recent_posts {
 }
 
 #about {
+}
+
+#entertainment {
+  
+}
+#entertainment_books {
+  height: 700px;
+  background-color: #ccc;
+}
+#entertainment_other {
+  height: 700px;
+  margin-left: 80px;
+  background-color: #ccc;
 }

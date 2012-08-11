@@ -1,9 +1,26 @@
-%h2= @post.title
-.post_author
-  by
-  = @post.author.name
+#post_title
+  %h2= @post.title
+#post_author_top.span9
+  .span3
+    By:
+    = @post.author.name
+  .span2offset3
+    Published: 
+    = @post.created_at
 .post_intro=raw @post.intro
 .post_body=raw @post.body
-
+#post_author_bottom
+  %h4{style:"color: #600; margin: 10px"}= @post.author.name
+  #author_about
+    = @post.author.about
+#post_related.span9
+  %h4{style:"margin-bottom: 5px; margin-left: 10px; margin-top: 10px"} Related Posts
+  #related_one.span3
+    sdf
+  #related_two.span3
+    sdf
+  #related_three.span3
+    sdf
+%br
 - if current_user
   = link_to 'Edit', edit_admin_post_path(@post)

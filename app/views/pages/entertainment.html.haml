@@ -1,1 +1,18 @@
-%h2 entertainment
+#entertainment_books.span4
+	%ul.nav.nav-tabs
+		%li= link_to 'Books', '#books_1', 'data-toggle' => 'tab'
+	#entertainment_books_content.tab-content
+		#books_1.tab-pane.active
+			.span2
+				this is the image span
+			.span2
+				this is the info span
+#entertainment_other.span4
+	%ul.nav.nav-tabs
+		%li= link_to 'Movies', '#movies_1', 'data-toggle' => 'tab'
+	#entertainment_other_content.tab-content
+		#movies_1.tab-pane.active
+			.span2
+				this is the image span
+			.span2
+				this is the info span
