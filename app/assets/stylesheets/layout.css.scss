@@ -9,13 +9,13 @@
   li:hover{
     border-top-color: #000;
   }
-  min-width: 775px;
+  min-width: 960px;
 }
 
 #nav_button.active {
   border-top-color: #000;
   a {
-    background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(#600), to(#222));
+    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
   }
 }
 
@@ -60,8 +60,8 @@
 //  margin-left: -3000px;
 //  margin-right: -3000px;
 //  background: url(footer.jpg) 0 0 repeat-x;
-  .container {background-image: -webkit-linear-gradient(top, #333, #222);}
-  background-image: -webkit-linear-gradient(top, #333, #222);
+  
+  @include linear-gradient(#333, #222);
   height: 300px;
   border-top: 5px solid #ccc;
   font-size: 90%;

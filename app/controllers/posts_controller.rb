@@ -3,8 +3,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @category = params[:category] || ''
-    @posts = Post.published.where(category: @category)
+    @current_section = params[:category] || ''
+    @posts = Post.published.where(category: @current_section)
 
     respond_to do |format|
       format.html # index.html.erb

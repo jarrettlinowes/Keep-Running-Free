@@ -11,6 +11,10 @@ $navbarLinkColorHover: #4a4;
 
 /*@import "bootstrap-responsive";*/
 
+a:hover {
+  text-decoration: none;
+}
+
 .navbar-inner {
   @include border-radius(0);
 }
