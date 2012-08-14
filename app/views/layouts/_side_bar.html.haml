@@ -1,33 +1,36 @@
 #side_bar
-	.row{style:"width: 220px; height: 275px"}
-		%ul#side_tab.nav.nav-tabs
-			%li= link_to 'Recent', '#recent', 'data-toggle' => 'tab'
-			%li= link_to 'Popular', '#popular', 'data-toggle' => 'tab'
-			%li= link_to "KRF", '#whatsnew', 'data-toggle' => 'tab'
-		#side_tabContent.tab-content
-			#recent.tab-pane.active
-				%ul
-					- Post.limit(3).each do |post|
-						%li= link_to post.title, post
-			#popular.tab-pane
-				- @most_popular = Post.published.order("views DESC").limit(3)
-				- @most_popular.each do |post|
-					%div
-						[IMAGE](#{post.views})
-						= link_to post.title, post
+  .row{style:"width: 220px; height: 275px"}
+    %ul#side_tab.nav.nav-tabs
+      %li= link_to 'Recent', '#recent', 'data-toggle' => 'tab'
+      %li= link_to 'Popular', '#popular', 'data-toggle' => 'tab'
+      %li= link_to "KRF", '#whatsnew', 'data-toggle' => 'tab'
+    #side_tabContent.tab-content
+      #recent.tab-pane.active
+        %ul
+          - Post.order("published_on DESC").limit(3).each do |post|
+            %li= link_to post.title, post
+      #popular.tab-pane
+        - @most_popular = Post.published.order("views DESC").limit(3)
+        - @most_popular.each do |post|
+          %div
+            [IMAGE](#{post.views})
+            = link_to post.title, post
 
-			#whatsnew.tab-pane
-				#whatsnew_part.row
-					%h4=link_to "KRF Store", "/store"
-					%p{style:"font-size: 10px"} Take a look at a variety of KRF products at the KRF Store!
-				#whatsnew_part.row
-					%h4=link_to "Facebook", ""
-					%p{style:"font-size: 10px"} Like Keep Running Free on Facebook to recieve updates and other exclusive information!
-				#whatsnew_part.row
-					%h4=link_to "Twitter", ""
-					%p{style:"font-size: 10px"} Follow our Twitter feed for site updates and more!
-	#side_ad.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
-		/ = render '/layouts/ad_200x200'
-	#side_mail.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
-		/ = render '/layouts/newsletter'
+      #whatsnew.tab-pane
+        #whatsnew_part.row
+          %h4=link_to "KRF Store", "/store"
+          %p{style:"font-size: 10px"} Take a look at a variety of KRF products at the KRF Store!
+        #whatsnew_part.row
+          %h4=link_to "Facebook", ""
+          %p{style:"font-size: 10px"} Like Keep Running Free on Facebook to recieve updates and other exclusive information!
+        #whatsnew_part.row
+          %h4=link_to "Twitter", ""
+          %p{style:"font-size: 10px"} Follow our Twitter feed for site updates and more!
+  #side_ad.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
+    / = render '/layouts/ad_200x200'
+  #side_mail.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
+    / = render '/layouts/newsletter'
+    %form.form-horizontal{action:"http://parkerhill.us4.list-manage.com/subscribe/post?u=ec7193fc4554803ffb3d25368&amp;id=5a6ae59c30", method:"post", target:"_blank"}
+      %input#mce-EMAIL{type:"email", name:"EMAIL", placeholder:"Email"}
+      %input#mc-embedded-subscribe.btn{type:"submit", value:"Subscribe", name:"subscribe"}
 

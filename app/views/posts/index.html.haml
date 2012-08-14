@@ -1,9 +1,20 @@
-%h3{style:"color: #600"}= @current_section.titleize
+%h3#post_lsit_section_title= @current_section.titleize
 %p
 
 - @posts.each do |post|
-  %div{style: "border-bottom: 2px #aaa solid"}
-    %ul
-      %li= post.title
-      %li= post.author.name
-    =raw post.intro
+  %div#post_list.span9
+    %div#post_list_thumb_border.span2
+      %div#post_list_thumb= image_tag("filler_thumb.jpg")
+    %div#post_list_text.span6
+      %p#post_list_post_title
+        = post.title
+      %p
+        By: 
+        = post.author.name
+      %p
+        =raw post.intro
+
+    / %ul
+    /   %li= post.title
+    /   %li= post.author.name
+    / =raw post.intro
