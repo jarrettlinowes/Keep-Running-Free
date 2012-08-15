@@ -33,34 +33,8 @@
 }
 
 
-#post_title {
-  margin-bottom: 5px;
-  border-bottom: 1px solid #ccc;
-}
-#post_author {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #eee;
-}
-#post_related {
-  margin: 15px 0;
-  background-color: #eee;
-}
-#post_author_bottom {
-  border: 1px solid #ccc;
-}
-#author_about {
-  margin: 0 10px 10px;
-}
-
-
 #site_footer {
   padding: 10px 0;
-//  padding-left: 3000px;
-//  padding-right:3000px;
-//  margin-left: -3000px;
-//  margin-right: -3000px;
-//  background: url(footer.jpg) 0 0 repeat-x;
-  
   @include linear-gradient(#333, #222);
   height: 300px;
   border-top: 5px solid #ccc;
@@ -68,50 +42,46 @@
   width: 100%;
   min-width: 960px; // fixed shortened background
 }
-
 #link_footer1 {
   padding-top: 5px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   height: 150px;
 }
-
 #link_footer2 {
   padding-top: 5px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   height: 150px;
-
   margin-left: 24px;
 }
-
 #link_footer3 {
   padding-top: 5px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   height: 150px;
-
   margin-left: 24px; 
 }
-
 #link_footer4 {
   padding-top: 5px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   height: 150px;
-
   margin-left: 24px;
 }
-
 #link_footer_text {
-//  background: url(footer_link.png) 0 0 repeat-x;
   background-color: #ccc;
   border-top: 5px solid #303030;
   height: 75px;
   border-radius: 5px;
   width: 220px;
 }
-
+#footer_linktext_title {
+  color: #000;
+}
+#footer_linktext_body {
+  color: #202020;
+}
 #mailing_footer {
   margin-top: 20px;
   margin-left: 2px;
@@ -145,13 +115,21 @@
 #post_list_section_title {
   color: #600;
 }
+#most_recent_section_post {
+  
+}
+#most_recent_post_caption {
+  height: 30px;
+  width: 700px;
+  background-color: #333;
+}
 #post_list {
   border-bottom: 1px #aaa solid;
   margin-top: 15px;
 }
 #post_list_thumb_border {
   border: 1px #000 solid;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 #post_list_thumb {
   margin: 3px;
@@ -162,4 +140,34 @@
 }
 #post_list_post_title {
   color: #600;
+  font-size: 20px;
+}
+#post_list_post_author {
+  color: #a2a2a2;
+  font-size: 11px;
+}
+
+#post_title {
+  color: #600;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+#post_author_top {
+  padding-bottom: 5px;
+  color: #a2a2a2;
+  font-size: 11px;
+}
+#post_related {
+  margin: 15px 0;
+  background-color: #eee;
+}
+#post_author_bottom {
+  border: 1px solid #ccc;
+}
+#author_about {
+  margin: 0 10px 10px;
+}
+
+#post_intro_one {
+  color: #938
 }

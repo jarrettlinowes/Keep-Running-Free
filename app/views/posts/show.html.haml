@@ -1,12 +1,10 @@
 #post_title
   %h2= @post.title
 #post_author_top.span9
-  .span3
-    By:
-    = @post.author.name
-  .span2offset3
-    Published: 
-    = @post.published_on.strftime("%B %d, %Y")
+  Written by
+  = @post.author.name
+  | Published on
+  = @post.published_on.strftime("%B %d, %Y")
 .post_intro=raw @post.intro
 .post_body=raw @post.body
 #post_author_bottom
