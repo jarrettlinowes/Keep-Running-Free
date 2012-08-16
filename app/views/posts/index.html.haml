@@ -1,26 +1,23 @@
-%h1 Listing posts
-%p
-
-%table.table.table-bordered.table-striped
-  %tr
-    %th Title
-    %th Intro
-    %th Status
-    %th Author
-    %th
-    %th
-    %th
-
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= post.intro
-      %td= post.status
-      %td= post.author.name
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete
-
+%h3#post_list_section_title
+  = @current_section.titleize
 %br
-
-= link_to 'New Post', new_post_path
+%div#most_recent_section_post
+  =image_tag("main_filler_pic.jpg")
+- @posts.each do |post|
+  %div#post_list.span9
+    %div#post_list_thumb_border.span2
+      %div#post_list_thumb= image_tag("filler_thumb.jpg")
+    %div#post_list_text.span6
+      %p#post_list_post_title
+        = post.title
+      %p#post_list_post_author
+        Written by
+        = post.author.name
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      %p#post_intro_one
+        =raw post.intro
+    / %ul
+    /   %li= post.title
+    /   %li= post.author.name
+    / =raw post.intro

@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
-  before_filter :authorize, except: [:show]
+  before_filter :authorize, except: [:index, :show]
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @current_section = params[:category] || ''
+    @posts = Post.published.where(category: @current_section)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
+    @post = Post.published.find(params[:id])
+    @post.increment!(:views) unless current_user
 
     respond_to do |format|
       format.html # show.html.erb

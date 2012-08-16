@@ -1,5 +1,7 @@
 KRF::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -16,6 +18,12 @@ KRF::Application.routes.draw do
 
   match 'about' => 'pages#about'
   root :to => 'pages#home'
+  match 'store' => 'pages#store'
+  match 'running' => 'pages#running'
+  match 'reviews' => 'pages#reviews'
+  match 'entertainment' => 'pages#entertainment'
+  match 'test' => 'pages#test'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

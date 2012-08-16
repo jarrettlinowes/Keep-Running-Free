@@ -1,46 +1,173 @@
 
-#site_navbar.navbar {
-  margin-bottom: 0;
-}
-
-#banner {
-  height: 100px;
-  background: url(banner.jpg) no-repeat;
-}
-
-#blog_navbar {
-  padding: 3px 1em;
-  a {
-    color: white;
-    text-decoration: none;
+#site_navbar {
+  .navbar {
+    height: 57px;
   }
-  margin-bottom: 18px;
-  .btn {
-    margin-right: 18px;
+  li {
+    border-top: 3px #333 solid;
+  }
+  li:hover{
+    border-top-color: #000;
+  }
+  min-width: 960px;
+}
+
+#nav_button.active {
+  border-top-color: #000;
+  a {
+    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
   }
 }
 
 #content {
-  min-height: 400px;
-  border: 1px solid #ddd;
+  min-height: 800px;
+  border: 0px solid #ddd;
+}
+#side_bar {
+  height: 600px;
+  background-color: #f0f0f0;
+}
+#whatsnew_part {
+  width: 200px;
+  padding: 0 10px;
 }
 
+
 #site_footer {
-  padding: 5px 0;
-  background-color: #aaa;
+  padding: 10px 0;
+  @include linear-gradient(#333, #222);
+  height: 300px;
+  border-top: 5px solid #ccc;
   font-size: 90%;
+  width: 100%;
+  min-width: 960px; // fixed shortened background
+}
+#link_footer1 {
+  padding-top: 5px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  height: 150px;
+}
+#link_footer2 {
+  padding-top: 5px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  height: 150px;
+  margin-left: 24px;
+}
+#link_footer3 {
+  padding-top: 5px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  height: 150px;
+  margin-left: 24px; 
+}
+#link_footer4 {
+  padding-top: 5px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  height: 150px;
+  margin-left: 24px;
+}
+#link_footer_text {
+  background-color: #ccc;
+  border-top: 5px solid #303030;
+  height: 75px;
+  border-radius: 5px;
+  width: 220px;
+}
+#footer_linktext_title {
+  color: #000;
+}
+#footer_linktext_body {
+  color: #202020;
+}
+#mailing_footer {
+  margin-top: 20px;
+  margin-left: 2px;
+  background: url(ribbon_footer_darkred.png) no-repeat;
+  height: 50px;
 }
 
 /* -------- home page ------- */
 #carousel {
-  height: 300px;
-  background-color: #eea;
+  height: 319px;
 }
 #recent_posts {
-  border: 1px solid #ddd;
-  background-color: #eee;
 }
 
 #about {
+}
+
+#entertainment {
   
+}
+#entertainment_books {
+  height: 700px;
+  background-color: #ccc;
+}
+#entertainment_other {
+  height: 700px;
+  margin-left: 80px;
+  background-color: #ccc;
+}
+
+#post_list_section_title {
+  color: #600;
+}
+#most_recent_section_post {
+  
+}
+#most_recent_post_caption {
+  height: 30px;
+  width: 700px;
+  background-color: #333;
+}
+#post_list {
+  border-bottom: 1px #aaa solid;
+  margin-top: 15px;
+}
+#post_list_thumb_border {
+  border: 1px #000 solid;
+  margin-top: 2px;
+}
+#post_list_thumb {
+  margin: 3px;
+}
+#post_list_text {
+  margin-left: 30px;
+  width: 528px;
+}
+#post_list_post_title {
+  color: #600;
+  font-size: 20px;
+}
+#post_list_post_author {
+  color: #a2a2a2;
+  font-size: 11px;
+}
+
+#post_title {
+  color: #600;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+#post_author_top {
+  padding-bottom: 5px;
+  color: #a2a2a2;
+  font-size: 11px;
+}
+#post_related {
+  margin: 15px 0;
+  background-color: #eee;
+}
+#post_author_bottom {
+  border: 1px solid #ccc;
+}
+#author_about {
+  margin: 0 10px 10px;
+}
+
+#post_intro_one {
+  color: #938
 }
