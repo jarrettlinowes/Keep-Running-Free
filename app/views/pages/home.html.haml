@@ -7,22 +7,31 @@
           %h4=link_to "Review: Nike+ Fuelband", "/posts/4"
           %p{style:"color: white; font-size: 11px"} The Nike + Fuelband allows you to live life as a sport as you recieve "fuelpoints" for the activity that you do throughout the day. Run, walk, play ball, and live life as you keep track of your activity in a new and innovative way!
       .item
-        = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/reviews'
+        = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/posts?category=reviews'
         .carousel-caption
-          %h4=link_to "Product Reviews", "/reviews"
+          %h4=link_to "Product Reviews", "/posts?category=reviews"
           %p{style:"color: white; font-size: 11px"} Read reviews for all different types of athletic and running shoes, running watches, and other running accessories!
       .item store
-      .item mailing list
+      .item
+        = link_to (image_tag("newsletter_promo.jpg")), ''
+        .carousel-caption
+          %h4=link_to "Join Our Mailing List", ""
+          %ul{style:"color: white; font-size: 11px"}
+            %li Email updates about changes and updates to Keep Running Free
+            %li Inspirational running information and quotes
+            %li Exclusive information and links to interesting running articles and products
+            %li And More...
     = link_to "‹", "#carousel", :class => "carousel-control left", "data-slide" => "prev"
     = link_to "›", "#carousel", :class => "carousel-control right", "data-slide" => "next"
 
 .row
-  #recent_posts.span4{style:"margin-left: 0"}
-    %ul
-      %li Foo
-      %li Bar
-      %li Baz
-  #about.span5.last      
-    %h2 About
-    %p
-      About .asdf asdfa sdf asdf as dfa sdf adf asd fas dfas df asdf 
+  #about.span9
+    %p{style:"font-size: 14px; font-weight: bold; color: #600"} Welcome to Keep Running Free – a website that helps runners learn about their sport and find useful reviews on running shoes and accessories.
+    %p{style:"font-size: 11px"} Keep Running Free is a website that offers running tips, nutrition tips, reviews, and entertainment all in one place. Delve into a variety of articles and reviews and feel free to leave your take on the subject with a comment. We are constantly working to bring fresh content and to provide newer and more dynamic webpages.
+    %p{style:"font-size: 11px; font-weight: bold"} Enjoy the articles! Find the most recent and most popular posts on the sidebar tabs.
+    .span3
+      %p{style:"font-size: 11px"} Like our Facebook page
+      %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fkeeprunningfree&send=false&layout=button_count&width=50&show_faces=false&action=like&colorscheme=light&font&height=21", :style => "border:none; overflow:hidden; width:45px; height:21px;padding-left: 38px"}
+    .span3offset3
+      %p{style:"font-size: 11px"} Follow Us on Twitter
+      %em{style:"padding-left: 28px"}=render 'layouts/twitter'

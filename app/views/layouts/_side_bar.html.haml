@@ -29,8 +29,10 @@
   #side_ad.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
     / = render '/layouts/ad_200x200'
   #side_mail.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
-    / = render '/layouts/newsletter'
-    %form.form-horizontal{action:"http://parkerhill.us4.list-manage.com/subscribe/post?u=ec7193fc4554803ffb3d25368&amp;id=5a6ae59c30", method:"post", target:"_blank"}
-      %input#mce-EMAIL{type:"email", name:"EMAIL", placeholder:"Email"}
-      %input#mc-embedded-subscribe.btn{type:"submit", value:"Subscribe", name:"subscribe"}
+    %form.form-horizontal{action:"http://keeprunningfree.us4.list-manage.com/subscribe/post?u=ec7250299824e5388c21c7fdb&id=04a00d0f72", method:"post", target:"_blank"}
+      %input#side-mailchimp-input{type:"email", name:"EMAIL", placeholder:"Email..."}
+      %button#side-mailchimp-button.btn
+        %i.icon-envelope
+      / %button.btn.add-on#side-mailchimp-button
+      /   %i.icon-envelope
 

@@ -33,7 +33,11 @@
       .row
         .span6{style:"margin-left: 70px"}
           %h4{style:"color: #ffffff; padding-top: 10px;"} Opt-in to our Mailing List (It's Free!)
-        #mailchimp_footer.span5offset7
+        #mailchimp_footer.span4offset8
+          %form.form-horizontal{action:"http://keeprunningfree.us4.list-manage.com/subscribe/post?u=ec7250299824e5388c21c7fdb&id=04a00d0f72", method:"post", target:"_blank"}
+            %input#footer-mailchimp-input{type:"email", name:"EMAIL", placeholder:"Email..."}
+            %button#footer-mailchimp-button.btn
+              %i.icon-envelope
 
     #copyright.row{style:"color: #ffffff"}
       %br
