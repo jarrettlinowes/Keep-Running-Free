@@ -1,34 +1,38 @@
 #site_footer
   .container
     .row{style:"text-align: center"}
-      #link_footer1.span3
-        = link_to (image_tag("about.png")), '/about'
-        #link_footer_text.span3
-          %center{style:"padding-top: 5px"}
-          %h3#footer_linktext_title About Us
-          %h6#footer_linktext_body Check out who we are
-          %h6#footer_linktext_body and send us a note!
-      #link_footer2.span3
-        = link_to (image_tag("reviews.png")), '/reviews'
-        #link_footer_text.span3offest3
-          %center{style:"padding-top: 5px"}
-          %h3#footer_linktext_title Reviews
-          %h6#footer_linktext_body Read about running shoes
-          %h6#footer_linktext_body watches, and more!
-      #link_footer3.span3
-        = link_to (image_tag("fb_footer.png")), 'http://www.facebook.com'
-        #link_footer_text.span3
-          %center{style:"padding-top: 5px"}
-          %h3#footer_linktext_title Like Us
-          %h6#footer_linktext_body Like our Facebook page
-          %h6#footer_linktext_body for daily updates!
-      #link_footer4.span3.last
-        = link_to (image_tag("twitter_footer.png")), 'http://www.twitter.com'
-        #link_footer_text.span3offest9
-          %center{style:"padding-top: 5px"}
-          %h3#footer_linktext_title Follow Us
-          %h6#footer_linktext_body Stay up to date
-          %h6#footer_linktext_body with twitter!
+      .span3
+        %div#link_footer1
+          = link_to (image_tag("about.png")), '/about'
+          #link_footer_text.span3
+            %center{style:"padding-top: 5px"}
+            %h3#footer_linktext_title About Us
+            %h6#footer_linktext_body Check out who we are
+            %h6#footer_linktext_body and send us a note!
+      #link_margin_footer.span3
+        %div#link_footer2
+          = link_to (image_tag("reviews.png")), '/reviews'
+          #link_footer_text.span3
+            %center{style:"padding-top: 5px"}
+            %h3#footer_linktext_title Reviews
+            %h6#footer_linktext_body Read about running shoes
+            %h6#footer_linktext_body watches, and more!
+      #link_margin_footer.span3
+        %div#link_footer3
+          = link_to (image_tag("fb_footer.png")), 'http://www.facebook.com'
+          #link_footer_text.span3
+            %center{style:"padding-top: 5px"}
+            %h3#footer_linktext_title Like Us
+            %h6#footer_linktext_body Like our Facebook page
+            %h6#footer_linktext_body for daily updates!
+      #link_margin_footer.span3.last
+        %div#link_footer4
+          = link_to (image_tag("twitter_footer.png")), 'http://www.twitter.com'
+          #link_footer_text.span3offest9
+            %center{style:"padding-top: 5px"}
+            %h3#footer_linktext_title Follow Us
+            %h6#footer_linktext_body Stay up to date
+            %h6#footer_linktext_body with twitter!
     #mailing_footer
       .row
         .span6{style:"margin-left: 70px"}

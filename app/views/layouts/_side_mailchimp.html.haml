@@ -1,0 +1,16 @@
+#side_mail.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
+  .span3
+    %div#side_mail_banner
+      %h4#side_mail_bannertext Get Bi-Weekly Updates!
+  .span3
+    %div
+      %p#side_mail_whyopt= link_to 'Why opt-in to our mailing list?', '/why_opt_in'
+  %form.form-horizontal{action:"http://keeprunningfree.us4.list-manage.com/subscribe/post?u=ec7250299824e5388c21c7fdb&id=04a00d0f72", method:"post", target:"_blank"}
+    %input#side-mailchimp-input{type:"email", name:"EMAIL", placeholder:"Email..."}
+    %button#side-mailchimp-button.btn
+      %i.icon-envelope
+  .span3
+    %div.ul{style:"margin-left: 10px; color: #600"}
+      %li New Articles and Posts
+      %li New Site Updates
+      %li And More!

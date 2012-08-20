@@ -29,6 +29,7 @@
         .span9= content_for?(:content) ? yield(:content) : yield
         .span3.offset9{style:"margin-left: 40px"}
           = render 'layouts/side_bar'
+          = render 'layouts/side_mailchimp'
       -#.row{style:"margin-left: 0"}
       -#  = render 'layouts/footer'
     =render 'layouts/footer'

@@ -1,8 +1,10 @@
 %h3#post_list_section_title
   = @current_section.titleize
 %br
-%div#most_recent_section_post
-  =image_tag("main_filler_pic.jpg")
+/ %div#most_recent_section_post
+/   =image_tag("main_filler_pic.jpg")
+@posts.first
+  %div#most_recent_section_post
 - @posts.each do |post|
   %div#post_list.span9
     %div#post_list_thumb_border.span2
