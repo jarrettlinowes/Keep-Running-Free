@@ -145,26 +145,26 @@
   width: 700px;
   background-color: #333;
 }
-#post_list {
+.post_list {
   border-bottom: 1px #aaa solid;
   margin-top: 15px;
 }
-#post_list_thumb_border {
+.post_list_thumb_border {
   border: 1px #000 solid;
   margin-top: 2px;
 }
-#post_list_thumb {
+.post_list_thumb {
   margin: 3px;
 }
-#post_list_text {
+.post_list_text {
   margin-left: 30px;
   width: 528px;
 }
-#post_list_post_title {
+.post_list_post_title a {
   color: #600;
   font-size: 20px;
 }
-#post_list_post_author {
+.post_list_post_author {
   color: #a2a2a2;
   font-size: 11px;
 }
