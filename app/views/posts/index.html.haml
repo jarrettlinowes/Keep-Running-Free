@@ -6,7 +6,9 @@
 / %div#most_recent_section_post
 /   =image_tag("main_filler_pic.jpg")
 - @posts[0..0].each do |post|
-  %div#most_recent_section_post.span9
+  %div#most-recent-back-layer.span9=image_tag("nike.jpg", size: "700x319")
+  %div#most-recent-front-layer
+  %div#most-recent-word-layer hello
     
 - @posts[1..-1].each do |post|
   %div#post_list.span9

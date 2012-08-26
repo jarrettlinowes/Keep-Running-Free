@@ -156,7 +156,8 @@
   color: #600;
 }
 #most_recent_section_post {
-  border: 1px solid #982343;
+  width: 700px;
+  height: 319px;
 }
 #most_recent_post_caption {
   height: 30px;
@@ -218,4 +219,25 @@
 }
 #whyopt_body {
   font-size: 12px;
+}
+
+
+#most-recente-back-layer {
+  position:relative;
+  z-index:1;
+}
+#most-recent-front-layer {
+  position:relative;
+  z-index:2;
+  margin-top: 244px;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  height: 75px;
+  background-color: #333;
+}
+#most-recent-word-layer {
+  position:relative;
+  z-index:3;
+  background-color: red;
 }
