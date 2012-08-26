@@ -1,5 +1,6 @@
-$baseFontSize: 16px;
-$baseFontFamily: Georgia,Cambria,"Times New Roman",Times,serif; // $serifFontFamily;
+$baseFontSize: 12px;
+$baseFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;  //$sansFontFamily; 
+// dasfd $baseFontFamily: Georgia,Cambria,"Times New Roman",Times,serif; // $serifFontFamily;
 
 $navbarText: #eee;
 $navbarLinkColor: #eee;
@@ -70,9 +71,9 @@ width: 960px;
 
 body {
   margin: 0;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 12px;
-  line-height: 18px;
+  //font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  //font-size: 12px;
+  //line-height: 18px;
   color: #333333;
   background-color: white;
 }
