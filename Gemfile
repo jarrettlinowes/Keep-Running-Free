@@ -6,16 +6,17 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml-rails'
+gem "bourbon"
 gem 'simple_form'
 gem 'decent_exposure'
 gem 'squeel'
+gem 'kaminari'
 gem 'jquery-rails'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'activeadmin'
 gem "ckeditor", "3.7.1"
 gem "paperclip"
-gem "bourbon"
 gem "aws-sdk"
 
 # Gems used only for assets and not required

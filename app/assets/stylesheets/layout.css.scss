@@ -194,3 +194,13 @@
   color: #938
 }
 
+// (dont know why this style is missing)
+nav.pagination span.page.current, 
+nav.pagination span.page.gap {
+  border: #ddd solid 1px;
+  border-size: 1px 1px 1px 0;
+  float: left;
+  line-height: 34px;
+  padding: 0 14px;
+  font-weight: bold;
+}

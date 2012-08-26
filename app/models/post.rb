@@ -8,4 +8,8 @@ class Post < ActiveRecord::Base
 	belongs_to :author
 
 	scope :published, where{{ status.in => ['published', 'p-featured'] }}
+	
+	paginates_per 8
+  
+  
 end

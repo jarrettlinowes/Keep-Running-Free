@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
   before_filter :authorize, except: [:index, :show]
+  
   # GET /posts
   # GET /posts.json
   def index
     @current_section = params[:category] || ''
-    @posts = Post.published.where(category: @current_section)
+    @posts = Post.published.where(category: @current_section).page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
