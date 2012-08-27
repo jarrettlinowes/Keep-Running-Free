@@ -129,7 +129,7 @@
   padding-top: 2px;
 }
 
-/* -------- home page ------- */
+// -------- home page ------- 
 #carousel {
   height: 319px;
 }
@@ -164,26 +164,26 @@
   width: 700px;
   background-color: #333;
 }
-#post_list {
+.post_list {
   border-bottom: 1px #aaa solid;
   margin-top: 15px;
 }
-#post_list_thumb_border {
+.post_list_thumb_border {
   border: 1px #000 solid;
   margin-top: 2px;
 }
-#post_list_thumb {
+.post_list_thumb {
   margin: 3px;
 }
-#post_list_text {
+.post_list_text {
   margin-left: 30px;
   width: 528px;
 }
-#post_list_post_title {
+.post_list_post_title a {
   color: #600;
   font-size: 20px;
 }
-#post_list_post_author {
+.post_list_post_author {
   color: #a2a2a2;
   font-size: 11px;
 }
@@ -213,6 +213,7 @@
   color: #938
 }
 
+// <<<<<<< HEAD
 #whyopt_header {
   color: #600;
   border-bottom: 1px solid #ccc;
@@ -240,4 +241,16 @@
   position:relative;
   z-index:3;
   background-color: red;
+// =======
+// (dont know why this style is missing)
+nav.pagination span.page.current, 
+nav.pagination span.page.gap {
+  border: #ddd solid 1px;
+  border-size: 1px 1px 1px 0;
+  float: left;
+  line-height: 34px;
+  padding: 0 14px;
+  font-weight: bold;
+// >>>>>>> 1dcf275658e125fba0c1ff24f63fb9ed63ed0ed9
+}
 }

@@ -1,7 +1,7 @@
 
 To create admin user
 $ rails console
-> User.create name:"jarrett@linowes.com", password:"secret"
+> User.create email:"jarrett@linowes.com", password:"secret"
 
 
 ===========================
