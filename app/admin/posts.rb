@@ -5,6 +5,8 @@ ActiveAdmin.register Post do
     column :author
     column :status
     column :category
+    column :tags_count
+    column :groups_count
     column :published_on
     column :updated_at
     default_actions
@@ -18,8 +20,8 @@ ActiveAdmin.register Post do
   		f.input :author
   		f.input :status, :collection => ['published','p-featured']
       f.input :category, :collection => ['running','reviews']
-      f.input :tag_list, :hint => "Comma delimited"
-      f.input :group_list, :hint => 'Comma delimited'
+      f.input :tag_list, :hint => "Comma delimited ~ #{Post.tag_list_for_display_on :tags}"
+      f.input :group_list, :hint => "Comma delimited ~ #{Post.tag_list_for_display_on :groups}"
   	end
   	f.buttons
 	end
