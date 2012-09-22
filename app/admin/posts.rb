@@ -11,6 +11,18 @@ ActiveAdmin.register Post do
     column :updated_at
     default_actions
   end
+
+  filter :author
+  filter :title
+  filter :intro
+  filter :status
+  filter :created_at
+  filter :updated_at
+  filter :published_on
+  filter :views
+  filter :category
+  #filter :tagged_with, as: :string
+
 	form do |f|
 		f.inputs do
       f.input :published_on
