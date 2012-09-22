@@ -1,0 +1,224 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jonathan/rails/nh4k/db/schema.rb",
+		"/Users/jonathan/rails/nh4k/app/models/hiker.rb",
+		"/Users/jonathan/rails/nh4k/app/models/trip.rb",
+		"/Users/jonathan/rails/nh4k/app/models/mountain.rb",
+		"/Users/jonathan/rails/nh4k/app/models/my_hike.rb",
+		"/Users/jonathan/rails/nh4k/db/migrate/20120915193843_change_hbtm_to_through.rb",
+		"/Users/jonathan/rails/nh4k/spec/requests/hikers_spec.rb",
+		"/Users/jonathan/rails/nh4k/spec/requests/mountains_spec.rb",
+		"/Users/jonathan/rails/nh4k/spec/requests/trips_spec.rb",
+		"/Users/jonathan/rails/nh4k/spec/factories/users.rb",
+		"/Users/jonathan/rails/nh4k/doc/my notes.txt",
+		"/Users/jonathan/rails/nh4k/db/seeds.rb",
+		"/Users/jonathan/rails/nh4k/app/views/layouts/_navbar.html.haml",
+		"/Users/jonathan/rails/nh4k/app/controllers/hikers_controller.rb",
+		"/Users/jonathan/rails/nh4k/app/models/ascent.rb",
+		"/Users/jonathan/rails/nh4k/app/views/mountains/show.html.haml",
+		"/Users/jonathan/rails/nh4k/app/views/mountains/index.html.haml",
+		"/Users/jonathan/rails/nh4k/app/controllers/mountains_controller.rb",
+		"/Users/jonathan/rails/nh4k/Gemfile",
+		"/Users/jonathan/rails/nh4k/spec/support/session_support.rb",
+		"/Users/jonathan/rails/nh4k/app/controllers/trips_controller.rb",
+		"/Users/jonathan/rails/nh4k/Gemfile.lock",
+		"/Users/jonathan/rails/nh4k/spec/spec_helper.rb",
+		"/Users/jonathan/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jonathan/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/Users/jonathan/rails/nh4k/app/views/trips/show.html.haml",
+		"/Users/jonathan/rails/nh4k/app/views/hikers/index.html.haml",
+		"/Users/jonathan/rails/nh4k/.gitignore"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"factory",
+			"file",
+			"open",
+			"user"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.456178982646,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"spec/requests/mountains_spec.rb"
+			],
+			[
+				"sch",
+				"db/schema.rb"
+			],
+			[
+				"mou",
+				"app/models/mountain.rb"
+			],
+			[
+				"not",
+				"doc/my notes.txt"
+			],
+			[
+				"gemf",
+				"Gemfile.lock"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"myh",
+				"app/models/my_hike.rb"
+			],
+			[
+				"trip",
+				"app/models/trip.rb"
+			],
+			[
+				"hiker",
+				"app/models/hiker.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"hi",
+				"app/models/hiker.rb"
+			],
+			[
+				"ind",
+				"app/views/mountains/index.html.haml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true
+}

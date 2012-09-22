@@ -209,11 +209,19 @@
   margin: 0 10px 10px;
 }
 
+.post_intro p {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.post_body {
+  
+}
+
 #post_intro_one {
   color: #938
 }
 
-// <<<<<<< HEAD
 #whyopt_header {
   color: #600;
   border-bottom: 1px solid #ccc;
@@ -246,10 +254,15 @@
 nav.pagination span.page.current,
 nav.pagination span.page.gap {
   border: #ddd solid 1px;
-  border-size: 1px 1px 1px 0;
+  border-width: 0; //1px 1px 1px 0; 
   float: left;
   line-height: 34px;
   padding: 0 14px;
   font-weight: bold;
-// >>>>>>> 1dcf275658e125fba0c1ff24f63fb9ed63ed0ed9
+}
+//.pagination span.first a {
+//  border-width: 1px;
+//}
+.pagination span a {
+  border: 0;
 }

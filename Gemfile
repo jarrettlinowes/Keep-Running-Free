@@ -19,6 +19,7 @@ gem "ckeditor", "3.7.1"
 gem "paperclip"
 gem "aws-sdk"
 gem "kaminari"
+gem 'acts-as-taggable-on', '~> 2.3.1'
 
 # Gems used only for assets and not required
 # in production environments by default.

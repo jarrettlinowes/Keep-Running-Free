@@ -18,7 +18,26 @@ ActiveAdmin.register Post do
   		f.input :author
   		f.input :status, :collection => ['published','p-featured']
       f.input :category, :collection => ['running','reviews']
+      f.input :tag_list, :hint => "Comma delimited"
+      f.input :group_list, :hint => 'Comma delimited'
   	end
   	f.buttons
 	end
+  show do |post|
+    attributes_table do
+      row :id
+      row :title
+      row :intro
+      row :body
+      row :status
+      row :author
+      row :created_at
+      row :updated_at
+      row :published_on
+      row :category
+      row :tag_list
+      row :group_list
+      row :views
+    end
+  end
 end

@@ -25,7 +25,9 @@
         = post.published_on.strftime("%B %d, %Y")
       %p.post_intro_one
         =raw post.intro
-= paginate @posts
+.span9
+  %div
+    = paginate @posts
 / =======
 / %div#most_recent_section_post
 /   =image_tag("main_filler_pic.jpg")

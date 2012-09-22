@@ -11,5 +11,6 @@ class Post < ActiveRecord::Base
 	
 	paginates_per 8
   
-  
+  acts_as_taggable_on :tags, :groups
+  attr_accessible :tag_list, :group_list
 end
