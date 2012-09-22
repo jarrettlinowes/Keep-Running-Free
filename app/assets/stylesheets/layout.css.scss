@@ -241,9 +241,9 @@
   position:relative;
   z-index:3;
   background-color: red;
-// =======
-// (dont know why this style is missing)
-nav.pagination span.page.current, 
+}
+
+nav.pagination span.page.current,
 nav.pagination span.page.gap {
   border: #ddd solid 1px;
   border-size: 1px 1px 1px 0;
@@ -252,5 +252,4 @@ nav.pagination span.page.gap {
   padding: 0 14px;
   font-weight: bold;
 // >>>>>>> 1dcf275658e125fba0c1ff24f63fb9ed63ed0ed9
-}
 }
