@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
 	validates :body, presence: true
 
 	belongs_to :author
+  has_many :comments
 
 	scope :published, where{{ status.in => ['published', 'p-featured'] }}
 	

@@ -20,3 +20,9 @@
 %br
 - if current_user
   = link_to 'Edit', edit_admin_post_path(@post)
+
+#comments
+  %h2 Comments
+  = render @post.comments
+  = render "comments/new"
+

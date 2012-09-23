@@ -14,7 +14,9 @@ KRF::Application.routes.draw do
 
   resources :authors
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   match 'about' => 'pages#about'
   root :to => 'pages#home'

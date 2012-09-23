@@ -1,0 +1,7 @@
+%div{ class: "comment #{'comment_admin' if User.find_by_email(comment.email)}"}
+  .comment_details
+    by 
+    %strong= comment.name
+    on 
+    =comment.created_at.strftime("%b %d, %Y")
+  .comment_body= comment.body

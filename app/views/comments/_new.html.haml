@@ -1,0 +1,6 @@
+%h2 New Comment
+= simple_form_for [@post, @post.comments.new] do |form|
+  = form.input :name
+  = form.input :email
+  = form.input :body, :input_html => { :rows => 5, :style => "width:75%" }, :label => 'Comment'
+  = form.submit 'Submit Comment', class: 'btn'
