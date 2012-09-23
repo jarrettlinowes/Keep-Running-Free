@@ -1,0 +1,51 @@
+#carousel {
+  height: 319px;
+}
+#recent_posts {
+}
+
+#about {
+}
+
+#entertainment {
+  
+}
+#entertainment_books {
+  height: 700px;
+  background-color: #ccc;
+}
+#entertainment_other {
+  height: 700px;
+  margin-left: 80px;
+  background-color: #ccc;
+}
+
+
+#whyopt_header {
+  color: #600;
+  border-bottom: 1px solid #ccc;
+}
+#whyopt_body {
+  font-size: 12px;
+}
+
+
+#most-recente-back-layer {
+  position:relative;
+  z-index:1;
+}
+#most-recent-front-layer {
+  position:relative;
+  z-index:2;
+  margin-top: 244px;
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  height: 75px;
+  background-color: #333;
+}
+#most-recent-word-layer {
+  position:relative;
+  z-index:3;
+  background-color: red;
+}

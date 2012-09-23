@@ -17,6 +17,12 @@
  /*= depend_on "layout.css.scss" */
  @import "layout.css.scss";
 
+ /*= depend_on "home.css.scss" */
+ @import "home.css.scss";
+
+ /*= depend_on "posts.css.scss" */
+ @import "posts.css.scss";
+
 .cke_skin_kama .cke_editor {
   width: 80% !important;
 }

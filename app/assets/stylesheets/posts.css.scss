@@ -1,0 +1,92 @@
+
+// ===== posts index =====
+#post_list_section_title {
+  color: #600;
+}
+#most_recent_section_post {
+  width: 700px;
+  height: 319px;
+}
+#most_recent_post_caption {
+  height: 30px;
+  width: 700px;
+  background-color: #333;
+}
+.post_list {
+  border-bottom: 1px #aaa solid;
+  margin-top: 15px;
+}
+.post_list_thumb_border {
+  border: 1px #000 solid;
+  margin-top: 2px;
+}
+.post_list_thumb {
+  margin: 3px;
+}
+.post_list_text {
+  margin-left: 30px;
+  width: 528px;
+}
+.post_list_post_title a {
+  color: #600;
+  font-size: 20px;
+}
+.post_list_post_author {
+  color: #a2a2a2;
+  font-size: 11px;
+}
+
+nav.pagination span.page.current,
+nav.pagination span.page.gap {
+  border: #ddd solid 1px;
+  border-width: 0;
+  float: left;
+  line-height: 34px;
+  padding: 0 14px;
+  font-weight: bold;
+}
+nav.pagination span.page.current {
+  background-color: #f5f5f5;
+}
+.pagination span a {
+  border: 0;
+}
+
+// ===== posts show =====
+#post_title {
+  color: #600;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+#post_author_top {
+  padding-bottom: 5px;
+  color: #a2a2a2;
+  font-size: 11px;
+}
+#post_related {
+  margin: 15px 0;
+  background-color: #eee;
+}
+.related {
+  padding-left: 10px;
+}
+#post_author_bottom {
+  border: 1px solid #ccc;
+}
+#author_about {
+  margin: 0 10px 10px;
+}
+
+.post_intro p {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.post_body {
+  
+}
+
+#post_intro_one {
+  color: #938
+}
+
