@@ -79,15 +79,16 @@ nav.pagination span.page.current {
 
 .post_intro p {
   font-weight: bold;
-  font-size: 120%;
+  font-size: 90%;
+}
+
+.post_intro c {
+  color: white;
+  font-size: 11px;
 }
 
 .post_body {
   
-}
-
-#post_intro_one {
-  color: #938
 }
 
 .comment {
@@ -96,4 +97,10 @@ nav.pagination span.page.current {
 }
 .comment_admin {
   background-color: #eee;
+}
+.comment_name {
+  margin: 0 0 5px 0;
+}
+.comment_body {
+  margin: 0 0 5px 0;
 }
