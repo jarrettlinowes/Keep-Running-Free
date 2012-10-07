@@ -11,6 +11,10 @@ class PagesController < ApplicationController
 		@current_section = 'running'
 	end
 
+	def nutrition
+		@current_section = 'nutrition'
+	end
+
 	def reviews
 		@current_section = 'reviews'
 	end
