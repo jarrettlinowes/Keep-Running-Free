@@ -7,6 +7,168 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/posts/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 1486,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/posts/show.html.haml",
+			"settings":
+			{
+				"buffer_size": 729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/posts/_form.html.haml",
+			"settings":
+			{
+				"buffer_size": 256,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/comments/_new.html.haml",
+			"settings":
+			{
+				"buffer_size": 258,
+				"line_ending": "Unix",
+				"name": "%h2 New Comment"
+			}
+		},
+		{
+			"file": "app/controllers/comments_controller.rb",
+			"settings":
+			{
+				"buffer_size": 323,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 725,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/layout.js.coffee",
+			"settings":
+			{
+				"buffer_size": 191,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/posts.js.coffee",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/sessions.js.coffee",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/users.js.coffee",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/ckeditor.js",
+			"settings":
+			{
+				"buffer_size": 220,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/comments/_comment.html.haml",
+			"settings":
+			{
+				"buffer_size": 217,
+				"line_ending": "Unix",
+				"name": "Comment"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/posts.css.scss",
+			"settings":
+			{
+				"buffer_size": 1481,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/posts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2074,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/post.rb",
+			"settings":
+			{
+				"buffer_size": 933,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/comment.rb",
+			"settings":
+			{
+				"buffer_size": 227,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2355,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1453,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/helpers/application_helper.rb",
+			"settings":
+			{
+				"buffer_size": 254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/schema.rb",
+			"settings":
+			{
+				"buffer_size": 4675,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -32,6 +194,25 @@
 	},
 	"file_history":
 	[
+		"/Users/jonathan/rails/Keep-Running-Free/db/schema.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/db/migrate/20120701030454_create_posts.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/app/views/comments/_new.html.haml",
+		"/Users/jonathan/rails/Keep-Running-Free/db/migrate/20120922203624_create_comments.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/doc/notes.txt",
+		"/Users/jonathan/rails/Keep-Running-Free/vendor/assets/stylesheets/active_admin.css.scss",
+		"/Users/jonathan/rails/Keep-Running-Free/app/admin/posts.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/Gemfile",
+		"/Users/jonathan/rails/Keep-Running-Free/app/models/ckeditor/attachment_file.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/app/models/ckeditor/asset.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/config/s3.yml",
+		"/Users/jonathan/rails/Keep-Running-Free/app/models/ckeditor/picture.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/app/assets/stylesheets/application.css.scss",
+		"/Users/jonathan/rails/Keep-Running-Free/app/assets/stylesheets/posts.css.scss",
+		"/Users/jonathan/rails/Keep-Running-Free/app/assets/stylesheets/home.css.scss",
+		"/Users/jonathan/rails/Keep-Running-Free/app/assets/stylesheets/layout.css.scss",
+		"/Users/jonathan/rails/Keep-Running-Free/config/initializers/ckeditor.rb",
+		"/Users/jonathan/rails/Keep-Running-Free/db/migrate/20120922143216_acts_as_taggable_on_migration.rb",
+		"/Users/jonathan/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/jonathan/rails/nh4k/db/schema.rb",
 		"/Users/jonathan/rails/nh4k/app/models/hiker.rb",
 		"/Users/jonathan/rails/nh4k/app/models/trip.rb",
@@ -55,7 +236,6 @@
 		"/Users/jonathan/rails/nh4k/app/controllers/trips_controller.rb",
 		"/Users/jonathan/rails/nh4k/Gemfile.lock",
 		"/Users/jonathan/rails/nh4k/spec/spec_helper.rb",
-		"/Users/jonathan/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/Users/jonathan/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
 		"/Users/jonathan/rails/nh4k/app/views/trips/show.html.haml",
 		"/Users/jonathan/rails/nh4k/app/views/hikers/index.html.haml",
@@ -70,6 +250,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -77,6 +258,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"debugger",
+			"aws",
+			"related",
+			"raw",
+			"post_intro",
 			"factory",
 			"file",
 			"open",
@@ -98,13 +284,551 @@
 	"groups":
 	[
 		{
+			"selected": 12,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "app/views/posts/index.html.haml",
+					"settings":
+					{
+						"buffer_size": 1486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								784,
+								784
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/posts/show.html.haml",
+					"settings":
+					{
+						"buffer_size": 729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/posts/_form.html.haml",
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/comments/_new.html.haml",
+					"settings":
+					{
+						"buffer_size": 258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"auto_name": "%h2 New Comment",
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/comments_controller.rb",
+					"settings":
+					{
+						"buffer_size": 323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/layout.js.coffee",
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/javascripts/posts.js.coffee",
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/assets/javascripts/sessions.js.coffee",
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/assets/javascripts/users.js.coffee",
+					"settings":
+					{
+						"buffer_size": 229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/assets/javascripts/ckeditor.js",
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								42
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/views/comments/_comment.html.haml",
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Comment",
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/assets/stylesheets/posts.css.scss",
+					"settings":
+					{
+						"buffer_size": 1481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1477,
+								1477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 496.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/controllers/posts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								98
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "app/models/post.rb",
+					"settings":
+					{
+						"buffer_size": 933,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "app/models/comment.rb",
+					"settings":
+					{
+						"buffer_size": 227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 2355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								308,
+								308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								415,
+								415
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "app/helpers/application_helper.rb",
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "db/schema.rb",
+					"settings":
+					{
+						"buffer_size": 4675,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 796.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -125,18 +849,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.456178982646,
 			1.0
 		],
 		"rows":
@@ -158,7 +875,23 @@
 		[
 			[
 				"",
-				"spec/requests/mountains_spec.rb"
+				"app/views/comments/_comment.html.haml"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"rout",
+				"config/routes.rb"
 			],
 			[
 				"sch",
@@ -173,14 +906,6 @@
 				"doc/my notes.txt"
 			],
 			[
-				"gemf",
-				"Gemfile.lock"
-			],
-			[
-				"gem",
-				"Gemfile"
-			],
-			[
 				"myh",
 				"app/models/my_hike.rb"
 			],
@@ -191,10 +916,6 @@
 			[
 				"hiker",
 				"app/models/hiker.rb"
-			],
-			[
-				"sche",
-				"db/schema.rb"
 			],
 			[
 				"hi",
@@ -219,6 +940,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 293.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true
 }
