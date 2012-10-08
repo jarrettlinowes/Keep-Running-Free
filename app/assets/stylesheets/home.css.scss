@@ -30,22 +30,3 @@
 }
 
 
-#most-recente-back-layer {
-  position:relative;
-  z-index:1;
-}
-#most-recent-front-layer {
-  position:relative;
-  z-index:2;
-  margin-top: 244px;
-  zoom: 1;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-  height: 75px;
-  background-color: #333;
-}
-#most-recent-word-layer {
-  position:relative;
-  z-index:3;
-  background-color: red;
-}
