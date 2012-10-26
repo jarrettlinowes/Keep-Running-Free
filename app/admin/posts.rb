@@ -27,6 +27,7 @@ ActiveAdmin.register Post do
 		f.inputs do
       f.input :published_on
   		f.input :title
+      f.input :title_picture_id
   		f.input :intro, :input_html => {:class => "ckeditor"}
   		f.input :body, :input_html => {:class => "ckeditor"}
   		f.input :author
@@ -41,6 +42,7 @@ ActiveAdmin.register Post do
     attributes_table do
       row :id
       row :title
+      row :title_picture_id
       row :intro
       row :body
       row :status

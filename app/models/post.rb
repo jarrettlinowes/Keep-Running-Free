@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	attr_accessible :title, :intro, :body, :status, :author_id, :category, :published_on, :views
+	attr_accessible :title, :title_picture_id, :intro, :body, :status, :author_id, :category, :published_on, :views
 
 	validates :title, presence: true
 	validates :intro, presence: true
@@ -14,6 +14,8 @@ class Post < ActiveRecord::Base
   
   acts_as_taggable_on :tags, :groups
   attr_accessible :tag_list, :group_list
+
+  belongs_to :title_picture, class_name: 'Ckeditor::Picture'
 
   def self.tag_list_for_display_on(name)
     Post.tag_counts_on(name).map {|tag| "#{tag.name}(#{tag.count})"}.join(', ')

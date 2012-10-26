@@ -17,7 +17,11 @@
 - @posts[1..-1].each do |post|
   %div.post_list.span9
     %div.post_list_thumb_border.span2
-      %div.post_list_thumb= image_tag("filler_thumb.jpg")
+      %div.post_list_thumb
+        - if post.title_picture
+          = image_tag post.title_picture.data(:list)
+        - else
+          = image_tag "filler_thumb.jpg"
     %div.post_list_text.span6
       %p.post_list_post_title
         =link_to post.title, post
