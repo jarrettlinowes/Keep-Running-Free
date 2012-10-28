@@ -6,25 +6,37 @@
       %li= link_to "KRF", '#whatsnew', 'data-toggle' => 'tab'
     #side_tabContent.tab-content
       #recent.tab-pane.active
-        %ul
-          - Post.order("published_on DESC").limit(3).each do |post|
-            %li= link_to post.title, post
+        - Post.order("published_on DESC").limit(4).each do |post|
+          %div#recent_popular
+            - if post.title_picture
+              = link_to post do
+                = image_tag post.title_picture.data(:thumb)
+            - else
+              = link_to post do
+                = image_tag ("filler_thumb.jpg")
+            = link_to post.title, post
+
       #popular.tab-pane
         - @most_popular = Post.published.order("views DESC").limit(3)
         - @most_popular.each do |post|
-          %div
-            [IMAGE](#{post.views})
+          %div#recent_popular
+            - if post.title_picture
+              = link_to post do
+                = image_tag post.title_picture.data(:thumb)
+            - else
+              = link_to post do
+                = image_tag ("filler_thumb.jpg")
             = link_to post.title, post
 
       #whatsnew.tab-pane
         #whatsnew_part.row
-          %h4=link_to "KRF Store", "/store"
-          %p{style:"font-size: 10px"} Take a look at a variety of KRF products at the KRF Store!
+          %h4=link_to "About Us", "/about"
+          %p{style:"font-size: 10px"} Take a look at who writes for Keep Running Free and find out what is offered on the site!
         #whatsnew_part.row
           %h4=link_to "Facebook", ""
           %p{style:"font-size: 10px"} Like Keep Running Free on Facebook to recieve updates and other exclusive information!
         #whatsnew_part.row
           %h4=link_to "Twitter", ""
           %p{style:"font-size: 10px"} Follow our Twitter feed for site updates and more!
-  #side_ad.row{style:"border-top: 1px solid #ddd; width: 220px; height: 200px"}
-    / = render '/layouts/ad_200x200'
+  #side_ad.row
+    = render '/layouts/ad_200x200'
