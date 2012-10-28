@@ -7,7 +7,11 @@
   #carousel.carousel.slide.span9
     .carousel-inner
       .active.item
-        = link_to (image_tag("nike.jpg", size: "700x319")), '/posts/4'
+        =link_to post
+        - if post.title_picture
+          = image_tage post.title_picture.data(:feature)
+        - else
+          = image_tag "main_filler_pic"
         .carousel-caption
           %h4
             =link_to post.title, post
