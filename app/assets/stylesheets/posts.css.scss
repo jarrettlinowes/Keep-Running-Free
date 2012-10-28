@@ -69,6 +69,16 @@ nav.pagination span.page.current {
 }
 .related {
   padding-left: 10px;
+  text-align: center;
+}
+.related_title {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #333;
+}
+.related_intro {
+  text-align: left;
+  margin: 0 5px;
 }
 #post_author_bottom {
   border: 1px solid #ccc;

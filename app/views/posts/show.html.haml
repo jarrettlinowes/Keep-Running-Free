@@ -13,12 +13,21 @@
   %h4{style:"color: #600; margin: 10px"}= @post.author.name
   #author_about
     = @post.author.about
-  - if @post.related_posts.present?
-    #post_related.span9
-      %h4{style:"margin-bottom: 5px; margin-left: 10px; margin-top: 10px"} Related Posts
-      - @post.related_posts.each do |rpost|
-        .related.span3
-          =link_to rpost.title, rpost
+- if @post.related_posts.present?
+  #post_related.span9
+    %h4{style:"margin-bottom: 5px; margin-left: 10px; margin-top: 10px"} Related Posts
+    - @post.related_posts.each do |rpost|
+      .related.span3
+        - if rpost.title_picture
+          = link_to rpost do
+            = image_tag rpost.title_picture.data(:list)
+        - else
+          = link_to rpost do
+            = image_tag "filler_list.jpg"
+        %div.related_title
+          = link_to rpost.title, rpost
+        %div.related_intro
+          =raw truncate(rpost.intro, :length => 100)
 %br
 - if current_user
   = link_to 'Edit', edit_admin_post_path(@post)
