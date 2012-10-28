@@ -10,18 +10,15 @@
  *
  *= require_self
  *= depend_on "bootstrap_and_overrides.css.scss"
- */
- @import "bootstrap_and_overrides.css.scss";
- @import "bourbon";
-
- /*= depend_on "layout.css.scss" */
- @import "layout.css.scss";
-
- /*= depend_on "home.css.scss" */
- @import "home.css.scss";
-
- /*= depend_on "posts.css.scss" */
- @import "posts.css.scss";
+ *= depend_on "layout.css.scss"
+ *= depend_on "home.css.scss"
+ *= depend_on "posts.css.scss"
+*/
+@import "bootstrap_and_overrides.css.scss";
+@import "bourbon";
+@import "layout.css.scss";
+@import "home.css.scss";
+@import "posts.css.scss";
 
 .cke_skin_kama .cke_editor {
   width: 80% !important;

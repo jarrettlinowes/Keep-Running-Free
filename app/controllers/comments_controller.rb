@@ -1,12 +1,14 @@
 class CommentsController < ApplicationController
   before_filter :authorize, only: [:edit, :update, :delete]
 
-  #expose(:post)
-  expose(:comments, ancestor: :post) { debugger; post.comments }
+  expose(:post)
+  expose(:comments, ancestor: :post)
   expose(:comment)
 
   def create
-    flash[:notice] = "Error creating comment." unless comment.save
+    unless comment.save
+      flash[:notice] = "Error creating comment." 
+    end
     redirect_to post
   end
 end
