@@ -13,10 +13,10 @@
         - else
           = link_to post do 
             = image_tag ("filler_feature.jpg")
-        .carousel-caption
+        .carousel-caption{style:"line-height: 18px; font-size: 11px; color: white;"}
           %h4
             =link_to post.title, post
-          %p{style:"color: white; font-size: 11px"}
+          %p#post_intro_c
             =raw post.intro
     
 - @posts[1..-1].each do |post|
