@@ -7,11 +7,12 @@
   #carousel.carousel.slide.span9
     .carousel-inner
       .active.item
-        =link_to post
         - if post.title_picture
-          = image_tage post.title_picture.data(:feature)
+          = link_to post do 
+            = image_tag post.title_picture.data(:feature)
         - else
-          = image_tag "main_filler_pic"
+          = link_to post do 
+            = image_tag ("main_filler_pic.jpg")
         .carousel-caption
           %h4
             =link_to post.title, post
@@ -23,9 +24,11 @@
     %div.post_list_thumb_border.span2
       %div.post_list_thumb
         - if post.title_picture
-          = image_tag post.title_picture.data(:list)
+          = link_to post do
+            = image_tag post.title_picture.data(:list)
         - else
-          = image_tag "filler_thumb.jpg"
+          = link_to post do
+            = image_tag "filler_thumb.jpg"
     %div.post_list_text.span6
       %p.post_list_post_title
         =link_to post.title, post
