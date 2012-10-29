@@ -10,6 +10,8 @@ KRF::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
+  # SET TO TRUE WHEN RUNNING production MODE LOCALLY
+  #config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
