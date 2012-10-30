@@ -76,8 +76,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-h4, h5, h6 {
-  line-height: 18px;
+h2 {
+  font-size: 24px;
+  line-height: 36px;
 }
 h3 {
   font-size: 18px;
@@ -86,6 +87,12 @@ h3 {
 h4 {
   font-size: 14px;
 }
+h5 {
+  font-size: 12px;
+}
 h6 {
   font-size: 11px; 
+}
+h4, h5, h6 {
+  line-height: 18px;
 }
