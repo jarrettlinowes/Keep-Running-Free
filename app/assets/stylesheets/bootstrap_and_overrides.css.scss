@@ -16,10 +16,6 @@ a:hover {
   text-decoration: none;
 }
 
-.navbar-inner {
-  @include border-radius(0);
-}
-
 .container-fluid {
   padding: 0;
 }
@@ -73,4 +69,23 @@ body {
   margin: 0;
   font-color: #333333;
   background-color: white;
+  line-height: 18px;
+}
+
+// adjustments to behave like older bootstrap (probably just calculated from different base variables?)
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+h4, h5, h6 {
+  line-height: 18px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 27px;
+}
+h4 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 11px; 
 }
