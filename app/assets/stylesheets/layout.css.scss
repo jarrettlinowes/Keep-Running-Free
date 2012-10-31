@@ -20,6 +20,15 @@
   }
 }
 
+.navbar-inner {
+  @include border-radius(0);
+  @include linear-gradient(#333, #222);
+}
+
+.navbar .nav > li > a {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
 // ===== general content area =====
 #content {
   min-height: 800px;
