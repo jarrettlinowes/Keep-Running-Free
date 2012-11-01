@@ -79,6 +79,8 @@ nav.pagination span.page.current {
 .related_intro {
   text-align: left;
   margin: 0 5px;
+  width: 150px;
+  padding-left: 35px;
 }
 #post_author_bottom {
   border: 1px solid #ccc;
@@ -113,4 +115,16 @@ nav.pagination span.page.current {
 }
 .comment_body {
   margin: 0 0 5px 0;
+}
+
+// ===== Social Bar =====
+
+.social_bar {
+  position: relative;
+  top: 150px;
+  left: 2px;
+  height: 120px;
+  width: 90px;
+  border-right: 1px solid #ccc;
+  margin-left: 10px;
 }

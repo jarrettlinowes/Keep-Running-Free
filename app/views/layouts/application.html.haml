@@ -16,6 +16,13 @@
       });
     
     = yield(:head)
+    = render 'layouts/s_facebook'
+    = render 'layouts/s_twitter'
+    = render 'layouts/s_stumble'
+    = render 'layouts/s_google'
+  %div  
+    - if @post
+      = render 'layouts/social'
   %body{ :id => yield(:body_id)}
     #container.container-fluid
       .row-fluid{style:"margin-left: 0"}
