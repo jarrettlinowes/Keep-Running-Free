@@ -1,8 +1,6 @@
 %h3#post_list_section_title
   = @current_section.titleize
 %br
-/ <<<<<<< HEAD
-
 - @posts[0..0].each do |post|
   #carousel.carousel.slide.span9
     .carousel-inner
@@ -42,26 +40,3 @@
 .span9
   %div
     = paginate @posts
-/ =======
-/ %div#most_recent_section_post
-/   =image_tag("main_filler_pic.jpg")
-/ - @posts.each do |post|
-/   %div.post_list.span9
-/     %div.post_list_thumb_border.span2
-/       %div.post_list_thumb= image_tag("filler_thumb.jpg")
-/     %div.post_list_text.span6
-/       %p.post_list_post_title
-/         =link_to post.title, post
-/       %p.post_list_post_author
-/         Written by
-/         = post.author.name
-/         | Published on
-/         = post.published_on.strftime("%B %d, %Y")
-/       %p.post_intro_one
-/         =raw post.intro
-/ %ul
-/   %li= post.title
-/   %li= post.author.name
-/ =raw post.intro
-/= paginate @posts
-/ >>>>>>> 1dcf275658e125fba0c1ff24f63fb9ed63ed0ed9
