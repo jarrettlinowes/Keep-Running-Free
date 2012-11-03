@@ -25,15 +25,14 @@
           = link_to rpost do
             = image_tag "filler_list.jpg"
         %div.related_title
-          = link_to rpost.title, rpost
+          = link_to truncate(rpost.title, :length => 25), rpost
         %div.related_intro
           =raw truncate(rpost.intro, :length => 100)
 %br
 - if current_user
   = link_to 'Edit', edit_admin_post_path(@post)
 
-#comments
-  %h2 Comments
-  = render @post.comments
-  = render "comments/new"
-
+/ #comments
+/   %h2 Comments
+/   = render @post.comments
+/   = render "comments/new"

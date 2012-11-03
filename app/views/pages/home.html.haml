@@ -2,19 +2,19 @@
   #carousel.carousel.slide.span9
     .carousel-inner
       .active.item
-        = link_to image_tag("nike.jpg"), '/posts/4'
-        .carousel-caption
+        = link_to (image_tag("nike.jpg", size: "700x319")), '/posts/4'
+        .carousel-caption{style:"line-height: 18px;"}
           %h4=link_to "Review: Nike+ Fuelband", "/posts/4"
           %p{style:"color: white; font-size: 11px"} The Nike + Fuelband allows you to live life as a sport as you recieve "fuelpoints" for the activity that you do throughout the day. Run, walk, play ball, and live life as you keep track of your activity in a new and innovative way!
       .item
-        = link_to image_tag("reviews_promo.jpg"), '/posts?category=reviews'
-        .carousel-caption
+        = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/posts?category=reviews'
+        .carousel-caption{style:"line-height: 18px;"}
           %h4=link_to "Product Reviews", "/posts?category=reviews"
           %p{style:"color: white; font-size: 11px"} Read reviews for all different types of athletic and running shoes, running watches, and other running accessories!
       / .item store
       .item
-        = link_to image_tag("newsletter_promo.jpg"), '/why_opt_in'
-        .carousel-caption
+        = link_to (image_tag("newsletter_promo.jpg")), '/why_opt_in'
+        .carousel-caption{style:"line-height: 18px;"}
           %h4=link_to "Join Our Mailing List", ""
           %ul{style:"color: white; font-size: 11px"}
             %li Email updates about changes and updates to Keep Running Free
