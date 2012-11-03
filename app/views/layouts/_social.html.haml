@@ -1,11 +1,10 @@
 %div{"data-offset-top" => "0", "data-spy" => "affix"}
-  - if @post
-    %div.social_bar.center
-      #fb-root
-      .fb-like{"data-font" => "arial", "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "false", "data-width" => "450"}
-      %p
-      %a.twitter-share-button{"data-lang" => "en", "data-via" => "twitterapi", :href => "https://twitter.com/share"} Tweet
-      %p
-      %div.g-plusone{"data-size" => "medium"}
-      %p
-      %su:badge{:layout => "1"}
+  .social_bar.center
+    #fb-root
+    .fb-like{"data-font" => "arial", "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "false", "data-width" => "450"}
+    %p
+    %a.twitter-share-button{"data-lang" => "en", "data-via" => "twitterapi", :href => "https://twitter.com/share"} Tweet
+    %p
+    %div.g-plusone{"data-size" => "medium"}
+    %p
+    %su:badge{:layout => "1"}

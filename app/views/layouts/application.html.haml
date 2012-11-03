@@ -35,4 +35,5 @@
       -#.row{style:"margin-left: 0"}
       -#  = render 'layouts/footer'
     =render 'layouts/footer'
-    =render 'layouts/social_js'
+    - if @post
+      =render 'layouts/social_js'
