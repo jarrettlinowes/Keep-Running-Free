@@ -2,18 +2,16 @@
   #carousel.carousel.slide.span9
     .carousel-inner
       .active.item
-        / - @recent_featured = Post.p_featured.order("published_on DESC").limit(1)
-        / - @recent_featured.each do |fpost|
-        /   - if fpost.title_picture
-        /     = link_to fpost do
-        /       = image_tag fpost.title_picture.data(:featured)
-        /   - else
-        /     = link_to fpost do
-        /       = image_tag ("filler_feature.jpg")
-        /   .carousel-caption{style:"line-height: 18px;"}
-        /     %h4=link_to fpost.title, fpost
-        /     =raw fpost.intro
-        hello
+        - if fpost = Post.p_featured.recent.first
+          - if fpost.title_picture
+            = link_to fpost do
+              = image_tag fpost.title_picture.data(:feature)
+          - else
+            = link_to fpost do
+              = image_tag ("filler_feature.jpg")
+          .carousel-caption{style:"line-height: 18px;"}
+            %h4=link_to fpost.title, fpost
+            =raw fpost.intro
       .item
         = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/posts?category=reviews'
         .carousel-caption{style:"line-height: 18px;"}

@@ -9,6 +9,8 @@ class Post < ActiveRecord::Base
   has_many :comments
 
 	scope :published, where{{ status.in => ['published', 'p_featured'] }}
+  scope :p_featured, where( status: 'p_featured' )
+  scope :recent, order("published_on DESC")
 	
 	paginates_per 8
   

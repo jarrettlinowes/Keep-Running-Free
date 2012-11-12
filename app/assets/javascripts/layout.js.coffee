@@ -8,12 +8,11 @@ $ ->
 
   $(".collapse").collapse()
 
-$ ->
-  if ($(window).width() < 400)
-    $("#social_bar").hide();
+  if ($(window).width() < 1162)
+    $(".social_bar").hide();
 
-$(window).resize ->
-  if ($(window).width < 400)
-    $("#social_bar").hide();
-  else
-    $("#social_bar").show();
+  $(window).resize ->
+    if ($(window).width() < 1162)
+      $(".social_bar").hide();
+    else
+      $(".social_bar").show();
