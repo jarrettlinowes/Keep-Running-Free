@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 	belongs_to :author
   has_many :comments
 
-	scope :published, where{{ status.in => ['published', 'p-featured'] }}
+	scope :published, where{{ status.in => ['published', 'p_featured'] }}
 	
 	paginates_per 8
   
@@ -22,7 +22,7 @@ class Post < ActiveRecord::Base
   end
 
   def is_published?
-    ['published', 'p-featured'].include? status
+    ['published', 'p_featured'].include? status
   end
 
   def tags_count

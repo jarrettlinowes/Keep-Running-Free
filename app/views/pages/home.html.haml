@@ -2,10 +2,18 @@
   #carousel.carousel.slide.span9
     .carousel-inner
       .active.item
-        = link_to (image_tag("nike.jpg", size: "700x319")), '/posts/4'
-        .carousel-caption{style:"line-height: 18px;"}
-          %h4=link_to "Review: Nike+ Fuelband", "/posts/4"
-          %p{style:"color: white; font-size: 11px"} The Nike + Fuelband allows you to live life as a sport as you recieve "fuelpoints" for the activity that you do throughout the day. Run, walk, play ball, and live life as you keep track of your activity in a new and innovative way!
+        / - @recent_featured = Post.p_featured.order("published_on DESC").limit(1)
+        / - @recent_featured.each do |fpost|
+        /   - if fpost.title_picture
+        /     = link_to fpost do
+        /       = image_tag fpost.title_picture.data(:featured)
+        /   - else
+        /     = link_to fpost do
+        /       = image_tag ("filler_feature.jpg")
+        /   .carousel-caption{style:"line-height: 18px;"}
+        /     %h4=link_to fpost.title, fpost
+        /     =raw fpost.intro
+        hello
       .item
         = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/posts?category=reviews'
         .carousel-caption{style:"line-height: 18px;"}
