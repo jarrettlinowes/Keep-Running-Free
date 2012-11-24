@@ -5,24 +5,27 @@
     height: 57px;
   }
   li {
-    border-top: 3px #333 solid;
+    border-top: 3px #000 solid;
   }
   li:hover{
-    border-top-color: #000;
+    border-top-color: #ddd;
   }
   min-width: 960px;
 }
 
 #nav_button.active {
-  border-top-color: #000;
+  border-top-color: #ddd;
   a {
-    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
+    @include linear-gradient(#111, #000);
   }
+//  a {
+//    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
+//  }
 }
 
 .navbar-inner {
   @include border-radius(0);
-  @include linear-gradient(#333, #222);
+  @include linear-gradient(#000, #111);
 }
 
 .navbar .nav > li > a {
