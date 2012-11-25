@@ -18,7 +18,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.published.find(params[:id])
     @post.increment!(:views) unless current_user
-
+    @current_section = @post.category
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }

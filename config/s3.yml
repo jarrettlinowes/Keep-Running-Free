@@ -1,3 +1,5 @@
 bucket: krf-dev
 access_key_id: AKIAIO3T5UNLGO4JYCBQ
 secret_access_key: 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
+
+# NOTE: Change bucket for production by editing file config/initializers/paperclip.rb
