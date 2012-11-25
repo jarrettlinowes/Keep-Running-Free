@@ -5,7 +5,7 @@
     height: 57px;
   }
   li {
-    border-top: 3px #000 solid;
+    border-top: 2px #000 solid;
   }
   li:hover{
     border-top-color: #ddd;
@@ -16,7 +16,7 @@
 #nav_button.active {
   border-top-color: #ddd;
   a {
-    @include linear-gradient(#111, #000);
+    @include linear-gradient(#000, #000);
   }
 //  a {
 //    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
@@ -92,7 +92,7 @@
 // ====== footer ======
 #site_footer {
   padding: 10px 0;
-  @include linear-gradient(#333, #222);
+  @include linear-gradient(#000, #111);
   height: 300px;
   border-top: 5px solid #ccc;
   font-size: 90%;

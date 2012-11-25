@@ -1,42 +1,45 @@
 %h3#post_list_section_title
   = @current_section.titleize
 %br
-- @posts[0..0].each do |post|
-  #carousel.carousel.slide.span9
-    .carousel-inner
-      .active.item
-        - if post.title_picture
-          = link_to post do 
-            = image_tag post.title_picture.data(:feature)
-        - else
-          = link_to post do 
-            = image_tag ("filler_feature.jpg")
-        .carousel-caption{style:"line-height: 18px; font-size: 11px; color: white;"}
-          %h4
-            =link_to post.title, post
-          %p#post_intro_c
-            =raw post.intro
-    
-- @posts[1..-1].each do |post|
-  %div.post_list.span9
-    %div.post_list_thumb_border.span2
-      %div.post_list_thumb
-        - if post.title_picture
-          = link_to post do
-            = image_tag post.title_picture.data(:list)
-        - else
-          = link_to post do
-            = image_tag "filler_list.jpg"
-    %div.post_list_text.span6
-      %p.post_list_post_title
-        =link_to post.title, post
-      %p.post_list_post_author
-        Written by
-        = post.author.name
-        | Published on
-        = post.published_on.strftime("%B %d, %Y")
-      %p.post_intro_one
-        =raw post.intro
-.span9
-  %div
-    = paginate @posts
+- if @posts
+  %p sorry
+- else
+  - @posts[0..0].each do |post|
+    #carousel.carousel.slide.span9
+      .carousel-inner
+        .active.item
+          - if post.title_picture
+            = link_to post do 
+              = image_tag post.title_picture.data(:feature)
+          - else
+            = link_to post do 
+              = image_tag ("filler_feature.jpg")
+          .carousel-caption{style:"line-height: 18px; font-size: 11px; color: white;"}
+            %h4
+              =link_to post.title, post
+            %p#post_intro_c
+              =raw post.intro
+      
+  - @posts[1..-1].each do |post|
+    %div.post_list.span9
+      %div.post_list_thumb_border.span2
+        %div.post_list_thumb
+          - if post.title_picture
+            = link_to post do
+              = image_tag post.title_picture.data(:list)
+          - else
+            = link_to post do
+              = image_tag "filler_list.jpg"
+      %div.post_list_text.span6
+        %p.post_list_post_title
+          =link_to post.title, post
+        %p.post_list_post_author
+          Written by
+          = post.author.name
+          | Published on
+          = post.published_on.strftime("%B %d, %Y")
+        %p.post_intro_one
+          =raw post.intro
+  .span9
+    %div
+      = paginate @posts
