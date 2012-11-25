@@ -1,4 +1,10 @@
-bucket: krf-dev
-access_key_id: AKIAIO3T5UNLGO4JYCBQ
-secret_access_key: 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
+development:
+	bucket: krf-dev
+	access_key_id: AKIAIO3T5UNLGO4JYCBQ
+	secret_access_key: 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
 
+production:
+	bucket: krf-dev
+	access_key_id: AKIAIO3T5UNLGO4JYCBQ
+	secret_access_key: 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
+	#bucket: krf-pro
