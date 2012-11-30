@@ -62,3 +62,14 @@ Right Side panel
 
 -----------------
 Can't delete an author if there are posts associated with it.
+
+
+================
+To run in production mode locally, 
+  edit config/environments/production.rb
+      # SET TO TRUE WHEN RUNNING production MODE LOCALLY
+      #config.serve_static_assets = true
+      
+  and make sure database.yml and s3.yml points to development db and buckets 
+    
+

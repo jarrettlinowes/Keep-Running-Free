@@ -1,7 +1,10 @@
 %h3#post_list_section_title
   = @current_section.titleize
 %br
-- @posts[0..0].each do |post|
+- if @posts.empty?
+  %p You're too early! Please check back soon for new articles to be posted.
+- else
+  - post = @posts.first
   #carousel.carousel.slide.span9
     .carousel-inner
       .active.item
@@ -17,26 +20,26 @@
           %p#post_intro_c
             =raw post.intro
     
-- @posts[1..-1].each do |post|
-  %div.post_list.span9
-    %div.post_list_thumb_border.span2
-      %div.post_list_thumb
-        - if post.title_picture
-          = link_to post do
-            = image_tag post.title_picture.data(:list)
-        - else
-          = link_to post do
-            = image_tag "filler_list.jpg"
-    %div.post_list_text.span6
-      %p.post_list_post_title
-        =link_to post.title, post
-      %p.post_list_post_author
-        Written by
-        = post.author.name
-        | Published on
-        = post.published_on.strftime("%B %d, %Y")
-      %p.post_intro_one
-        =raw post.intro
-.span9
-  %div
-    = paginate @posts
+  - @posts[1..-1].each do |post|
+    %div.post_list.span9
+      %div.post_list_thumb_border.span2
+        %div.post_list_thumb
+          - if post.title_picture
+            = link_to post do
+              = image_tag post.title_picture.data(:list)
+          - else
+            = link_to post do
+              = image_tag "filler_list.jpg"
+      %div.post_list_text.span6
+        %p.post_list_post_title
+          =link_to post.title, post
+        %p.post_list_post_author
+          Written by
+          = post.author.name
+          | Published on
+          = post.published_on.strftime("%B %d, %Y")
+        %p.post_intro_one
+          =raw post.intro
+  .span9
+    %div
+      = paginate @posts
