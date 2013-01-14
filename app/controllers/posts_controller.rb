@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @current_section = params[:category] || ''
     @posts = Post.published.where(category: @current_section).page params[:page]
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }

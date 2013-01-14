@@ -1,7 +1,0 @@
-#blog_navbar
-  .navbar-inner
-    .container
-      %ul.nav.pull-left
-        %li= link_to 'Who Are We?', '/about'
-        %li= link_to 'KRF Store', ''
-  

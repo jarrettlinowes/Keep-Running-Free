@@ -5,28 +5,28 @@
         About the Site
     #about_one.accordion-body.collapse
       .accordion-inner
-        %p{style:"font-size: 12px; font-style: italic"} Welcome to Keep Running Free – Learn about running, find useful nutritional tips, and read through lists of product reviews that may be of interest.
-        %p{style:"font-size: 11px"} Keep Running Free is a website that offers running tips, nutrition tips, reviews, and entertainment all in one place. Delve into a variety of articles and reviews and feel free to comment! We are constantly working to bring fresh content and provide links to information and products that you may find interesting.
-        %p{style:"font-size: 11px; font-weight: bold"} Enjoy the articles! Find the most recent and most popular posts on the sidebar tabs.
+        %p.about1_style1 Welcome to Keep Running Free – Learn about running, find useful nutritional tips, and read through lists of product reviews that may be of interest.
+        %p.about_11px Keep Running Free is a website that offers running tips, nutrition tips, reviews, and entertainment all in one place. Delve into a variety of articles and reviews and feel free to comment! We are constantly working to bring fresh content and provide links to information and products that you may find interesting.
+        %p.about1_bold Enjoy the articles! Find the most recent and most popular posts on the sidebar tabs.
         .span3
-          %p{style:"font-size: 11px"} Like our Facebook page
+          %p.about_11px Like our Facebook page
           %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fkeeprunningfree&send=false&layout=button_count&width=50&show_faces=false&action=like&colorscheme=light&font&height=21", :style => "border:none; overflow:hidden; width:45px; height:21px;padding-left: 38px"}
         .span3offset3
-          %p{style:"font-size: 11px"} Follow Us on Twitter
-          %em{style:"padding-left: 28px"}=render 'layouts/twitter'
+          %p.about_11px Follow Us on Twitter
+          %em.about1_twitter=render 'layouts/twitter'
   .accordion-group
     .accordion-heading
       %a.accordion-toggle{"data-parent" => "#about", "data-toggle" => "collapse", :href => "#about_two"}
         What's on Keep Running Free?
     #about_two.accordion-body.collapse.in
       .accordion-inner
-        %p{style:"font-size: 11px; font-weight: bold"} Running and Nutrition
-        %p{style:"font-size: 11px"} #{link_to 'Running', ''} articles on Keep Running Free range in topics from barefoot running to racing in a 5k race. With consistent updates, there is always something new to learn in the running area of the website. 
+        %p.about_bold Running and Nutrition
+        %p.about_11px #{link_to 'Running', ''} articles on Keep Running Free range in topics from barefoot running to racing in a 5k race. With consistent updates, there is always something new to learn in the running area of the website. 
         / %p{style:"font-size: 11px"} #{link_to 'Nutrition', ''} articles on Keep Running Free are written by students and professionals in the field and offer advice to athletes who are struggling with or who would like to enhance their body and workouts with proper nutrition and supplements. Throughout the Nutrition articles, supplement recommendations will be offered and reviewed by athletes currently using them.
         %hr
-        %p{style:"font-size: 11px; font-weight: bold"} Reviews and Entertainment
-        %p{style:"font-size: 11px"}Keep Running Free #{link_to 'Reviews', ''} are written to give you a more comfortable idea about what you are looking into purchasing. Each product review is reviewed by someone who has used and tested the shoe or running accessory for a couple of weeks, allowing them to develop a complete opinion on the product along with a detailed description.
-        %p{style:"font-size: 11px"}The #{link_to 'Entertainment', '/entertainment'} area of Keep Running Free offers insight and recommendations on books, movies, and music that are related to the sport of running or will motivate you during a run or get you to go for a run.
+        %p.about_bold Reviews and Entertainment
+        %p.about_11px Keep Running Free #{link_to 'Reviews', ''} are written to give you a more comfortable idea about what you are looking into purchasing. Each product review is reviewed by someone who has used and tested the shoe or running accessory for a couple of weeks, allowing them to develop a complete opinion on the product along with a detailed description.
+        %p.about_11px The #{link_to 'Entertainment', '/entertainment'} area of Keep Running Free offers insight and recommendations on books, movies, and music that are related to the sport of running or will motivate you during a run or get you to go for a run.
         / %hr
         / %p{style:"font-size: 11px; font-weight: bold"} The KRF Store
         / %p{style:"font-size: 11px"} The #{link_to 'Keep Running Free Store', '/store'} will offer athletic clothing and accessories with the Keep Running Free logo and name printed on. You will be able to browse through water bottles, t-shirts, hats, and more, and browse with the freedom of personal customization. Currently the KRF Store is not available until further notice.
@@ -37,6 +37,6 @@
     #about_three.accordion-body.collapse.in
       .accordion-inner
         - @authors.each do |author|
-          %h4{style:"color: #600; margin: 10px"}= author.name
+          %h4.about_author= author.name
           #author_about
             = author.about

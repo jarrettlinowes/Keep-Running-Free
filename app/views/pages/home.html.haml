@@ -9,20 +9,20 @@
           - else
             = link_to fpost do
               = image_tag ("filler_feature.jpg")
-          .carousel-caption{style:"line-height: 18px;"}
+          .carousel-caption.carousel_caption
             %h4=link_to fpost.title, fpost
             =raw fpost.intro
       .item
         = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/posts?category=reviews'
-        .carousel-caption{style:"line-height: 18px;"}
+        .carousel-caption.carousel_caption
           %h4=link_to "Product Reviews", "/posts?category=reviews"
-          %p{style:"color: white; font-size: 11px"} Read reviews for all different types of athletic and running shoes, running watches, and other running accessories!
+          %p.carousel_p Read reviews for all different types of athletic and running shoes, running watches, and other running accessories!
       / .item store
       .item
         = link_to (image_tag("newsletter_promo.jpg")), '/why_opt_in'
-        .carousel-caption{style:"line-height: 18px;"}
+        .carousel-caption.carousel_caption
           %h4=link_to "Join Our Mailing List", ""
-          %ul{style:"color: white; font-size: 11px"}
+          %ul.carousel_p
             %li Email updates about changes and updates to Keep Running Free
             %li Inspirational running information and quotes
             %li Exclusive information and links to interesting running articles and products

@@ -44,8 +44,15 @@
   height: 475px;
   background-color: #f0f0f0;
 }
+#side_tab_nav {
+  width: 220px;
+  height: 275px;
+}
 #side_mail {
   background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+  width: 220px;
+  height: 200px;
 }
 #side_mail_banner {
   background-color: #600;
@@ -72,9 +79,15 @@
   margin: 4px 0 0 -4px;
   height: 29px;
 }
+#side_mail_link {
+  color: #600;
+}
 #whatsnew_part {
   width: 200px;
   padding: 0 8px;
+}
+#whatsnew_font {
+  font-size: 10px;
 }
 #side_ad {
   width: 220px;
@@ -98,6 +111,9 @@
   font-size: 90%;
   width: 100%;
   min-width: 960px; // fixed shortened background
+}
+#footer_links {
+  text-align: center;
 }
 #link_footer1 {
   padding-top: 5px;
@@ -131,6 +147,9 @@
   border-radius: 5px;
   width: 220px;
 }
+#center_footer_link_text {
+  padding-top: 5px;
+}
 #link_margin_footer {
   margin-left: 26px;
 }
@@ -146,6 +165,11 @@
   background: url(ribbon_footer_darkred.png) no-repeat;
   height: 50px;
 }
+#mailing_footer_text {
+  color: #fff;
+  padding-top: 10px;
+  margin-left: 70px;
+}
 #mailchimp_footer {
   margin-left: 100px;
 }
@@ -157,4 +181,8 @@
   margin-top: 10px;
   height: 20px;
   padding-top: 2px;
+}
+
+#copyright {
+  color: #fff;
 }

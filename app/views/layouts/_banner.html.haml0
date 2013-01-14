@@ -1,2 +1,0 @@
-#banner
-  = image_tag("header_banner.jpg")

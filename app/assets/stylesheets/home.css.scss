@@ -5,15 +5,14 @@
     width: 700px;
   }
 }
-#recent_posts {
+.carousel_caption {
+  line-height: 18px;
+}
+.carousel_p {
+  color: white;
+  font-size: 11px;
 }
 
-#about {
-}
-
-#entertainment {
-  
-}
 #entertainment_books {
   height: 700px;
   background-color: #ccc;
@@ -23,7 +22,6 @@
   margin-left: 80px;
   background-color: #ccc;
 }
-
 
 #whyopt_header {
   color: #600;
