@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   scope :p_featured, where( status: 'p_featured' )
   scope :recent, order("published_on DESC")
 	
-	paginates_per 8
+	paginates_per 9
   
   acts_as_taggable_on :tags, :groups
   attr_accessible :tag_list, :group_list

@@ -16,9 +16,17 @@
   border-bottom: 1px #aaa solid;
   margin-top: 15px;
 }
+
+.gear_post_list {
+  width: 200px;
+  height: 200px;
+  margin-right: 33px;
+  margin-bottom: 33px;
+}
+
 .post_list_thumb_border {
   border: 1px #000 solid;
-  margin-top: 2px;
+  margin: 10px 0px 10px 29px;
 }
 .post_list_thumb {
   margin: 3px;
@@ -27,9 +35,18 @@
   margin-left: 30px;
   width: 528px;
 }
+.gear_post_list_text {
+  width: 200px;
+  text-align: center;
+}
 .post_list_post_title a {
   color: #600;
   font-size: 20px;
+}
+.post_list_gear_post_title a {
+  color: #600;
+  font-size: 16px;
+  text-align: center;
 }
 .post_list_post_author {
   color: #a2a2a2;

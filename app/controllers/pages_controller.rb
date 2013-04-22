@@ -13,6 +13,14 @@ class PagesController < ApplicationController
 		@current_section = 'running'
 	end
 
+	def running101
+		@current_section = 'running101'
+	end
+
+	def runninggear
+		@current_section = 'runninggear'
+	end
+
 	def nutrition
 		@current_section = 'nutrition'
 	end
