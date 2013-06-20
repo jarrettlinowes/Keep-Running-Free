@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @current_section = params[:category] || ''
-    @posts = Post.published.where(category: @current_section).page params[:page]
+    @posts = Post.published.where(category: @current_section).page(params[:page]).per(3)
     
     respond_to do |format|
       format.html # index.html.erb

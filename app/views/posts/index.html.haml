@@ -1,13 +1,26 @@
-%h3#post_list_section_title
-  = @current_section.titleize
-%br
-
+/ %h3#post_list_section_title
+/   = @current_section.titleize
 - if
   - @current_section == 'runninggear'
   - @most_recent = Post.published.where(category: @current_section).order("published_on DESC")
+  - @most_recent[0..0].each do |post|
+    #carousel.carousel.slide.span9
+      .carousel-inner
+        .active.item
+          - if post.title_picture
+            = link_to post do 
+              = image_tag post.title_picture.data(:feature)
+          - else
+            = link_to post do 
+              = image_tag ("filler_feature.jpg")
+          .carousel-caption{style:"line-height: 18px; font-size: 11px; color: white;"}
+            %h4
+              =link_to post.title, post
+            %p#post_intro_c
+              =raw post.intro
   - @most_recent[0..-1].each do |post|
     %div.gear_post_list.span3
-      %div.post_list_thumb_border.span2
+      %div.post_list_thumb_border2.span2
         %div.post_list_thumb
           - if post.title_picture
             = link_to post do
