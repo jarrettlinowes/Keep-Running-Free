@@ -19,6 +19,8 @@ class Post < ActiveRecord::Base
 
   belongs_to :title_picture, class_name: 'Ckeditor::Picture'
 
+  before_save :set_published_on
+
   def self.tag_list_for_display_on(name)
     Post.tag_counts_on(name).map {|tag| "#{tag.name}(#{tag.count})"}.join(', ')
   end
@@ -43,5 +45,11 @@ class Post < ActiveRecord::Base
     end
   end
 
+  # before_save
+  def set_published_on
+    if is_published? && published_on.nil?
+      self.published_on = Time.zone.now.to_date
+    end
+  end
 
 end

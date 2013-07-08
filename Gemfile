@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-
-gem 'rails', '3.2.8'
+ruby "1.9.3"
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'decent_exposure'
 gem 'squeel'
 gem 'kaminari'
+gem 'kaminari-bootstrap'
 gem 'jquery-rails'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
@@ -18,7 +19,6 @@ gem 'activeadmin'
 gem "ckeditor", "3.7.1"
 gem "paperclip"
 gem "aws-sdk"
-gem "kaminari"
 gem 'acts-as-taggable-on', '~> 2.3.1'
 
 # Gems used only for assets and not required
@@ -38,6 +38,9 @@ end
 
 group :test, :development do
   gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
   gem 'sqlite3'
 
   gem "rspec-rails"

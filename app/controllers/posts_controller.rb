@@ -5,7 +5,16 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @current_section = params[:category] || ''
-    @posts = Post.published.where(category: @current_section).page(params[:page]).per(3)
+
+    # for the carousel
+    @most_recent = Post.published.where(category: @current_section).recent.first
+
+    # bulid posts query, for current section
+    @posts = Post.published.where(category: @current_section).recent
+    # not including the first one 
+    @posts = @posts.where( "id != #{@most_recent.id}" ) if @most_recent and (@current_section == 'runninggear')
+    # paginate the posts
+    @posts = @posts.page(params[:page]).per(3)
     
     respond_to do |format|
       format.html # index.html.erb

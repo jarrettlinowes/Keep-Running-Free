@@ -1,0 +1,14 @@
+.gear_post_list.span3
+  .post_list_thumb_border2.span2
+    .post_list_thumb
+      = link_to post do
+        = image_tag( post.title_picture ? post.title_picture.data(:list) : "filler_list.jpg" )
+  .gear_post_list_text.span3
+    %p.post_list_gear_post_title
+      =link_to post.title, post
+    %p.post_list_post_author
+      Published on
+      = post.published_on.strftime("%B %d, %Y")
+    - if post.intro
+      %p#post_intro_c
+        =raw post.intro

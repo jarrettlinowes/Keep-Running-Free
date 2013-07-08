@@ -2,6 +2,7 @@ KRF::Application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
 
+  root :to => 'pages#home'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -19,7 +20,6 @@ KRF::Application.routes.draw do
   end
 
   match 'about' => 'pages#about'
-  root :to => 'pages#home'
   match 'store' => 'pages#store'
   # match 'running' => 'pages#running'
   # match 'reviews' => 'pages#reviews'
