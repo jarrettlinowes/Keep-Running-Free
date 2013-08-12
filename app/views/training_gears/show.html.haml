@@ -1,0 +1,12 @@
+- title @training_gear.title, false
+#post_title
+  - if @training_gear.title_picture
+    = image_tag @training_gear.title_picture.data(:feature)
+  %h2= @training_gear.title
+#post_author_top.span9
+  Published on
+  = @training_gear.published_on.strftime("%B %d, %Y")
+
+= link_to 'Edit', edit_training_gear_path(@training_gear)
+/ \|
+/ = link_to 'Back', training_gears_path

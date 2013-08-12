@@ -1,0 +1,42 @@
+#side_bar
+  #side_tab_nav.row
+    %ul#side_tab.nav.nav-tabs
+      %li= link_to 'Recent', '#recent', 'data-toggle' => 'tab'
+      %li= link_to 'Popular', '#popular', 'data-toggle' => 'tab'
+      %li= link_to "KRF", '#whatsnew', 'data-toggle' => 'tab'
+    #side_tabContent.tab-content
+      #recent.tab-pane.active
+        - @most_recent = Post.published.order("published_on DESC").limit(4)
+        - @most_recent.each do |post|
+          %div#recent_popular
+            - if post.title_picture
+              = link_to post do
+                = image_tag post.title_picture.data(:thumb)
+            - else
+              = link_to post do
+                = image_tag ("filler_thumb.jpg")
+            %div#recent_popular_title
+              = link_to truncate(post.title, :length => 25), post
+
+      #popular.tab-pane
+        - @most_popular = Post.published.order("views DESC").limit(4)
+        - @most_popular.each do |post|
+          %div#recent_popular
+            - if post.title_picture
+              = link_to post do
+                = image_tag post.title_picture.data(:thumb)
+            - else
+              = link_to post do
+                = image_tag ("filler_thumb.jpg")
+            #recent_popular_title
+              = link_to truncate(post.title, :length => 25), post
+      #whatsnew.tab-pane
+        #whatsnew_part.row
+          %h4=link_to "About Us", "/about"
+          %p#whatsnew_font Take a look at who writes for Keep Running Free!
+        #whatsnew_part.row
+          %h4=link_to "Facebook", "http://www.facebook.com/keeprunningfree"
+          %p#whatsnew_font Like Keep Running Free on Facebook to recieve updates and other exclusive information!
+        #whatsnew_part.row
+          %h4=link_to "Twitter", "http://www.twitter.com/keeprunningfree"
+          %p#whatsnew_font Follow our Twitter feed for site updates and more!

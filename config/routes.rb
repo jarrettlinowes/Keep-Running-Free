@@ -1,5 +1,8 @@
 KRF::Application.routes.draw do
 
+  resources :training_gears
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   root :to => 'pages#home'

@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422013058) do
+ActiveRecord::Schema.define(:version => 20130808194438) do
+
+  create_table "Training_Gear", :force => true do |t|
+    t.string   "title"
+    t.text     "details"
+    t.text     "description"
+    t.string   "status"
+    t.integer  "title_picture_id"
+    t.string   "category"
+    t.date     "published_on"
+    t.string   "gender"
+    t.text     "amazon"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false

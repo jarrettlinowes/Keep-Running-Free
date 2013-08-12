@@ -7,11 +7,11 @@
         %ul.nav
           %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
           %li#nav_button{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
-          %li#nav_button{class: @current_section=='running101' && 'active'}= link_to 'Running 101', '/posts/9'
-          %li#nav_button{class: @current_section=='runninggear' && 'active'}= link_to 'Running Gear', '/posts?category=runninggear'
-          / %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
+          %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+          %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
+          %li#nav_button{class: @current_section=='training_gear' && 'active'}= link_to 'Training Gear', '/training_gears'
           %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
-          %li#nav_button{class: @current_section=='entertainment' && 'active'}= link_to 'Entertainment', '/entertainment'
+          / %li#nav_button{class: @current_section=='entertainment' && 'active'}= link_to 'Entertainment', '/entertainment'
         / .input-append.pull-right{style:"padding-top: 8px"}
         /   %input.span2{:placeholder => "Search..."}
         /   %button.btn.add-on

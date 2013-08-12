@@ -1,7 +1,7 @@
 / %h3#post_list_section_title
 /   = @current_section.titleize
 - if
-  - @current_section == 'runninggear'
+  - @current_section == 'traininggear'
   - @most_recent = Post.published.where(category: @current_section).order("published_on DESC")
   - @most_recent[0..0].each do |post|
     #carousel.carousel.slide.span9
@@ -82,7 +82,7 @@
 / - if @posts.empty?
 /   %p You're too early! Please check back soon for new articles to be posted.
 / - else  
-/   - @most_recent = Post.published.where(category: @current_section == 'runninggear').order("published_on DESC")
+/   - @most_recent = Post.published.where(category: @current_section == 'traininggear').order("published_on DESC")
 /   - @most_recent[0..0].each do |post|
 /     %div.span3
 /       %div.post_list_thumb_border.span2

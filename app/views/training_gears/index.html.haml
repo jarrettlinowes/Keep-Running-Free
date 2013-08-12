@@ -1,0 +1,34 @@
+= render partial: 'carousel'
+
+- @training_gears.each do |gear|
+  .gear_post_list.span3
+    .post_list_thumb_border2.span2
+      .post_list_thumb
+        = link_to gear do
+          = image_tag( gear.title_picture ? gear.title_picture.data(:list) : "filler_list.jpg" )
+    .gear_post_list_text.span3
+      %p.post_list_gear_post_title
+        =link_to gear.title, gear
+      %p.post_list_post_author
+        Published on
+        = gear.published_on.strftime("%B %d, %Y")
+      - if gear.details
+        %p#post_intro_c
+          =raw gear.details
+
+
+/ %table
+/   %tr
+/     %th
+/     %th
+/     %th
+
+/   - @training_gears.each do |training_gear|
+/     %tr
+/       %td= link_to 'Show', training_gear
+/       %td= link_to 'Edit', edit_training_gear_path(training_gear)
+/       %td= link_to 'Destroy', training_gear, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+/ %br
+
+/ = link_to 'New Training gear', new_training_gear_path
