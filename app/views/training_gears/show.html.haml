@@ -1,11 +1,20 @@
 - title @training_gear.title, false
 #post_title
-  - if @training_gear.title_picture
-    = image_tag @training_gear.title_picture.data(:feature)
+  = image_tag "GearTest.jpg"
+  / - if @training_gear.title_picture
+  /   = image_tag @training_gear.title_picture.data(:feature)
   %h2= @training_gear.title
 #post_author_top.span9
   Published on
   = @training_gear.published_on.strftime("%B %d, %Y")
+.span9  
+  .description_b.div.span5
+    .g_body=raw @training_gear.description
+  .span4=raw @training_gear.details
+  .center_button.div
+    %a{:href => "http://www.amazon.com" + @training_gear.amazon}
+      = image_tag "amazon.gif"
+
 
 = link_to 'Edit', edit_training_gear_path(@training_gear)
 / \|

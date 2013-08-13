@@ -3,13 +3,13 @@
     .navbar-inner
       .container
         %a.brand{:href => "/"}
-          = image_tag("header_logo2.png", size:"226x39")
+          = image_tag("FinalLogo7.png") #, size:"226x39"
         %ul.nav
           %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
           %li#nav_button{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
           %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
           %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
-          %li#nav_button{class: @current_section=='training_gear' && 'active'}= link_to 'Training Gear', '/training_gears'
+          %li#nav_button{class: @current_section=='Training Gear' && 'active'}= link_to 'Training Gear', '/training_gears'
           %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
           / %li#nav_button{class: @current_section=='entertainment' && 'active'}= link_to 'Entertainment', '/entertainment'
         / .input-append.pull-right{style:"padding-top: 8px"}

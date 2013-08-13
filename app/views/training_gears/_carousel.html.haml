@@ -3,6 +3,6 @@
     .active.item
       - image_file = @most_recent.title_picture ? @most_recent.title_picture.data(:feature) : "filler_feature.jpg"
       = link_to image_tag(image_file), @most_recent
-      .carousel-caption{style:"line-height: 18px; font-size: 11px; color: white;"}
+      .carousel-caption.carousel_caption{style:"line-height: 18px; font-size: 11px; color: white;"}
         %h4
           = link_to @most_recent.title, @most_recent

@@ -2,17 +2,17 @@ class TrainingGearsController < InheritedResources::Base
 	before_filter :authorize, except: [:index, :show]
 
 	def index
-		@current_section = params[:category] || ''
+		@current_section = params[:category] || 'Training Gear'
 
 		# for the carousel
-		@most_recent = TrainingGear.published.where(category: @current_section).recent.first
+		@most_recent = TrainingGear.published.recent.first #.where(category: @current_section)
 
 		# bulid posts query, for current section
-		@training_gears = TrainingGear.published.where(category: @current_section).recent
+		@training_gears = TrainingGear.published.recent #.where(category: @current_section)
 		# not including the first one 
 		@training_gears = @training_gears.where( "id != #{@most_recent.id}" ) if @most_recent
 		# paginate the posts
-		@training_gears = @training_gears.page(params[:page]).per(10)
+		@training_gears = @training_gears.page(params[:page]).per(3)
 
 		respond_to do |format|
 			format.html
@@ -21,7 +21,7 @@ class TrainingGearsController < InheritedResources::Base
 
 	def show
 		@training_gear = TrainingGear.published.find(params[:id])
-		@current_section = @training_gear #.categroy
+		@current_section = "Training Gear" #@training_gear.category
 
 		respond_to do |format|
 			format.html

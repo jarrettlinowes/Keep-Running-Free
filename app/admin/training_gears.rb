@@ -2,6 +2,7 @@ ActiveAdmin.register TrainingGear do
 	index do
 		column :id
 		column :title
+		column :gender
 		column :status
 		column :category
 		column :published_on
@@ -14,6 +15,7 @@ ActiveAdmin.register TrainingGear do
 	filter :created_at
 	filter :updated_at
 	filter :category
+	filter :gender
 
 	form do |f|
 		f.inputs do
@@ -22,6 +24,8 @@ ActiveAdmin.register TrainingGear do
 			f.input :title_picture_id
 			f.input :details, :input_html => {:class => "ckeditor"}
 			f.input :description, :input_html => {:class => "ckeditor"}
+			f.input :gender, :collection => ['men','women']
+			f.input :amazon
 			f.input :status, :collection => ['published','g_featured']
 			f.input :category, :collection => ['endurance','strength_training','speed_&_agility']
 		end

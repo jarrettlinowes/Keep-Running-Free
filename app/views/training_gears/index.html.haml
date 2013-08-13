@@ -15,8 +15,13 @@
       - if gear.details
         %p#post_intro_c
           =raw gear.details
+      .center_button_ig.div
+        %a{:href => "http://www.amazon.com" + gear.amazon}
+        = image_tag "amazon.gif"
 
-
+.span9
+  %div
+    = paginate @training_gears
 / %table
 /   %tr
 /     %th

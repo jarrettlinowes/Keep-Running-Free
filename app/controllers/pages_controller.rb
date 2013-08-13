@@ -21,9 +21,9 @@ class PagesController < ApplicationController
 		@current_section = 'running101'
 	end
 
-	# def traininggear
-	# 	@current_section = 'training_gear'
-	# end
+	def traininggear
+		@current_section = 'training_gear'
+	end
 
 	def nutrition
 		@current_section = 'nutrition'
