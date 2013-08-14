@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 	def home
 		@current_section = 'home'
 		@recent_feature = Post.p_featured.order("published_on DESC")
+		@authors = Author.all
 	end
 
 	def about

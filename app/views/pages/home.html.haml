@@ -31,16 +31,23 @@
     = link_to "›", "#carousel", :class => "carousel-control right", "data-slide" => "next"
 
 .row
-  #about.span5
-    %p{style:"font-size: 14px; font-weight: bold; color: #600"} Welcome to Keep Running Free – Learn about running, find useful nutritional tips, and read through lists of product reviews that may be of interest.
+  #about.span4
+    .welcome
+      %p.welcome_head Welcome to Keep Running Free
+    %p.welcome_sub Learn about running, find useful nutritional tips, and read through lists of product reviews that may be of interest.
     %p{style:"font-size: 11px"} Keep Running Free is a website that offers running tips, nutrition tips, reviews, and entertainment all in one place. Delve into a variety of articles and reviews and feel free to comment! We are constantly working to bring fresh content and provide links to information and products that you may find interesting.
     %p{style:"font-size: 11px; font-weight: bold"} Enjoy the articles! Find the most recent and most popular posts on the sidebar tabs.
-    .span3
+    .span2
       %p{style:"font-size: 11px"} Like our Facebook page
       %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fkeeprunningfree&send=false&layout=button_count&width=50&show_faces=false&action=like&colorscheme=light&font&height=21", :style => "border:none; overflow:hidden; width:45px; height:21px;padding-left: 38px"}
-    .span3offset3
+    .span2
       %p{style:"font-size: 11px"} Follow Us on Twitter
-      %em{style:"padding-left: 28px"}=render 'layouts/twitter'
+      %em{style:"padding-left: 25px"}=render 'layouts/twitter'
+  .span4.offset5
+    - @authors.each do |author|
+      %h4.about_author= author.name
+      #author_about
+        = author.about
 
 .row
   - @recent_feature[1..7].each do |post|
