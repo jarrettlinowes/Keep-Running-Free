@@ -5,9 +5,8 @@
         About the Site
     #about_one.accordion-body.collapse
       .accordion-inner
-        %p.about1_style1 Welcome to Keep Running Free – Learn about running, find useful nutritional tips, and read through lists of product reviews that may be of interest.
-        %p.about_11px Keep Running Free is a website that offers running tips, nutrition tips, reviews, and entertainment all in one place. Delve into a variety of articles and reviews and feel free to comment! We are constantly working to bring fresh content and provide links to information and products that you may find interesting.
-        %p.about1_bold Enjoy the articles! Find the most recent and most popular posts on the sidebar tabs.
+        %p.about1_style1{style: "color: #600"} Welcome to Elite Fitness Edge - Learn about Running, Training, and Nutrition, while browsing Product Reviews and Training Gear!
+        %p.about_11px Elite Fitness Edge offers advice and experience with running, training, and nutrition. Read a variety of articles that range from very beginner topics to advance ideology. Find reviews and training gear that may be of interest as well with a growing list of items to browse.
         .span3
           %p.about_11px Like our Facebook page
           %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fkeeprunningfree&send=false&layout=button_count&width=50&show_faces=false&action=like&colorscheme=light&font&height=21", :style => "border:none; overflow:hidden; width:45px; height:21px;padding-left: 38px"}
@@ -17,23 +16,27 @@
   .accordion-group
     .accordion-heading
       %a.accordion-toggle{"data-parent" => "#about", "data-toggle" => "collapse", :href => "#about_two"}
-        What's on Keep Running Free?
+        What's on Elite Fitness Edge?
     #about_two.accordion-body.collapse.in
       .accordion-inner
-        %p.about_bold Running and Nutrition
-        %p.about_11px #{link_to 'Running', ''} articles on Keep Running Free range in topics from barefoot running to racing in a 5k race. With consistent updates, there is always something new to learn in the running area of the website. 
-        / %p{style:"font-size: 11px"} #{link_to 'Nutrition', ''} articles on Keep Running Free are written by students and professionals in the field and offer advice to athletes who are struggling with or who would like to enhance their body and workouts with proper nutrition and supplements. Throughout the Nutrition articles, supplement recommendations will be offered and reviewed by athletes currently using them.
+        %p.about_bold Running
+        %p.about_11px #{link_to 'Running', '/posts?category=running'} articles on Elite Fitness Edge range in topics from barefoot running to racing in a 5k race and are angled toward beginner and advanced runners. Running themes delve into burning fat, minimalist running, and training.
+        %p.about_bold Training
+        %p.about_11px Elite Fitness Edge will provide athletes, bodybuilders, and the average person looking to get into shape with #{link_to 'training', '/posts?category=training'} advice to help everyone reach their goals. These articles will include training tips and guidelines for all ranges of athletes including runners, bodybuilders, crossfitters, and more.
+        %p.about_bold Nutrition
+        %p.about_11px Whether you’re looking to lose weight, build muscle, or maintain a healthy lifestyle, Elite Fitness Edge will provide you with up to date nutritional guidelines and advice to help you achieve your goals. These articles will range from fat loss tips, healthy bulking habits, and much more advice on #{link_to 'Nutrition', '/posts?category=nutrition'}.
         %hr
-        %p.about_bold Reviews and Entertainment
-        %p.about_11px Keep Running Free #{link_to 'Reviews', ''} are written to give you a more comfortable idea about what you are looking into purchasing. Each product review is reviewed by someone who has used and tested the shoe or running accessory for a couple of weeks, allowing them to develop a complete opinion on the product along with a detailed description.
-        %p.about_11px The #{link_to 'Entertainment', '/entertainment'} area of Keep Running Free offers insight and recommendations on books, movies, and music that are related to the sport of running or will motivate you during a run or get you to go for a run.
+        %p.about_bold Reviews
+        %p.about_11px Elite Fitness Edge #{link_to 'Reviews', '/posts?category=reviews'} are written to give you a more comfortable idea about what you are looking into purchasing. Each product review is reviewed by someone who has used and tested the shoe or accessory, allowing them to develop a complete opinion on the product along with a detailed description. Reviews will range from all topics on EFE, including running, training, and nutrition products.
+        %p.about_bold Training Gear
+        %p.about_11px The #{link_to 'Training Gear', '/training_gears'} of Elite Fitness Edge is a unique area of the site that offers a growing collection of recommended and featured training gear with a purchase link and a short description of the product. The training gear on EFE can be sorted by category (Endurance, Training, and Nutrition) along with gender.
         / %hr
         / %p{style:"font-size: 11px; font-weight: bold"} The KRF Store
         / %p{style:"font-size: 11px"} The #{link_to 'Keep Running Free Store', '/store'} will offer athletic clothing and accessories with the Keep Running Free logo and name printed on. You will be able to browse through water bottles, t-shirts, hats, and more, and browse with the freedom of personal customization. Currently the KRF Store is not available until further notice.
   .accordion-group
     .accordion-heading
       %a.accordion-toggle{"data-parent" => "#about", "data-toggle" => "collapse", :href => "#about_three"}
-        Who Writes for Keep Running Free?
+        Who Writes for Elite Fitness Edge?
     #about_three.accordion-body.collapse.in
       .accordion-inner
         - @authors.each do |author|
