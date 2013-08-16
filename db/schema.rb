@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130808194438) do
+ActiveRecord::Schema.define(:version => 20130816050328) do
 
   create_table "Training_Gear", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20130808194438) do
     t.text     "amazon"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "price"
   end
 
   create_table "active_admin_comments", :force => true do |t|
@@ -63,8 +64,9 @@ ActiveRecord::Schema.define(:version => 20130808194438) do
   create_table "authors", :force => true do |t|
     t.string   "name"
     t.text     "about"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "title_picture_id"
   end
 
   create_table "ckeditor_assets", :force => true do |t|

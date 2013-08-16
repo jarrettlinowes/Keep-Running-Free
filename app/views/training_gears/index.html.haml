@@ -9,15 +9,15 @@
     .gear_post_list_text.span3
       %p.post_list_gear_post_title
         =link_to gear.title, gear
-      %p.post_list_post_author
-        Published on
-        = gear.published_on.strftime("%B %d, %Y")
-      - if gear.details
-        %p#post_intro_c
-          =raw gear.details
+      / %p.post_list_post_author
+      /   Published on
+      /   = gear.published_on.strftime("%B %d, %Y")
+      / - if gear.details
+      /   %p#post_intro_c
+      /     =raw gear.details
       .center_button_ig.div
         %a{:href => "http://www.amazon.com" + gear.amazon}
-        = image_tag "amazon.gif"
+          = image_tag "amazon.gif"
 
 .span9
   %div

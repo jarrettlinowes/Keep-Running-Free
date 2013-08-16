@@ -297,6 +297,7 @@ DEPENDENCIES
   kaminari
   kaminari-bootstrap
   launchy
+  nokogiri
   paperclip
   pg
   rack-google-analytics
