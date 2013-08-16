@@ -12,7 +12,7 @@ class TrainingGearsController < InheritedResources::Base
 		# not including the first one 
 		@training_gears = @training_gears.where( "id != #{@most_recent.id}" ) if @most_recent
 		# paginate the posts
-		@training_gears = @training_gears.page(params[:page]).per(3)
+		@training_gears = @training_gears.page(params[:page]).per(15)
 
 		respond_to do |format|
 			format.html

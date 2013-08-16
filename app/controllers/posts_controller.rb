@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     # not including the first one 
     @posts = @posts.where( "id != #{@most_recent.id}" ) if @most_recent and (@current_section == 'traininggear')
     # paginate the posts
-    @posts = @posts.page(params[:page]).per(3)
+    @posts = @posts.page(params[:page]).per(9)
     
     respond_to do |format|
       format.html # index.html.erb
