@@ -1,6 +1,6 @@
 = render partial: 'carousel'
 
-- @posts[1..-1].each do |post|
+- @posts.each do |post|
   - partial_file = @current_section == 'traininggear' ? 'gear_post' : 'post'
   = render partial: partial_file, locals: { post: post }
 

@@ -13,21 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130816050328) do
 
-  create_table "Training_Gear", :force => true do |t|
-    t.string   "title"
-    t.text     "details"
-    t.text     "description"
-    t.string   "status"
-    t.integer  "title_picture_id"
-    t.string   "category"
-    t.date     "published_on"
-    t.string   "gender"
-    t.text     "amazon"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.string   "price"
-  end
-
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
     t.string   "resource_type", :null => false
@@ -124,6 +109,21 @@ ActiveRecord::Schema.define(:version => 20130816050328) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "training_gear", :force => true do |t|
+    t.string   "title"
+    t.text     "details"
+    t.text     "description"
+    t.string   "status"
+    t.integer  "title_picture_id"
+    t.string   "category"
+    t.date     "published_on"
+    t.string   "gender"
+    t.text     "amazon"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "price"
   end
 
   create_table "users", :force => true do |t|
