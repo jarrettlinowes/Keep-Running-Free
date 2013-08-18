@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     # bulid posts query, for current section
     @posts = Post.published.where(category: @current_section).recent
     # not including the first one 
-    @posts = @posts.where( "id != #{@most_recent.id}" ) if @most_recent and (@current_section == 'traininggear')
+    @posts = @posts.where( "id != #{@most_recent.id}" ) if @most_recent # and (@current_section == 'traininggear')
     # paginate the posts
     @posts = @posts.page(params[:page]).per(9)
     
