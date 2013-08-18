@@ -28,7 +28,7 @@ ActiveAdmin.register Post do
       f.input :published_on
   		f.input :title
       #f.input :title_picture_id
-      f.input :title_picture, as: :select, collection: Ckeditor::Picture.all
+      f.input :title_picture, as: :select, collection: Ckeditor::Picture.all.map(&:id)
   		f.input :intro, :input_html => {:class => "ckeditor"}
   		f.input :body, :input_html => {:class => "ckeditor"}
   		f.input :author
