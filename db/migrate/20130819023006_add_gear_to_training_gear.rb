@@ -1,5 +1,5 @@
 class AddGearToTrainingGear < ActiveRecord::Migration
   def change
-  	add_column :training_gear, :gear, :string
+  	add_column :Training_Gear, :gear, :string
   end
 end
