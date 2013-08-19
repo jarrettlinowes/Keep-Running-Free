@@ -3,6 +3,7 @@ ActiveAdmin.register TrainingGear do
 		column :id
 		column :title
 		column :gender
+		column :gear
 		column :status
 		column :category
 		column :published_on
@@ -16,18 +17,20 @@ ActiveAdmin.register TrainingGear do
 	filter :updated_at
 	filter :category
 	filter :gender
+	filter :gear
 
 	form do |f|
 		f.inputs do
 			f.input :published_on
 			f.input :title
-			f.input :title_picture_id
+			f.input :title_picture, as: :select, collection: Ckeditor::Picture.all.map(&:id)
 			f.input :details, :input_html => {:class => "ckeditor"}
 			f.input :description, :input_html => {:class => "ckeditor"}
-			f.input :gender, :collection => ['men','women']
+			f.input :gender, :collection => ['Men','Women']
 			f.input :amazon
 			f.input :status, :collection => ['published','g_featured']
-			f.input :category, :collection => ['endurance','strength_training','speed_&_agility']
+			f.input :category, :collection => ['Running','Training','Nutrition']
+			f.input :gear, :collection => ['Shoes', 'Equipment', 'Clothing']
 		end
 		f.buttons
 	end
@@ -43,6 +46,7 @@ ActiveAdmin.register TrainingGear do
 			row :updated_at
 			row :published_on
 			row :category
+			row :gear
 		end
 	end
 end

@@ -1,5 +1,5 @@
 class TrainingGear < ActiveRecord::Base
-  attr_accessible :title, :title_picture_id, :details, :description, :status, :category, :published_on, :amazon, :gender
+  attr_accessible :title, :title_picture_id, :details, :description, :status, :category, :published_on, :amazon, :gender, :gear
   set_table_name 'Training_Gear'
   validates :title, presence: true
   validates :description, presence: true
