@@ -16,7 +16,7 @@ gem 'jquery-rails'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'activeadmin'
-gem "ckeditor", "~> 3.7.1"
+gem "ckeditor", "3.7.1"
 gem "paperclip"
 gem "aws-sdk"
 gem 'acts-as-taggable-on', '~> 2.3.1'
