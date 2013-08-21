@@ -10,7 +10,7 @@ class TrainingGearsController < InheritedResources::Base
 		# bulid posts query, for current section
 		@training_gears = TrainingGear.published.recent #.where(category: @current_section)
 		# not including the first one 
-		@training_gears = @training_gears.where( "id != #{@most_recent.id}" ) if @most_recent
+		# @training_gears = @training_gears.where( "id != #{@most_recent.id}" ) if @most_recent
 		# paginate the posts
 		@training_gears = @training_gears.page(params[:page]).per(15)
 
