@@ -3,7 +3,7 @@
     %ul#side_tab.nav.nav-tabs
       %li= link_to 'Recent', '#recent', 'data-toggle' => 'tab'
       %li= link_to 'Popular', '#popular', 'data-toggle' => 'tab'
-      %li= link_to "KRF", '#whatsnew', 'data-toggle' => 'tab'
+      %li= link_to "EFE", '#whatsnew', 'data-toggle' => 'tab'
     #side_tabContent.tab-content
       #recent.tab-pane.active
         - @most_recent = Post.published.order("published_on DESC").limit(4)
