@@ -18,7 +18,7 @@
     
     = yield(:head)
   %body{ :id => yield(:body_id)}
-    - if @post || @training_gear
+    - if @post
       = render 'layouts/social'
     #container.container-fluid
       .row-fluid{style:"margin-left: 0"}
