@@ -4,8 +4,9 @@
     = image_tag @training_gear.title_picture.data(:feature)
   %h2= @training_gear.title
 #post_author_top.span9
-  = @training_gear.gender
-  |
+  - if @training_gear.gender.present?
+    = @training_gear.gender
+    |
   = @training_gear.category
   |
   = @training_gear.gear
