@@ -1,13 +1,3 @@
-/ #carousel2.visible-lg{style: "margin-bottom: 15px; width: 100%;"}
-/   - image_file = @most_recent.title_picture ? @most_recent.title_picture.data(:feature) : "filler_feature.jpg"
-/   = link_to image_tag(image_file), @most_recent
-/   .container
-/     .carousel_caption{style:"line-height: 18px; font-size: 11px; color: white;"}
-/       %h4
-/         = link_to @most_recent.title, @most_recent
-/       %p#post_intro_c
-/         = raw @most_recent.intro
-
 #carousel.carousel.slide.hidden-xs{"data-ride" => "carousel", style: "margin-left: 15px; margin-right: 15px; margin-bottom: 15px;"}
   .carousel-inner
     .item.active

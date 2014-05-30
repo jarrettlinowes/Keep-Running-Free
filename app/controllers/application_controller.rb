@@ -17,3 +17,8 @@ class ApplicationController < ActionController::Base
   # end
 
 end
+
+
+layout "index_layout", only: :index
+layout "show_layout" only: :show
+layout "application", except: [:index,:show]

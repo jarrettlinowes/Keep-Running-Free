@@ -20,11 +20,18 @@ a:hover {
   padding: 0;
 }
 
+.navbar .nav > li > a {
+padding: 11px 10px 11px;
+line-height: 34px;
+color: #000;
+}
+
 .navbar .nav .active > a{
-  color: #fdd017;
+  color: #060172;
+  border-top: 2px #fdd017 solid;
 } 
 .navbar .nav .active > a:hover {
-  color: silver;
+  color: #060172;
 }
 
 .input-append button.add-on {
@@ -52,15 +59,25 @@ a:hover {
 .navbar .nav > li > a:hover {
   color: #fdd017;
 }
+.icon-bar {
+  background-color: #000;
+}
+.navbar-toggle {
+  border: 1px solid #000;
+}
 
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1100px;
 }
 
 .row {
   margin-left: 0px;
   *zoom: 1;
-  width: 960px;
+  width: 100%;
 }
 
 [class*="span"] {

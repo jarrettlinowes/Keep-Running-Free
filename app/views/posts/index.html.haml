@@ -1,9 +1,9 @@
-= render partial: 'carousel'
+/ = render partial: 'carousel'
 
 - @posts.each do |post|
   - partial_file = @current_section == 'traininggear' ? 'gear_post' : 'post'
   = render partial: partial_file, locals: { post: post }
 
-.span9
+.col-xs-12
   %div
     = paginate @posts

@@ -29,13 +29,23 @@
         = render 'layouts/flash', flash: flash
         - if show_title?
           %h1= yield(:title)
-        .span9= content_for?(:content) ? yield(:content) : yield
-        .span3.offset9{style:"margin-left: 40px"}
-          - if @current_section == 'traininggear'
-            = render 'layouts/rgear_side_bar'
-          - else
+        - if @current_section == 'home'
+          .col-lg-12= content_for?(:content) ? yield(:content) : yield
+        - else
+          .col-lg-8.col-md-8.col-sm-8.col-xs-12{style: "padding-left: 0;"}= content_for?(:content) ? yield(:content) : yield
+          .col-lg-4.col-md-4.col-sm-4.col-xs-12{style: "padding-left: 0;"}
             = render 'layouts/side_bar'
-          = render 'layouts/side_mailchimp'
+
+        / - else
+        /   .row
+        /     = render 'posts/carousel'
+        /     / = render 'layouts/list_feature'
+        /     .col-lg-8.col-md-8.col-sm-8.col-xs-12{style: "padding-left: 0; padding-right: 0;"}= content_for?(:content) ? yield(:content) : yield
+        /     .col-lg-4.col-md-4.col-sm-4.col-xs-12
+        /       - if @current_section == 'traininggear'
+        /         = render 'layouts/rgear_side_bar'
+        /       - else
+        /         = render 'layouts/side_bar'
       -#.row{style:"margin-left: 0"}
       -#  = render 'layouts/footer'
     =render 'layouts/footer'

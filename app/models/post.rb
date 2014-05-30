@@ -8,8 +8,11 @@ class Post < ActiveRecord::Base
 	belongs_to :author
   has_many :comments
 
-	scope :published, where{{ status.in => ['published', 'p_featured'] }}
+	scope :published, where{{ status.in => ['published', 'p_featured', 'f_training', 'f_nutrition', 'f_review'] }}
   scope :p_featured, where( status: 'p_featured' )
+  scope :f_training, where( status: 'f_training')
+  scope :f_nutrition, where( status: 'f_nutrition')
+  scope :f_review, where( status: 'f_review')
   scope :recent, order("published_on DESC")
 	
 	paginates_per 8
@@ -26,7 +29,7 @@ class Post < ActiveRecord::Base
   end
 
   def is_published?
-    ['published', 'p_featured'].include? status
+    ['published', 'p_featured', 'f_training', 'f_nutrition', 'f_review'].include? status
   end
 
   def tags_count

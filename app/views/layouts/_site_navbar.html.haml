@@ -1,21 +1,72 @@
-#site_navbar
-  .navbar
-    .navbar-inner
-      .container
-        %a.brand{:href => "/"}
-          = image_tag("FinalLogo9.png") #, size:"226x39"
-        %ul.nav
-          %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
-          %li#nav_button{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
-          %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
-          %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
-          %li#nav_button{class: @current_section=='Training Gear' && 'active'}= link_to 'Training Gear', '/training_gears'
-          %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
-          / %li#nav_button{class: @current_section=='entertainment' && 'active'}= link_to 'Entertainment', '/entertainment'
-        / .input-append.pull-right{style:"padding-top: 8px"}
-        /   %input.span2{:placeholder => "Search..."}
-        /   %button.btn.add-on
-        /     %i.icon-search
-        %ul.nav.pull-right
-          %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'Who Are We?', '/about'
-          / %li#nav_button{class: @current_section=='krf store' && 'active'}= link_to 'KRF Store', '/store'
+%nav#site_navbar.navbar.visible-xs{role: "navigation", style: "height: 50px;"}
+  / Use 'Toggle' and 'Brand' for better mobile
+  .container#nav_shadow
+    %div.navbar-header
+      %button.navbar-toggle{"data-target" => "#nav-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand2{:href => "/"}
+        = image_tag("Logo3.png")
+
+    %div.navbar-right#nav-collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Fitness
+            %b.caret
+          %ul.dropdown-menu
+            %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
+            %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+        %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
+        %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
+        %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
+        %li#nav_button
+          %form.form-inline{role: "form", action:"http://elitefitnessedge.us4.list-manage2.com/subscribe?u=ec7250299824e5388c21c7fdb&id=3897a99f2d", method:"post", target:"_blank"}
+            .form-group
+              %label.sr-only Email address
+              %input.form-control{placeholder: "Subscribe - Email", type: "email"}
+    / /.navbar-collapse
+%nav#site_navbar.navbar.hidden-xs{role: "navigation"}
+  / Use 'Toggle' and 'Brand' for better mobile
+  .container
+    %div#nav_social.navbar-right{style: "margin-right: -83px;"}
+      %a{:href => "/"}
+        = image_tag("nav_twitter.png", :size => "30x30")
+      %a{:href => "/"}
+        = image_tag("nav_facebook.png", :size => "30x30")
+      %a{:href => "/"}
+        = image_tag("nav_pinterest.png", :size => "30x30")
+      %form#nav_sub.form-inline{role: "form", action:"http://elitefitnessedge.us4.list-manage2.com/subscribe?u=ec7250299824e5388c21c7fdb&id=3897a99f2d", method:"post", target:"_blank"}
+        .form-group
+          %label.sr-only Email address
+          %input.form-control{placeholder: "Subscribe - Email", type: "email"}
+        %button.btn.btn-default.btn-md{type: "button", type: "submit"}
+          %span.glyphicon.glyphicon-envelope
+    %div.navbar-header
+      %button.navbar-toggle{"data-target" => "#nav-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        = image_tag("Logo3.png")
+      #slogan
+        "Fitness, Training, Nutrition - Simplified"
+
+    %div.navbar-right#nav-collapse.collapse.navbar-collapse.hidden-xs{style: "padding-top: 90px; margin-right: -296px;"}
+      %ul.nav.navbar-nav
+        %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            Fitness
+            %b.caret
+          %ul.dropdown-menu
+            %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
+            %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+        %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
+        %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
+        %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
+    / /.navbar-collapse

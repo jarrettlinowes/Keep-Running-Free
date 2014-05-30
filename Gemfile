@@ -21,6 +21,7 @@ gem "paperclip"
 gem "aws-sdk"
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'nokogiri'
+gem 'layout_by_action'
 
 # Gems used only for assets and not required
 # in production environments by default.

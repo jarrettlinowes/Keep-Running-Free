@@ -1,44 +1,49 @@
 #side_bar
-  #side_tab_nav.row
-    %ul#side_tab.nav.nav-tabs
-      %li= link_to 'Recent', '#recent', 'data-toggle' => 'tab'
-      %li= link_to 'Popular', '#popular', 'data-toggle' => 'tab'
-      %li= link_to "EFE", '#whatsnew', 'data-toggle' => 'tab'
-    #side_tabContent.tab-content
-      #recent.tab-pane.active
-        - @most_recent = Post.published.order("published_on DESC").limit(4)
-        - @most_recent.each do |post|
-          %div#recent_popular
-            - if post.title_picture
-              = link_to post do
-                = image_tag post.title_picture.data(:thumb)
-            - else
-              = link_to post do
-                = image_tag ("filler_thumb.jpg")
-            %div#recent_popular_title
-              = link_to truncate(post.title, :length => 25), post
+  .hidden-lg{style: "margin-top: 15px;"}
+  .side_feature_ad{style: "padding-top: 0px;"}
+    .side_feature_top
+      .side_feature_title
+        Featured Training Article
+    - if fpost = Post.f_training.recent.first
+      - if fpost.title_picture
+        = link_to fpost do
+          = image_tag fpost.title_picture.data(:feature)
+      - else
+        = link_to fpost do
+          = image_tag ("filler_feature.jpg"), {style: "width: 100%;"}
+  .side_feature_ad
+    .side_feature_top
+      .side_feature_title
+        Featured Nutrition Article
+    - if fpost = Post.f_nutrition.recent.first
+      - if fpost.title_picture
+        = link_to fpost do
+          = image_tag fpost.title_picture.data(:feature)
+      - else
+        = link_to fpost do
+          = image_tag ("filler_feature.jpg"), {style: "width: 100%;"}
+  .side_feature_ad
+    .side_feature_top
+      .side_feature_title
+        Featured Product Review
+    - if fpost = Post.f_review.recent.first
+      - if fpost.title_picture
+        = link_to fpost do
+          = image_tag fpost.title_picture.data(:feature)
+      - else
+        = link_to fpost do
+          = image_tag ("filler_feature.jpg"), {style: "width: 100%;"}
 
-      #popular.tab-pane
-        - @most_popular = Post.published.order("views DESC").limit(4)
-        - @most_popular.each do |post|
-          %div#recent_popular
-            - if post.title_picture
-              = link_to post do
-                = image_tag post.title_picture.data(:thumb)
-            - else
-              = link_to post do
-                = image_tag ("filler_thumb.jpg")
-            #recent_popular_title
-              = link_to truncate(post.title, :length => 25), post
-      #whatsnew.tab-pane
-        #whatsnew_part.row
-          %h4=link_to "About Us", "/about"
-          %p#whatsnew_font Take a look at who writes for Elite Fitness Edge!
-        #whatsnew_part.row
-          %h4=link_to "Facebook", "http://www.facebook.com/elitefitnessedge"
-          %p#whatsnew_font Like Elite Fitness Edge on Facebook to recieve site updates and other exclusive information!
-        #whatsnew_part.row
-          %h4=link_to "Twitter", "http://www.twitter.com/elitefitedge"
-          %p#whatsnew_font Follow our Twitter feed for site updates and more!
-  #side_ad.row
-    = render '/layouts/ad_200x200'
+  %h3{style: "text-align: center; color: #f0f0f0; position: relative; top: 10px;"} Sponsored Links
+  %hr{style: "border-top: 1px solid #f0f0f0; margin-top: 10px; margin-bottom: 10px; margin-left: 10px;"}
+
+  .side_feature_ad.visible-lg
+    = render '/layouts/ad_300x250'
+  .side_feature_ad.visible-lg
+    = render '/layouts/ad_300x250_2'
+  .side_small_ad.hidden-lg
+    = render '/layouts/ad_180x150'
+  .side_small_ad.hidden-lg
+    = render '/layouts/ad_180x150'
+  .side_small_ad.hidden-lg
+    = render '/layouts/ad_180x150'

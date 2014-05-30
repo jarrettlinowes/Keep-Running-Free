@@ -1,22 +1,74 @@
-
 // ===== nav bar =====
 #site_navbar {
-  .navbar {
-    height: 57px;
-  }
+  height: 149px;
+  background-color: #fff;
+  min-width: 300px;
   li {
-    border-top: 2px #000 solid;
+    border-top: 2px #fff solid;
+    z-index: 1000;
+    background-color: #fff;
   }
   li:hover{
-    border-top-color: #ddd;
+    border-top: 2px #fff solid;
+    z-index: 1000;
   }
-  min-width: 960px;
+}
+#nav_shadow {
+  box-shadow: 0px 10px 5px #888;
+}
+.navbar .nav > li > a:hover {
+  backgound-color: #fff;
+  color: #060172;
+}
+.navbar-brand {
+  width: 348px;
+  height: 75px;
+  z-index: 1000;
+  position: absolute;
+  img {
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding-left: 25px;
+  }
+}
+#slogan {
+  font-style:italic;
+  padding-top: 90px;
+  padding-left: 25px;
+  font-size: 15px;
+}
+.navbar-brand2 {
+  width: 232px;
+  height: 50px;
+  z-index: 1000;
+  position: absolute;
+  img {
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding-left: 25px;
+  }
+}
+#nav_social {
+  position: relative;
+  right: 100px;
+  top: 35px;
+}
+#nav_social a {
+  position: relative;
+  right: -30px;
+  margin-right: 2px;
+}
+#nav_sub {
+  padding-left: 150px;
+  margin-top: -34px;
 }
 
 #nav_button.active {
-  border-top-color: #ddd;
+  border-top-color: #fdd017;
   a {
-    @include linear-gradient(#000, #000);
+    @include linear-gradient(#fff, #fff);
   }
 //  a {
 //    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
@@ -24,12 +76,17 @@
 }
 
 .navbar-inner {
-  @include border-radius(0);
+  border-radius: 0;
   @include linear-gradient(#000, #111);
 }
 
 .navbar .nav > li > a {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+//  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-size: 15px;
+  :hover {
+    color: #060172;
+  }
 }
 
 // ===== general content area =====
@@ -41,8 +98,32 @@
 
 // ====== side bar ======
 #side_bar {
-  height: 475px;
-  background-color: #f0f0f0;
+  height: 100%;
+  background-color: #fff;
+}
+.side_feature_ad {
+  margin: 0 0 0 12px;
+  padding-top: 10px;
+  float: right;
+}
+.side_small_ad {
+  text-align: center;
+  margin-top: 10px;
+}
+.side_feature_top {
+  height: 20px;
+  width: 75%;
+  background: #ccc;
+  position: absolute;
+  opacity:0.9;
+  filter:alpha(opacity=90); /* For IE8 and earlier */
+}
+.side_feature_title {
+  padding-left: 5px;
+  padding-top: 2px;
+  color: #000;
+  font-weight: bold;
+  font-family: calibri light;
 }
 #side_tab_nav {
   width: 220px;
@@ -105,83 +186,32 @@
 #site_footer {
   padding: 10px 0;
   @include linear-gradient(#000, #111);
-  height: 300px;
+  height: 215px;
   border-top: 5px solid #ccc;
   font-size: 90%;
   width: 100%;
-  min-width: 960px; // fixed shortened background
+  min-width: 300px; // fixed shortened background
 }
-#footer_links {
-  text-align: center;
+
+.footer_links a {
+  color: #ccc;
 }
-#link_footer1 {
-  padding-top: 5px;
-  //border: 1px solid #c8c8c8;
-  //border-radius: 5px;
-  height: 150px;
-}
-#link_footer2 {
-  padding-top: 5px;
-  //border: 1px solid #c8c8c8;
-  //border-radius: 5px;
-  height: 150px;
-}
-#link_footer3 {
-  padding-top: 5px;
-  //border: 1px solid #c8c8c8;
-  //border-radius: 5px;
-  height: 150px;
-}
-#link_footer4 {
-  padding-top: 5px;
-  //border: 1px solid #c8c8c8;
-  //border-radius: 5px;
-  height: 150px;
-}
-#link_footer_text {
-  background-color: #ccc;
-  border-top: 5px solid #000;
-  margin-left: -1px;
-  height: 75px;
-  border-radius: 5px;
-  width: 220px;
-}
-#center_footer_link_text {
-  padding-top: 5px;
-}
-#link_margin_footer {
-  margin-left: 26px;
-}
-#footer_linktext_title {
-  color: #000;
-}
-#footer_linktext_body {
-  color: #202020;
-}
-#mailing_footer {
-  margin-top: 20px;
-  margin-left: 2px;
-  background: url(ribbon_footer_gold.png) no-repeat;
-  height: 50px;
-}
-#mailing_footer_text {
+.footer_link_hover a:hover {
   color: #fff;
-  padding-top: 10px;
-  margin-left: 70px;
-}
-#mailchimp_footer {
-  margin-left: 100px;
-}
-#footer-mailchimp-input {
-  margin-top: 10px;
-  height: 10px;
-}
-#footer-mailchimp-button {
-  margin-top: 10px;
-  height: 20px;
-  padding-top: 2px;
 }
 
 #copyright {
-  color: #fff;
+  color: #ccc;
+}
+.logout_link a {
+  color: #00f;
+}
+.logout_link_hov a:hover {
+  color: #428bca;
+}
+.footer_social {
+  float: right;
+}
+.footer_social_lower {
+  margin-top: 100px;
 }

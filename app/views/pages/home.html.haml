@@ -1,73 +1,230 @@
 .row
-  #carousel.carousel.slide.span9
+  #carousel.carousel.slide{"data-ride" => "carousel"}
     .carousel-inner
-      .active.item
-        - if fpost = Post.p_featured.recent.first
+      .item.active
+        - if fpost = Post.f_training.recent.first
           - if fpost.title_picture
             = link_to fpost do
-              = image_tag fpost.title_picture.data(:feature)
+              = image_tag fpost.title_picture.data(:front)
           - else
             = link_to fpost do
-              = image_tag ("filler_feature.jpg")
-          .carousel-caption.carousel_caption
-            %h4=link_to fpost.title, fpost
-            =raw fpost.intro
+              = image_tag ("filler_front.jpg")
+          .carousel-caption.carousel_caption.hidden-xs
+            %h5=link_to fpost.title, fpost
+          .carousel-caption.carousel_caption_small.visible-xs
+            %h5=link_to fpost.title, fpost
       .item
-        = link_to (image_tag("reviews_promo.jpg", size: "700x319")), '/posts?category=reviews'
-        .carousel-caption.carousel_caption
-          %h4=link_to "Product Reviews", "/posts?category=reviews"
-          %p.carousel_p Read reviews for all different types of athletic and running shoes, running watches, and other running accessories!
-      / .item store
-      .item
-        = link_to (image_tag("EFE_Mailing2.jpg")), '/why_opt_in'
-        .carousel-caption.carousel_caption
-          %h4=link_to "Join Our Mailing List", ""
-          %ul.carousel_p
-            %li Email updates about changes and updates to Elite Fitneses Edge
-            %li Inspirational running information and quotes
-            %li Exclusive information and links to interesting running, training, and nutrition articles and products
-            %li And More...
-    = link_to "‹", "#carousel", :class => "carousel-control left", "data-slide" => "prev"
-    = link_to "›", "#carousel", :class => "carousel-control right", "data-slide" => "next"
-
-.row
-  #about.span4
-    .welcome
-      %p.welcome_head Welcome to Elite Fitness Edge
-    %p.welcome_sub Find Articles on Running, Training, Nutrition, Product Reviews and browse Featured Training Gear!
-    %p{style:"font-size: 11px"} Elite Fitness Edge offers advice and experience with running, training, and nutrition. Read a variety of articles that range from very beginner topics to advance ideology. Find reviews and training gear that may be of interest as well with a growing list of items to browse.
-    .span2
-      %p{style:"font-size: 11px"} Like our #{link_to 'Facebook page', 'http://www.facebook.com/elitefitnessedge'}
-      %em{style:"padding-left: 25px"}= render 'layouts/facebook_like'
-    .span2
-      %p{style:"font-size: 11px"} Follow Us on Twitter
-      %em{style:"padding-left: 25px"}=render 'layouts/twitter'
-  .span4.offset5
-    - @authors.each do |author|
-      %h4.about_author= author.name
-      #author_about
-        = truncate(author.about, :length => 300)
-        = link_to "Read More", "/about"
-
-.row
-  - @recent_feature[1..7].each do |post|
-    %div.post_feature_list.span9
-      %br
-      %div.post_list_thumb_border.span2
-        %div.post_list_thumb
-          - if post.title_picture
-            = link_to post do
-              = image_tag post.title_picture.data(:list)
+        - if fpost = Post.f_nutrition.recent.first
+          - if fpost.title_picture
+            = link_to fpost do
+              = image_tag fpost.title_picture.data(:front)
           - else
-            = link_to post do
-              = image_tag "filler_list.jpg"
-      %div.post_list_text.span6
-        %p.post_list_post_title
-          =link_to post.title, post
-        %p.post_list_post_author
-          Written by
-          = post.author.name
-          | Published on
-          = post.published_on.strftime("%B %d, %Y")
-        %p.post_intro_one
-          =raw post.intro
+            = link_to fpost do
+              = image_tag ("filler_front.jpg")
+          .carousel-caption.carousel_caption.hidden-xs
+            %h5=link_to fpost.title, fpost
+          .carousel-caption.carousel_caption_small.visible-xs
+            %h5=link_to fpost.title, fpost
+      .item
+        - if fpost = Post.f_review.recent.first
+          - if fpost.title_picture
+            = link_to fpost do
+              = image_tag fpost.title_picture.data(:front)
+          - else
+            = link_to fpost do
+              = image_tag ("filler_front.jpg")
+          .carousel-caption.carousel_caption.hidden-xs
+            %h5=link_to fpost.title, fpost
+          .carousel-caption.carousel_caption_small.visible-xs
+            %h5=link_to fpost.title, fpost
+      .item
+        = link_to (image_tag("carsel.jpg")), '/posts?category=reviews'
+      .item
+        = link_to (image_tag("carousel_sample.png")), '/'
+
+    %a.left.carousel-control{"data-slide" => "prev", href: "#carousel"}
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{"data-slide" => "next", href: "#carousel"}
+      %span.glyphicon.glyphicon-chevron-right
+
+.row.visible-lg{style: "margin-left: -15px;"}
+  .col-md-4
+    .cat_promo
+      .cat_promo_title TRAINING
+    %img= link_to (image_tag("training.jpg")), '/posts?category=training'
+  .col-md-4{style: "position: relative; left: 6px;"}
+    .cat_promo
+      .cat_promo_title NUTRITION
+    %img
+      = link_to (image_tag("nutrition.jpg")), '/posts?category=nutrition'
+  .col-md-4{style: "position: relative; left: 12px;"}
+    .cat_promo
+      .cat_promo_title REVIEWS
+    %img
+      = link_to (image_tag("reviews.jpg")), '/posts?category=reviews'
+%br
+%hr
+.row
+  .front_articles_break RECENT ARTICLES
+
+.row.visible-lg{style: "margin-left: -15px; margin-top: 15px;"}
+  - @posts_recent[0..0].each do |post|
+    .col-md-5
+      - @posts_recent[0..0].each do |post|
+        - if post.title_picture
+          = link_to post do
+            = image_tag post.title_picture.data(:flist)
+        - else
+          = link_to post do
+            = image_tag ("front1.jpg")
+    .col-md-7.post_list_text
+      %p.post_list_post_title
+        =link_to post.title, post
+      %p.post_list_post_author
+        Written by
+        = post.author.name
+        |
+        = post.category
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+      .recent_button
+        = link_to 'Read More', post, class: "btn btn-primary"
+/ use this for tablet
+.row.visible-md{style: "margin-left: -15px; margin-top: 15px;"}
+  - @posts_recent[0..0].each do |post|
+    .col-md-5
+      - @posts_recent[0..0].each do |post|
+        - if post.title_picture
+          = link_to post do
+            = image_tag post.title_picture.data(:flist)
+        - else
+          = link_to post do
+            = image_tag ("front1.jpg")
+    .col-md-6.post_list_text{style: "position: relative; left: 90px;"}
+      %p.post_list_post_title
+        =link_to post.title, post
+      %p.post_list_post_author
+        Written by
+        = post.author.name
+        |
+        = post.category
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+
+.row.visible-lg{style: "position: relative; right: 15px; margin-top: 50px;"}
+  - @posts_recent[1..1].each do |post|
+    .col-md-7
+      %p.post_list_post_title
+        =link_to post.title, post
+      %p.post_list_post_author
+        Written by
+        = post.author.name
+        |
+        = post.category
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+    .col-md-5
+      - @posts_recent[1..1].each do |post|
+        - if post.title_picture
+          = link_to post do
+            = image_tag post.title_picture.data(:flist)
+        - else
+          = link_to post do
+            = image_tag ("front2.jpg")
+    .recent_button{style: "padding-left: 15px;"}
+      = link_to 'Read More', post, class: "btn btn-primary"
+/ use for tablet
+.row.visible-md{style: "position: relative; left: -15px; margin-top: 50px;"}
+  - @posts_recent[1..1].each do |post|
+    .col-md-6
+      %p.post_list_post_title
+        =link_to post.title, post
+      %p.post_list_post_author
+        Written by
+        = post.author.name
+        |
+        = post.category
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+    .col-md-5
+      - @posts_recent[1..1].each do |post|
+        - if post.title_picture
+          = link_to post do
+            = image_tag post.title_picture.data(:flist)
+        - else
+          = link_to post do
+            = image_tag ("front2.jpg")
+
+.row.visible-lg{style: "margin-left: -15px; margin-top: 50px;"}
+  - @posts_recent[2..2].each do |post|
+    .col-md-5
+      - @posts_recent[2..2].each do |post|
+        - if post.title_picture
+          = link_to post do
+            = image_tag post.title_picture.data(:flist)
+        - else
+          = link_to post do
+            = image_tag ("front3.jpg")
+    .col-md-7.post_list_text
+      %p.post_list_post_title
+        =link_to post.title, post
+      %p.post_list_post_author
+        Written by
+        = post.author.name
+        |
+        = post.category
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+      .recent_button
+        = link_to 'Read More', post, class: "btn btn-primary"
+/ use for tablet
+.row.visible-md{style: "margin-left: -15px; margin-top: 50px;"}
+  - @posts_recent[2..2].each do |post|
+    .col-md-5
+      - @posts_recent[2..2].each do |post|
+        - if post.title_picture
+          = link_to post do
+            = image_tag post.title_picture.data(:flist)
+        - else
+          = link_to post do
+            = image_tag ("front3.jpg")
+    .col-md-6.post_list_text{style: "position: relative; left: 90px;"}
+      %p.post_list_post_title
+        =link_to post.title, post
+      %p.post_list_post_author
+        Written by
+        = post.author.name
+        |
+        = post.category
+        | Published on
+        = post.published_on.strftime("%B %d, %Y")
+      .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+.row.visible-xs
+  - @posts_recent[0..2].each do |post|
+    .small_front_list_title
+      .cat_promo_title=link_to post.title, post
+    .small_front_image
+      - if post.title_picture
+        = link_to post do
+          = image_tag post.title_picture.data(:flist)
+      - else
+        = link_to post do
+          = image_tag ("front3.jpg"), {style: "width: 100%"}
+.row.visible-sm
+  - @posts_recent[0..2].each do |post|
+    .small_front_list_title
+      .cat_promo_title=link_to post.title, post
+    .small_front_image
+      - if post.title_picture
+        = link_to post do
+          = image_tag post.title_picture.data(:flist)
+      - else
+        = link_to post do
+          = image_tag ("front3.jpg"), {style: "width: 100%"}
+%br
+%br

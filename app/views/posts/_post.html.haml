@@ -1,19 +1,41 @@
-.post_list.span9
-  .post_list_thumb_border.span2
+.post_list.row.visible-lg.visible-md{style: "margin-left: 15px; max-width: 677px;"}
+  .post_list_thumb_border.col-lg-3.col-md-4{style: "padding-left: 0; padding-right: 0;"}
     .post_list_thumb
       - if post.title_picture
         = link_to post do
-          = image_tag post.title_picture.data(:list)
+          = image_tag post.title_picture.data(:list), {style: "width: 100%"}
       - else
         = link_to post do
-          = image_tag "filler_list.jpg"
-  .post_list_text.span6
+          = image_tag "filler_list.jpg", {style: "width: 100%"}
+  .post_list_text.col-lg-8.col-md-7{style: "padding-left: 0; padding-right: 0;"}
     %p.post_list_post_title
       =link_to post.title, post
     %p.post_list_post_author
       Written by
       = post.author.name
+      |
+      = post.category
       | Published on
       = post.published_on.strftime("%B %d, %Y")
-    %p.post_intro_one
-      =raw post.intro
+    .front_into{style: "font-size: 12px; font-weight: bold;"}=raw post.intro
+    %br.visible-md
+.row.visible-xs{style: "margin-left: 15px;"}
+  .small_front_list_title
+    .cat_promo_title=link_to post.title, post
+  .small_front_image
+    - if post.title_picture
+      = link_to post do
+        = image_tag post.title_picture.data(:flist)
+    - else
+      = link_to post do
+        = image_tag ("front3.jpg"), {style: "width: 95%"}
+.row.visible-sm{style: "margin-left: 15px;"}
+  .small_front_list_title
+    .cat_promo_title=link_to post.title, post
+  .small_front_image
+    - if post.title_picture
+      = link_to post do
+        = image_tag post.title_picture.data(:flist)
+    - else
+      = link_to post do
+        = image_tag ("front3.jpg"), {style: "width: 95%"}
