@@ -1,4 +1,39 @@
-= render 'posts/carousel'
-.col-lg-8.col-md-8.col-sm-8.col-xs-12{style: "padding-left: 0;"}= content_for?(:content) ? yield(:content) : yield
-.col-lg-4.col-md-4.col-sm-4.col-xs-12{style: "padding-left: 0;"}
-  = render 'layouts/side_bar'
+!!!
+%html
+  %head
+    %title= "Elite Fitness Edge | #{@current_section && @current_section.titleize} | #{yield :title}"
+    /[if lt IE 9]
+      %script{"src" => "http://html5shim.googlecode.com/svn/trunk/html5.js", "type" => "text/javascript"}
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}
+    %meta{"name" => "viewport", "content" => "width=device-width, initial-scale=1.0"}
+    %meta{:content => "2XzaYUvr0pYsRkt8XSGp4lyvZBTZ_cKOlPvy6fX5L7s", :name => "google-site-verification"}/
+    = csrf_meta_tag
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    %script
+      = yield :javascripts
+      $(function() {
+      = yield :javascript_ready
+      });
+    
+    = yield(:head)
+  %body{ :id => yield(:body_id)}
+    - if @post
+      = render 'layouts/social'
+    #container.container-fluid
+      .row-fluid{style:"margin-left: 0"}
+        = render 'layouts/site_navbar'
+        / = render 'layouts/blog_navbar'
+    .container
+      #content.row{style:"margin-left: 0"}
+        = render 'layouts/flash', flash: flash
+        - if show_title?
+          %h1= yield(:title)
+        = render 'posts/carousel'
+        .col-lg-8.col-md-8.col-sm-8.col-xs-12{style: "padding-left: 0;"}= content_for?(:content) ? yield(:content) : yield
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12{style: "padding-left: 0;"}
+          = render 'layouts/side_bar'
+
+    =render 'layouts/footer'
+    - if @post
+      =render 'layouts/social_js'

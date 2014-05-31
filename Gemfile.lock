@@ -155,6 +155,8 @@ GEM
       rails
     launchy (2.3.0)
       addressable (~> 2.3)
+    layout_by_action (0.0.2)
+      activesupport
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -297,6 +299,7 @@ DEPENDENCIES
   kaminari
   kaminari-bootstrap
   launchy
+  layout_by_action
   nokogiri
   paperclip
   pg
