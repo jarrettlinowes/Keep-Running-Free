@@ -34,6 +34,9 @@ ActiveAdmin.register Post do
   		f.input :author
   		f.input :status, :collection => ['published','p_featured','f_training','f_nutrition','f_review']
       f.input :category, :collection => ['running','training','traininggear','nutrition','reviews']
+      f.input :category, :collection => ['running','training','traininggear','nutrition','reviews']
+      f.input :category, :collection => ['running','training','traininggear','nutrition','reviews']
+      f.input :category, as: :check_boxes
       f.input :tag_list, :hint => "Comma delimited ~ #{Post.tag_list_for_display_on :tags}"
       f.input :group_list, :hint => "Comma delimited ~ #{Post.tag_list_for_display_on :groups}"
   	end

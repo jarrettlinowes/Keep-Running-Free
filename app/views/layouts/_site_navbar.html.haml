@@ -13,13 +13,14 @@
     %div.navbar-right#nav-collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Fitness
-            %b.caret
-          %ul.dropdown-menu
-            %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
-            %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+        / %li.dropdown
+        /   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        /     Fitness
+        /     %b.caret
+        /   %ul.dropdown-menu
+        /     %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
+        /     %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+        %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
         %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
         %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
         %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
@@ -59,13 +60,14 @@
     %div.navbar-right#nav-collapse.collapse.navbar-collapse.hidden-xs{style: "padding-top: 90px; margin-right: -296px;"}
       %ul.nav.navbar-nav
         %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-            Fitness
-            %b.caret
-          %ul.dropdown-menu
-            %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
-            %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+        / %li.dropdown
+        /   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        /     Fitness
+        /     %b.caret
+        /   %ul.dropdown-menu
+        /     %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
+        /     %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+        %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
         %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
         %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
         %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
