@@ -4,8 +4,8 @@ ActionMailer::Base.delivery_method = :smtp
 	:enable_starttls_auto => true,
 	:address => 'smtp.gmail.com',
 	:port => 587,
-	:domain => 'yourdomain.com',
-	:user_name => 'administrator[at]yourdomain.com',
-	:password => 'yourpassword',
+	:domain => 'meticufit.com',
+	:user_name => 'admin@meticufit.com',
+	:password => 'linowes!@9Mfit',
 	:authentication => 'plain'
 }
