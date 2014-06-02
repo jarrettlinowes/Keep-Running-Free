@@ -8,27 +8,30 @@
   = @post.author.name
   | Published on
   = @post.published_on.strftime("%B %d, %Y")
-.post_intro=raw @post.intro
+%br
+%br
+.post_intro_p=raw @post.intro
 .post_body=raw @post.body
 #post_author_bottom
   %h4{style:"color: #600; margin: 10px"}= @post.author.name
   #author_about
     = @post.author.about
-- if @post.related_posts.present?
-  #post_related.span9
-    %h4{style:"margin-bottom: 5px; margin-left: 10px; margin-top: 10px"} Related Posts
-    - @post.related_posts.each do |rpost|
-      .related.span3
-        - if rpost.title_picture
-          = link_to rpost do
-            = image_tag rpost.title_picture.data(:list)
-        - else
-          = link_to rpost do
-            = image_tag "filler_list.jpg"
-        %div.related_title
-          = link_to truncate(rpost.title, :length => 25), rpost
-        %div.related_intro
-          =raw truncate(rpost.intro, :length => 100)
+.hidden-xs.hidden-sm
+  - if @post.related_posts.present?
+    #post_related.col-lg-9.col-md-9
+      %h4{style:"margin-bottom: 5px; margin-left: 10px; margin-top: 10px"} Related Posts
+      - @post.related_posts.each do |rpost|
+        .related.col-lg-4.col-md-4
+          - if rpost.title_picture
+            = link_to rpost do
+              = image_tag rpost.title_picture.data(:list)
+          - else
+            = link_to rpost do
+              = image_tag "filler_list.jpg"
+          %div.related_title
+            = link_to truncate(rpost.title, :length => 25), rpost
+          %div.related_intro
+            =raw truncate(rpost.intro, :length => 100)
 %br
 - if current_user
   = link_to 'Edit', edit_admin_post_path(@post)

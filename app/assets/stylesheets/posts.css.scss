@@ -97,10 +97,12 @@ nav.pagination span.page.current {
 #post_related {
   margin: 15px 0;
   background-color: #eee;
+  width: 100%;
 }
 .related {
-  padding-left: 10px;
+  //padding-left: 8px;
   text-align: center;
+  //margin-left: 6%;
 }
 .related_title {
   margin: 5px 0;
@@ -110,8 +112,10 @@ nav.pagination span.page.current {
 .related_intro {
   text-align: left;
   margin: 0 5px;
-  width: 150px;
-  padding-left: 35px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 11px;
+  //padding-left: 35px;
 }
 #post_author_bottom {
   border: 1px solid #ccc;
@@ -156,6 +160,6 @@ nav.pagination span.page.current {
   left: 2px;
   height: 120px;
   width: 90px;
-  border-right: 1px solid #ccc;
+  // border-right: 1px solid #ccc;
   margin-left: 10px;
 }

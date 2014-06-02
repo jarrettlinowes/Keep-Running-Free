@@ -3,8 +3,6 @@
     .item.active
       - if post = @post
         - if post.title_picture
-          = link_to post do
-            = image_tag post.title_picture.data(:front)
+          = image_tag post.title_picture.data(:front)
         - else
-          = link_to post do
-            = image_tag ("filler_front.jpg")
+          = image_tag ("filler_front.jpg")
