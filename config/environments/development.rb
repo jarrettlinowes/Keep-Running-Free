@@ -34,4 +34,6 @@ KRF::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.raise_delivery_errors = true
 end
