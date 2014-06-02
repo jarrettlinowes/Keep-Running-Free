@@ -9,7 +9,7 @@ class SupportsController < ApplicationController
     if @support.save
       redirect_to('/', :notice => "Support was successfully sent.")
     else
-      :notice = "You must fill all fields."
+      flash[:notice] = "You must fill all fields."
       render 'new'
     end
   end
