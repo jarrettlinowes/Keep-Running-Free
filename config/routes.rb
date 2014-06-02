@@ -1,5 +1,8 @@
 KRF::Application.routes.draw do
 
+  resources :supports
+
+
   resources :training_gears
 
 
