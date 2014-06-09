@@ -1,19 +1,55 @@
 = form_for @support, :url => { :action => "create" }, :html => { :method => :post } do |f|
   %p
-    = f.label "Name"
-  %p
+    = f.label "Name:  "
     = f.text_field :sender_name
   %p
-    = f.label "Email"
-  %p
+    = f.label "Email:  "
     = f.text_field :email
   %p
-    = f.label "Type"
+    = f.label "Subject:  "
+    = f.select :support_type, options_for_select(["Question", "Comment"])
   %p
-    = f.select :support_type, options_for_select(["Bug", "Ask", "Idea"])
-  %p
-    = f.label "Details"
+    = f.label "Message"
   %p
     = f.text_area :content
   %p
     = f.submit "Submit"
+
+%hr
+
+#accordion.panel-group
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
+          About Meticufit
+    #collapseOne.panel-collapse.collapse
+      .panel-body
+        %p.about1_style1{style: "color: #600"} Welcome to Meticufit - We offer information about various forms of training, nutrition guidelines and advice, and fitness oriented product reviews.
+        %hr
+        %p.about_bold Training
+        %p.about_11px Meticufit provides advice and experience with running, strength training, and mobility ranging from simplistic topics to more advanced ideology. Browse a variety of topics within these sub fields for insight and information that may relate to your training habits.
+        %hr
+        %p.about_bold Nutrition
+        %p.about_11px Meticufit provides information on nutrition that relates to a healthy diet as well as a diet that pertains to someone interested in running, strength training and mobility. The nutrition section of Meticufit offers advice as well as various recipies.
+        %hr
+        %p.about_bold Product Reviews
+        %p.about_11px Meticufit offers a variety of fitness oriented product reviews aimed to enhance your experience with running, strength training, mobility training, and nutrition.
+        %hr
+        .span3
+          %p.about_11px Like our #{link_to 'Facebook page', 'http://www.facebook.com/elitefitnessedge'}
+          %em{style:"padding-left: 25px"}= render 'layouts/facebook_like'
+        .span3offset3
+          %p.about_11px Follow Us on Twitter
+          %em.about1_twitter=render 'layouts/twitter'
+  .panel.panel-default
+    .panel-heading
+      %h4.panel-title
+        %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseTwo"}
+          Content Disclaimer
+    #collapseTwo.panel-collapse.collapse.in
+      .panel-body
+        %iframe{height: "3100", src: "http://ourdisclaimer.com/?i=Meticufit", width: "100%"}
+
+%br
+%br

@@ -25,7 +25,7 @@
         %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
         %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
         %li#nav_button
-          %form.form-inline{role: "form", action:"http://elitefitnessedge.us4.list-manage2.com/subscribe?u=ec7250299824e5388c21c7fdb&id=3897a99f2d", method:"post", target:"_blank"}
+          %form.form-inline{role: "form", action:"http://eepurl.com/WzhLn", method:"post", target:"_blank"}
             .form-group
               %label.sr-only Email address
               %input.form-control{placeholder: "Subscribe - Email", type: "email"}
@@ -34,13 +34,14 @@
   / Use 'Toggle' and 'Brand' for better mobile
   .container
     %div#nav_social.navbar-right{style: "margin-right: -83px;"}
-      %a{:href => "/"}
-        = image_tag("nav_twitter.png", :size => "30x30")
-      %a{:href => "/"}
-        = image_tag("nav_facebook.png", :size => "30x30")
-      %a{:href => "/"}
-        = image_tag("nav_pinterest.png", :size => "30x30")
-      %form#nav_sub.form-inline{role: "form", action:"http://elitefitnessedge.us4.list-manage2.com/subscribe?u=ec7250299824e5388c21c7fdb&id=3897a99f2d", method:"post", target:"_blank"}
+      %div{style: "border-right: 1px #ccc solid; width: 120px; height: 30px;"}
+        %a{:href => "https://www.facebook.com/meticufit"}
+          = image_tag("nav_facebook.png", :size => "30x30")
+        %a{:href => "https://twitter.com/Meticufit"}
+          = image_tag("nav_twitter.png", :size => "30x30")
+      / %a{:href => "/"}
+      /   = image_tag("nav_pinterest.png", :size => "30x30")
+      %form#nav_sub.form-inline{role: "form", action:"http://eepurl.com/WzhLn", method:"post", target:"_blank"}
         .form-group
           %label.sr-only Email address
           %input.form-control{placeholder: "Subscribe - Email", type: "email"}

@@ -1,15 +1,236 @@
 #why_opt_in
-	.span9
-		%h3#whyopt_header Why Opt In to Our Mailing List?
-	.span9{style:"margin-top: 10px"}
-		%p#whyopt_body The Elite Fitness Edge's monthly newsletter is a free source of information that features a list of newly posted articles, exclusive tips, and recommendations for training gear you may find useful.
-		%p#whyopt_body{style:"font-weight: bold"} What do you get if you subscribe to our mailing list?
-		%ul#whyopt_body
-			%li Receive monthly emails with links to newly published content that you might have missed
-			%li Receive running, training, and nutrition tips not found on the Elite Fitnes Edge website
-			%li Find links to external articles and websites that you may find interesting and useful
-			%li Receive links and recommendations for the newest running apparel and accessories
-			%li Read quotes by and be inspired by successful athletes
-			%li Participate in occasional site-wide contests and polls
-		%p#whyopt_body Privacy notice: Email addresses and other personal information submitted is used only for the purpose of sending you a monthly newsletter. We respect your privacy and your information will not be disclosed or distributed to any third party service.
-		%p#whyopt_body I encourage you to sign up for a week and give it a try! You may opt-out at any time.
+  .span9
+    %h3#whyopt_header Why Opt In to Our Mailing List?
+  .span9{style:"margin-top: 10px"}
+    %p#whyopt_body Meticufit's monthly newsletter is a free source of information that features a list of newly posted articles, exclusive tips, and recommendations for training gear you may find useful.
+    %p#whyopt_body{style:"font-weight: bold"} What to expect as a subscribed member of our mailing list
+    %ul#whyopt_body
+      %li Receive monthly emails with links to newly published content that you may have missed
+      %li Receive training, and nutrition tips not found on the Meticufit website
+      %li Find links to external articles and websites that you may find interesting and useful
+      %li Receive links and recommendations for the newest training apparel and equipment
+      %li Participate in occasional site-wide contests and polls
+    %p#whyopt_body Privacy notice: Email addresses and other personal information submitted is used only for the purpose of sending you a monthly newsletter. We respect your privacy and your information will not be disclosed or distributed to any third party service.
+    %p#whyopt_body I encourage you to sign up for a week and give it a try! You may opt-out at any time.
+
+/ Begin MailChimp Signup Form
+%link{href: "//cdn-images.mailchimp.com/embedcode/classic-081711.css", rel: "stylesheet", type: "text/css"}/
+:css
+  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+#mc_embed_signup
+  %form#mc-embedded-subscribe-form.validate{action: "http://keeprunningfree.us4.list-manage1.com/subscribe/post?u=ec7250299824e5388c21c7fdb&id=7a9bac51e4", method: "post", name: "mc-embedded-subscribe-form", novalidate: "", target: "_blank"}
+    %h2 Subscribe to our mailing list
+    .indicates-required
+      %span.asterisk *
+      indicates required
+    .mc-field-group
+      %label{for: "mce-EMAIL"}
+        Email Address
+        %span.asterisk *
+      %input#mce-EMAIL.required.email{name: "EMAIL", type: "email", value: ""}/
+    .mc-field-group
+      %label{for: "mce-FNAME"} First Name
+      %input#mce-FNAME{name: "FNAME", type: "text", value: ""}/
+    .mc-field-group
+      %label{for: "mce-LNAME"} Last Name
+      %input#mce-LNAME{name: "LNAME", type: "text", value: ""}/
+    #mce-responses.clear
+      #mce-error-response.response{style: "display:none"}
+      #mce-success-response.response{style: "display:none"}
+    / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+    %div{style: "position: absolute; left: -5000px;"}
+      %input{name: "b_ec7250299824e5388c21c7fdb_7a9bac51e4", tabindex: "-1", type: "text", value: ""}/
+    .clear
+      %input#mc-embedded-subscribe.button{name: "subscribe", type: "submit", value: "Subscribe"}/
+:javascript
+  var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+  try {
+      var jqueryLoaded=jQuery;
+      jqueryLoaded=true;
+  } catch(err) {
+      var jqueryLoaded=false;
+  }
+  var head= document.getElementsByTagName('head')[0];
+  if (!jqueryLoaded) {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+      head.appendChild(script);
+      if (script.readyState && script.onload!==null){
+          script.onreadystatechange= function () {
+                if (this.readyState == 'complete') mce_preload_check();
+          }    
+      }
+  }
+  
+  var err_style = '';
+  try{
+      err_style = mc_custom_error_style;
+  } catch(e){
+      err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+  }
+  var head= document.getElementsByTagName('head')[0];
+  var style= document.createElement('style');
+  style.type= 'text/css';
+  if (style.styleSheet) {
+    style.styleSheet.cssText = err_style;
+  } else {
+    style.appendChild(document.createTextNode(err_style));
+  }
+  head.appendChild(style);
+  setTimeout('mce_preload_check();', 250);
+  
+  var mce_preload_checks = 0;
+  function mce_preload_check(){
+      if (mce_preload_checks>40) return;
+      mce_preload_checks++;
+      try {
+          var jqueryLoaded=jQuery;
+      } catch(err) {
+          setTimeout('mce_preload_check();', 250);
+          return;
+      }
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+      head.appendChild(script);
+      try {
+          var validatorLoaded=jQuery("#fake-form").validate({});
+      } catch(err) {
+          setTimeout('mce_preload_check();', 250);
+          return;
+      }
+      mce_init_form();
+  }
+  function mce_init_form(){
+      jQuery(document).ready( function($) {
+        var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+        var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+        $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+        options = { url: 'http://keeprunningfree.us4.list-manage1.com/subscribe/post-json?u=ec7250299824e5388c21c7fdb&id=7a9bac51e4&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                      beforeSubmit: function(){
+                          $('#mce_tmp_error_msg').remove();
+                          $('.datefield','#mc_embed_signup').each(
+                              function(){
+                                  var txt = 'filled';
+                                  var fields = new Array();
+                                  var i = 0;
+                                  $(':text', this).each(
+                                      function(){
+                                          fields[i] = this;
+                                          i++;
+                                      });
+                                  $(':hidden', this).each(
+                                      function(){
+                                          var bday = false;
+                                          if (fields.length == 2){
+                                              bday = true;
+                                              fields[2] = {'value':1970};//trick birthdays into having years
+                                          }
+                                        if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+                                          this.value = '';
+                        } else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+                                          this.value = '';
+                        } else {
+                            if (/\[day\]/.test(fields[0].name)){
+                                                this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                         
+                            } else {
+                                                this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+                                            }
+                                        }
+                                      });
+                              });
+                          $('.phonefield-us','#mc_embed_signup').each(
+                              function(){
+                                  var fields = new Array();
+                                  var i = 0;
+                                  $(':text', this).each(
+                                      function(){
+                                          fields[i] = this;
+                                          i++;
+                                      });
+                                  $(':hidden', this).each(
+                                      function(){
+                                          if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+                                          this.value = '';
+                        } else {
+                            this.value = 'filled';
+                                        }
+                                      });
+                              });
+                          return mce_validator.form();
+                      }, 
+                      success: mce_success_cb
+                  };
+        $('#mc-embedded-subscribe-form').ajaxForm(options);
+        
+        
+      });
+  }
+  function mce_success_cb(resp){
+      $('#mce-success-response').hide();
+      $('#mce-error-response').hide();
+      if (resp.result=="success"){
+          $('#mce-'+resp.result+'-response').show();
+          $('#mce-'+resp.result+'-response').html(resp.msg);
+          $('#mc-embedded-subscribe-form').each(function(){
+              this.reset();
+        });
+      } else {
+          var index = -1;
+          var msg;
+          try {
+              var parts = resp.msg.split(' - ',2);
+              if (parts[1]==undefined){
+                  msg = resp.msg;
+              } else {
+                  i = parseInt(parts[0]);
+                  if (i.toString() == parts[0]){
+                      index = parts[0];
+                      msg = parts[1];
+                  } else {
+                      index = -1;
+                      msg = resp.msg;
+                  }
+              }
+          } catch(e){
+              index = -1;
+              msg = resp.msg;
+          }
+          try{
+              if (index== -1){
+                  $('#mce-'+resp.result+'-response').show();
+                  $('#mce-'+resp.result+'-response').html(msg);            
+              } else {
+                  err_id = 'mce_tmp_error_msg';
+                  html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+                  
+                  var input_id = '#mc_embed_signup';
+                  var f = $(input_id);
+                  if (ftypes[index]=='address'){
+                      input_id = '#mce-'+fnames[index]+'-addr1';
+                      f = $(input_id).parent().parent().get(0);
+                  } else if (ftypes[index]=='date'){
+                      input_id = '#mce-'+fnames[index]+'-month';
+                      f = $(input_id).parent().parent().get(0);
+                  } else {
+                      input_id = '#mce-'+fnames[index];
+                      f = $().parent(input_id).get(0);
+                  }
+                  if (f){
+                      $(f).append(html);
+                      $(input_id).focus();
+                  } else {
+                      $('#mce-'+resp.result+'-response').show();
+                      $('#mce-'+resp.result+'-response').html(msg);
+                  }
+              }
+          } catch(e){
+              $('#mce-'+resp.result+'-response').show();
+              $('#mce-'+resp.result+'-response').html(msg);
+          }
+      }
+  }
+/ End mc_embed_signup

@@ -6,8 +6,8 @@
         %hr
         = link_to 'About', '/about'
         %br= link_to 'Subscribe', '/why_opt_in'
-        = link_to 'Authors', '/about'
-        %br= link_to 'Contact', '/about'
+        = link_to 'Contact', '/supports/new'
+        %br
         %br
         #copyright.logout_link.logout_link_hov
           %br
@@ -24,12 +24,12 @@
         %br= link_to 'Product Reviews', '/posts?category=reviews'
       .col-lg-4.col-md-4.footer_social
         .col-xs-12.footer_social_lower
-          %a{:href => "/", style: 'float: right;'}
-            = image_tag("nav_pinterest.png", :size => "25x25")
-          %a{:href => "/", style: 'float: right; margin-right: 4px;'}
-            = image_tag("nav_facebook.png", :size => "25x25")
-          %a{:href => "/", style: 'float: right; margin-right: 4px;'}
+          / %a{:href => "/", style: 'float: right;'}
+          /   = image_tag("nav_pinterest.png", :size => "25x25")
+          %a{:href => "https://twitter.com/Meticufit", style: 'float: right; margin-right: 4px;'}
             = image_tag("nav_twitter.png", :size => "25x25")
+          %a{:href => "https://www.facebook.com/meticufit", style: 'float: right; margin-right: 4px;'}
+            = image_tag("nav_facebook.png", :size => "25x25")
         .col-xs-12
           %a{:href => "/", style: 'float: right; margin-top: 10px;'}
             = image_tag("foot_logo.png")
