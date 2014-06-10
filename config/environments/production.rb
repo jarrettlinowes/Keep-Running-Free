@@ -65,7 +65,7 @@ KRF::Application.configure do
   config.active_support.deprecation = :notify
 
   config.gem 'rack-google-analytics', :lib => 'rack/google-analytics'
-  config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-43245358-1'
+  config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-51783514-1'
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
