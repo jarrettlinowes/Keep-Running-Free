@@ -38,9 +38,9 @@
           .carousel-caption.carousel_caption_small.visible-xs
             %h5=link_to fpost.title, fpost
       .item
-        = link_to (image_tag("carsel.jpg")), '/posts?category=reviews'
-      .item
-        = link_to (image_tag("carousel_sample.png")), '/'
+        = link_to (image_tag("carousel_sample.png")), '/posts?category=reviews'
+        .carousel-caption.carousel_caption.hidden-xs
+          %h5=link_to 'Product Reviews', '/posts?category=reviews'
 
     %a.left.carousel-control{"data-slide" => "prev", href: "#carousel"}
       %span.glyphicon.glyphicon-chevron-left
