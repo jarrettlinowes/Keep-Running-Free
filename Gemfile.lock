@@ -277,7 +277,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  activeadmin
+  activeadmin (= 0.6.0)
   acts-as-taggable-on (~> 2.3.1)
   aws-sdk
   bcrypt-ruby (~> 3.0.0)

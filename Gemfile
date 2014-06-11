@@ -15,7 +15,7 @@ gem 'kaminari-bootstrap'
 gem 'jquery-rails'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'activeadmin'
+gem 'activeadmin', '0.6.0'
 gem "ckeditor", "~> 3.7.1"
 gem "paperclip"
 gem "aws-sdk"
