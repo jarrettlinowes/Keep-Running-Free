@@ -1,8 +1,8 @@
 - title @post.title, false
-#post_title
-  - if @post.title_picture
-    = image_tag @post.title_picture.data(:feature)
-  %h2= @post.title
+/ #post_title
+/   - if @post.title_picture
+/     = image_tag @post.title_picture.data(:feature)
+/   %h2= @post.title
 #post_author_top.span9
   Written by
   = @post.author.name
