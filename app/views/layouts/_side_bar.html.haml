@@ -7,7 +7,7 @@
     - if fpost = Post.f_training.recent.first
       - if fpost.title_picture
         = link_to fpost do
-          = image_tag fpost.title_picture.data(:feature)
+          = image_tag fpost.title_picture.data(:sfeature), {style: "width: 100%;"}
       - else
         = link_to fpost do
           = image_tag ("filler_feature.jpg"), {style: "width: 100%;"}
@@ -18,7 +18,7 @@
     - if fpost = Post.f_nutrition.recent.first
       - if fpost.title_picture
         = link_to fpost do
-          = image_tag fpost.title_picture.data(:feature)
+          = image_tag fpost.title_picture.data(:sfeature), {style: "width: 100%;"}
       - else
         = link_to fpost do
           = image_tag ("filler_feature.jpg"), {style: "width: 100%;"}
@@ -29,7 +29,7 @@
     - if fpost = Post.f_review.recent.first
       - if fpost.title_picture
         = link_to fpost do
-          = image_tag fpost.title_picture.data(:feature)
+          = image_tag fpost.title_picture.data(:sfeature), {style: "width: 100%;"}
       - else
         = link_to fpost do
           = image_tag ("filler_feature.jpg"), {style: "width: 100%;"}
