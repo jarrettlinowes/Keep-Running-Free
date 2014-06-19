@@ -1,8 +1,8 @@
-#carousel.carousel.slide.hidden-xs{"data-ride" => "carousel", style: "margin-left: 15px; margin-right: 15px; margin-bottom: 15px;"}
+#carousel.carousel.slide{"data-ride" => "carousel", style: "margin-left: 15px; margin-right: 15px; margin-bottom: 15px;"}
   .carousel-inner
     .item.active
       - if post = @post
         - if post.title_picture
-          = image_tag post.title_picture.data(:front)
+          = image_tag post.title_picture.data(:front), {style: "width: 100%;"}
         - else
           = image_tag ("filler_front.jpg")
