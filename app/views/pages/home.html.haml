@@ -73,7 +73,7 @@
       - @posts_recent[0..0].each do |post|
         - if post.title_picture
           = link_to post do
-            = image_tag post.title_picture.data(:flist)
+            = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
         - else
           = link_to post do
             = image_tag ("front1.jpg")
@@ -97,7 +97,7 @@
       - @posts_recent[0..0].each do |post|
         - if post.title_picture
           = link_to post do
-            = image_tag post.title_picture.data(:flist)
+            = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
         - else
           = link_to post do
             = image_tag ("front1.jpg")
@@ -130,7 +130,7 @@
       - @posts_recent[1..1].each do |post|
         - if post.title_picture
           = link_to post do
-            = image_tag post.title_picture.data(:flist)
+            = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
         - else
           = link_to post do
             = image_tag ("front2.jpg")
@@ -154,7 +154,7 @@
       - @posts_recent[1..1].each do |post|
         - if post.title_picture
           = link_to post do
-            = image_tag post.title_picture.data(:flist)
+            = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
         - else
           = link_to post do
             = image_tag ("front2.jpg")
@@ -165,7 +165,7 @@
       - @posts_recent[2..2].each do |post|
         - if post.title_picture
           = link_to post do
-            = image_tag post.title_picture.data(:flist)
+            = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
         - else
           = link_to post do
             = image_tag ("front3.jpg")
@@ -189,7 +189,7 @@
       - @posts_recent[2..2].each do |post|
         - if post.title_picture
           = link_to post do
-            = image_tag post.title_picture.data(:flist)
+            = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
         - else
           = link_to post do
             = image_tag ("front3.jpg")
@@ -211,7 +211,7 @@
     .small_front_image
       - if post.title_picture
         = link_to post do
-          = image_tag post.title_picture.data(:flist)
+          = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
       - else
         = link_to post do
           = image_tag ("front3.jpg"), {style: "width: 100%"}
@@ -222,7 +222,7 @@
     .small_front_image
       - if post.title_picture
         = link_to post do
-          = image_tag post.title_picture.data(:flist)
+          = image_tag post.title_picture.data(:flist), {style: "width: 100%;"}
       - else
         = link_to post do
           = image_tag ("front3.jpg"), {style: "width: 100%"}
