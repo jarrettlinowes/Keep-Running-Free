@@ -1,6 +1,6 @@
 %nav#site_navbar.navbar.visible-xs{role: "navigation", style: "height: 50px;"}
   / Use 'Toggle' and 'Brand' for better mobile
-  .container#nav_shadow
+  .container
     %div.navbar-header
       %button.navbar-toggle{"data-target" => "#nav-collapse", "data-toggle" => "collapse", type: "button"}
         %span.sr-only Toggle navigation
@@ -10,7 +10,7 @@
       %a.navbar-brand2{:href => "/"}
         = image_tag("Logo3.png")
 
-    %div.navbar-right#nav-collapse.collapse.navbar-collapse
+    %div.navbar-right#nav-collapse.collapse.navbar-collapse#nav_shadow
       %ul.nav.navbar-nav
         %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
         / %li.dropdown

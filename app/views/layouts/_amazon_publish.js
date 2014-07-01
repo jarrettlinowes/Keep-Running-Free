@@ -1,0 +1,1 @@
+<!-- Start of Amazon Publisher Studio Loader -->    <script>  window.amznpubstudioTag = "everyt01-20";  </script>    <!-- Do not modify the following code ! -->  <script async="true" type="text/javascript" src="http://ps-us.amazon-adsystem.com/domains/everyt01-20_88a7f41d-dab0-484c-9366-95439d2b64f6.js" charset="UTF-8"></script>    <!-- End of Amazon Publisher Studio Loader -->
