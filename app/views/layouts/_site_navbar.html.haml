@@ -33,7 +33,6 @@
 %nav#site_navbar.navbar.hidden-xs{role: "navigation"}
   / Use 'Toggle' and 'Brand' for better mobile
   .container
-    = image_tag("nav_image.png")
     %div#nav_social.navbar-right{style: "margin-right: -83px;"}
       %div{style: "border-right: 1px #ccc solid; width: 120px; height: 30px;"}
         %a{:href => "https://www.facebook.com/meticufit"}
@@ -54,9 +53,11 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "/"}
-        = image_tag("Logo3.png")
-      #slogan
+      %a{style: "position: absolute; z-index: 1", :href => "/"}
+        = image_tag("Logo3.png");image_tag("nav_image.png")
+        %a.navbar-brand{:href => "/", style: "position: absolute; z-index: 2"}
+          = image_tag("Logo3.png")
+      #slogan{style: "z-index: 2; font-weight: bold; color: #000; opacity: 1.0;"}
         "Fitness, Training, Nutrition - Simplified"
 
     %div.navbar-right#nav-collapse.collapse.navbar-collapse.hidden-xs{style: "padding-top: 90px; margin-right: -296px;"}
