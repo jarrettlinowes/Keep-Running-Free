@@ -68,16 +68,6 @@
   margin-top: -34px;
 }
 
-#nav_button.active {
-  border-top-color: #fdd017;
-  a {
-    @include linear-gradient(#fff, #fff);
-  }
-  a {
-    @include radial-gradient(50% 50%, circle cover, #600, #222 60%);
-  }
-}
-
 .navbar-inner {
   border-radius: 0;
 //  @include linear-gradient(#000, #111);
