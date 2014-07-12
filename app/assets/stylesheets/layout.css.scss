@@ -54,6 +54,18 @@
     padding-left: 25px;
   }
 }
+.navbar-brand-mobile {
+  width: auto;
+  height: 50px;
+  z-index: 1000;
+  position: absolute;
+  img {
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding-left: 25px;
+  }
+}
 #nav_social {
   position: relative;
   right: 100px;

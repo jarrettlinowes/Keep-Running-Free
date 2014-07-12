@@ -16,19 +16,14 @@
         %button.btn.btn-default.btn-md{type: "button", type: "submit"}
           %span.glyphicon.glyphicon-envelope
     %div.navbar-header
-      %button.navbar-toggle{"data-target" => "#nav-collapse", "data-toggle" => "collapse", type: "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
       %a{style: "position: absolute; z-index: 1", :href => "/"}
-        = image_tag("Logo3.png");image_tag("nav_image.png")
+        = image_tag("nav_image.png")
         %a.navbar-brand{:href => "/", style: "position: absolute; z-index: 2"}
           = image_tag("Logo3.png")
       #slogan{style: "z-index: 2; font-weight: bold; color: #000; opacity: 1.0;"}
         "Fitness, Training, Nutrition - Simplified"
 
-    %div.navbar-right#nav-collapse.collapse.navbar-collapse.hidden-xs{style: "padding-top: 90px; margin-right: -296px;"}
+    %div.navbar-right.hidden-xs{style: "padding-top: 90px; margin-right: -296px;"}
       %ul.nav.navbar-nav
         %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
         / %li.dropdown
@@ -44,19 +39,14 @@
         %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
     / /.navbar-collapse
 
-.container.visible-xs{style: "position: fixed; z-index: 1500; width: 100%; height: 45px; background-color: #fff;"}
-  %div
-    %ul{style: "list-style-type: none;"}
-      %li{class: @current_section=='reviews' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; width: 60px;"}= link_to 'Reviews', '/posts?category=reviews'
-      %li{class: @current_section=='nutrition' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Nutrition', '/posts?category=nutrition'
-      %li{class: @current_section=='training' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Training', '/posts?category=training'
-      %a{:href => "/", style: "margin-left: -25px; margin-bottom: 5px;"}= image_tag("mobile_logo.png")
+/ .container.visible-xs{style: "position: fixed; z-index: 1500; width: 100%; height: 45px; background-color: #000;"}
+/   %div
+/     %ul{style: "list-style-type: none;"}
+/       %li{class: @current_section=='reviews' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; width: 60px;"}= link_to 'Reviews', '/posts?category=reviews'
+/       %li{class: @current_section=='nutrition' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Nutrition', '/posts?category=nutrition'
+/       %li{class: @current_section=='training' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Training', '/posts?category=training'
+/       %a{:href => "/", style: "margin-left: -25px; margin-bottom: 5px; padding-top: 5px;"}= image_tag("mobile_logo2.png")
       
-      
-      
-      
-
-
 / %nav#site_navbar.navbar.visible-xs{role: "navigation", style: "height: 50px;"}
 /   / Use 'Toggle' and 'Brand' for better mobile
 /   .container
@@ -88,3 +78,7 @@
 /               %label.sr-only Email address
 /               %input.form-control{placeholder: "Subscribe - Email", type: "email"}
 /     / /.navbar-collapse
+
+%nav.navbar.visible-xs{style: "max-height: 50px;"}
+  %div.navbar-header
+    %a.navbar-brand-mobile{:href => "/"}= image_tag("mobile_logo.png")
