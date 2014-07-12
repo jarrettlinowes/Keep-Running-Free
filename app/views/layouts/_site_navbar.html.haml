@@ -1,35 +1,3 @@
-%nav#site_navbar.navbar.visible-xs{role: "navigation", style: "height: 50px;"}
-  / Use 'Toggle' and 'Brand' for better mobile
-  .container
-    %div.navbar-header
-      %button.navbar-toggle{"data-target" => "#nav-collapse", "data-toggle" => "collapse", type: "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand2{:href => "/"}
-        = image_tag("Logo3.png")
-
-    %div.navbar-right#nav-collapse.collapse.navbar-collapse#nav_shadow
-      %ul.nav.navbar-nav
-        %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
-        / %li.dropdown
-        /   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-        /     Fitness
-        /     %b.caret
-        /   %ul.dropdown-menu
-        /     %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
-        /     %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
-        %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
-        %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
-        %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
-        %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
-        %li#nav_button
-          %form.form-inline{role: "form", action:"http://eepurl.com/WzhLn", method:"post", target:"_blank"}
-            .form-group
-              %label.sr-only Email address
-              %input.form-control{placeholder: "Subscribe - Email", type: "email"}
-    / /.navbar-collapse
 %nav#site_navbar.navbar.hidden-xs{role: "navigation"}
   / Use 'Toggle' and 'Brand' for better mobile
   .container
@@ -75,3 +43,45 @@
         %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
         %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
     / /.navbar-collapse
+
+.container.visible-xs{style: "position: fixed; z-index: 1500; width: 100%; height: 40px; background-color: #fff;"}
+  %div
+    %ul{style: "list-style-type: none;"}
+      %li{class: @current_section=='home' && 'active', style: "float: right;"}= link_to 'Home', '/'
+      %li{class: @current_section=='training' && 'active', style: "float: right; margin-right: 10px;"}= link_to 'Training', '/posts?category=training'
+      %li{class: @current_section=='nutrition' && 'active', style: "float: right; margin-right: 10px;"}= link_to 'Nutrition', '/posts?category=nutrition'
+      %li{class: @current_section=='reviews' && 'active', style: "float: right; margin-right: 10px;"}= link_to 'Reviews', '/posts?category=reviews'
+      %li{class: @current_section=='about' && 'active', style: "float: right; margin-right: 10px;"}= link_to 'About', '/about'
+
+
+/ %nav#site_navbar.navbar.visible-xs{role: "navigation", style: "height: 50px;"}
+/   / Use 'Toggle' and 'Brand' for better mobile
+/   .container
+/     %div.navbar-header
+/       %button.navbar-toggle{"data-target" => "#nav-collapse", "data-toggle" => "collapse", type: "button"}
+/         %span.sr-only Toggle navigation
+/         %span.icon-bar
+/         %span.icon-bar
+/         %span.icon-bar
+/       %a.navbar-brand2{:href => "/"}
+/         = image_tag("Logo3.png")
+/     %div.navbar-right#nav-collapse.collapse.navbar-collapse#nav_shadow
+/       %ul.nav.navbar-nav
+/         %li#nav_button{class: @current_section=='home' && 'active'}= link_to 'Home', '/'
+/         / %li.dropdown
+/         /   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+/         /     Fitness
+/         /     %b.caret
+/         /   %ul.dropdown-menu
+/         /     %li{class: @current_section=='running' && 'active'}= link_to 'Running', '/posts?category=running'
+/         /     %li{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+/         %li#nav_button{class: @current_section=='training' && 'active'}= link_to 'Training', '/posts?category=training'
+/         %li#nav_button{class: @current_section=='nutrition' && 'active'}= link_to 'Nutrition', '/posts?category=nutrition'
+/         %li#nav_button{class: @current_section=='reviews' && 'active'}= link_to 'Reviews', '/posts?category=reviews'
+/         %li#nav_button{class: @current_section=='about' && 'active'}= link_to 'About', '/about'
+/         %li#nav_button
+/           %form.form-inline{role: "form", action:"http://eepurl.com/WzhLn", method:"post", target:"_blank"}
+/             .form-group
+/               %label.sr-only Email address
+/               %input.form-control{placeholder: "Subscribe - Email", type: "email"}
+/     / /.navbar-collapse

@@ -29,10 +29,16 @@
         = render 'layouts/flash', flash: flash
         - if show_title?
           %h1= yield(:title)
-        = render 'layouts/show_title_image'
-        .col-lg-8.col-md-8.col-sm-8.col-xs-12= content_for?(:content) ? yield(:content) : yield
-        .col-lg-4.col-md-4.col-sm-4.col-xs-12{style: "padding-left: 0;"}
-          = render 'layouts/side_bar'
+        %div.hidden-xs
+          = render 'layouts/show_title_image'
+          .col-lg-8.col-md-8.col-sm-8.col-xs-12= content_for?(:content) ? yield(:content) : yield
+          .col-lg-4.col-md-4.col-sm-4.col-xs-12{style: "padding-left: 0;"}
+            = render 'layouts/side_bar'
+        %div.visible-xs{style: "margin-top: 50px;"}
+          = render 'layouts/show_title_image'
+          .col-lg-8.col-md-8.col-sm-8.col-xs-12= content_for?(:content) ? yield(:content) : yield
+          .col-lg-4.col-md-4.col-sm-4.col-xs-12{style: "padding-left: 0;"}
+            = render 'layouts/side_bar'
 
     =render 'layouts/footer'
     - if @post

@@ -81,7 +81,9 @@
     color: #060172;
   }
 }
-
+#mobile_nav li {
+  display: inline;
+}
 // ===== general content area =====
 #content {
   min-height: 800px;
