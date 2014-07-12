@@ -47,8 +47,7 @@
 .container.visible-xs{style: "position: fixed; z-index: 1500; width: 100%; height: 45px; background-color: #fff;"}
   %div
     %ul{style: "list-style-type: none;"}
-      %li{class: @current_section=='about' && 'active', style: "float: right; margin-top: 15px;"}= link_to 'About', '/about'
-      %li{class: @current_section=='reviews' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Reviews', '/posts?category=reviews'
+      %li{class: @current_section=='reviews' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; width: 60px;"}= link_to 'Reviews', '/posts?category=reviews'
       %li{class: @current_section=='nutrition' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Nutrition', '/posts?category=nutrition'
       %li{class: @current_section=='training' && 'active', style: "float: right; margin-right: 10px; margin-top: 15px; border-right: 1px #000 solid; width: 60px;"}= link_to 'Training', '/posts?category=training'
       %a{:href => "/", style: "margin-left: -25px; margin-bottom: 5px;"}= image_tag("mobile_logo.png")
