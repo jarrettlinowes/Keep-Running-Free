@@ -57,8 +57,10 @@ mailchimp_side_bkg.jpg: mailchimp_side_bkg-54db5cf37deac231cdefd4b347627b2c.jpg
 mailchimp_side_bkg/index.jpg: mailchimp_side_bkg-54db5cf37deac231cdefd4b347627b2c.jpg
 mailchimp_side_bkg_gold.jpg: mailchimp_side_bkg_gold-94f68be54c0cbb3cc08d7f39b78ddec6.jpg
 mailchimp_side_bkg_gold/index.jpg: mailchimp_side_bkg_gold-94f68be54c0cbb3cc08d7f39b78ddec6.jpg
-mobile_logo.png: mobile_logo-22eb2f92a65ff9b1863de58a16467ebb.png
-mobile_logo/index.png: mobile_logo-22eb2f92a65ff9b1863de58a16467ebb.png
+mobile_logo.png: mobile_logo-924a5e54fe18aa1f7e2d429fd8c63a8d.png
+mobile_logo/index.png: mobile_logo-924a5e54fe18aa1f7e2d429fd8c63a8d.png
+mobile_logo2.png: mobile_logo2-5fef772ce875d3de3dc30256301b2676.png
+mobile_logo2/index.png: mobile_logo2-5fef772ce875d3de3dc30256301b2676.png
 nav_facebook.png: nav_facebook-e42aa8c44deb6d3cea75d52e90e28f9d.png
 nav_facebook/index.png: nav_facebook-e42aa8c44deb6d3cea75d52e90e28f9d.png
 nav_image.png: nav_image-fa994951c656fd6b57b5979911a7cd28.png
@@ -87,10 +89,10 @@ training.jpg: training-6b55e6be39ab24111bf74298fa11e3e4.jpg
 training/index.jpg: training-6b55e6be39ab24111bf74298fa11e3e4.jpg
 twitter_footer.png: twitter_footer-bb2db66883a0a89d5be9050101c41b42.png
 twitter_footer/index.png: twitter_footer-bb2db66883a0a89d5be9050101c41b42.png
-application.js: application-e5c5720aa2dd159ddbd3989630870213.js
-application/index.js: application-e5c5720aa2dd159ddbd3989630870213.js
-application.css: application-7acbd0bffc49e23940f81fad4217a348.css
-application/index.css: application-7acbd0bffc49e23940f81fad4217a348.css
+application.js: application-fa41110655ba34fe7d14947502ed0890.js
+application/index.js: application-fa41110655ba34fe7d14947502ed0890.js
+application.css: application-0f0ef7673f30e99a1f8e092951a6d6f2.css
+application/index.css: application-0f0ef7673f30e99a1f8e092951a6d6f2.css
 scaffolds.css.scss0: scaffolds.css-4e1c83aee4efc6dfda6f86e06a0bab7e.scss0
 scaffolds/index.css.scss0: scaffolds.css-4e1c83aee4efc6dfda6f86e06a0bab7e.scss0
 active_admin.js: active_admin-440f861ebccdf93f109dddb79abd11e4.js
