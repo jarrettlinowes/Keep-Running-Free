@@ -20,7 +20,7 @@
   %body{ :id => yield(:body_id)}
     - if @post
       = render 'layouts/social'
-    #container.container-fluid
+    #container.container-fluid{style: "box-shadow: 0px 10px 10px #888;"}
       .row-fluid{style:"margin-left: 0"}
         = render 'layouts/site_navbar'
         / = render 'layouts/blog_navbar'

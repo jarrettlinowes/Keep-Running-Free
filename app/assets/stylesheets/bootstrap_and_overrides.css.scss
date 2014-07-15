@@ -28,7 +28,7 @@ color: #000;
 
 .navbar .nav .active > a{
   color: #060172;
-  border-top: 2px #fdd017 solid;
+  background-color: #eee;
 } 
 .navbar .nav .active > a:hover {
   color: #060172;
@@ -57,7 +57,7 @@ color: #000;
   color: silver;
 }
 .navbar .nav > li > a:hover {
-  color: #fdd017;
+//  color: #fdd017;
 }
 .icon-bar {
   background-color: #000;

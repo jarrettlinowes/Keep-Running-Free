@@ -3,13 +3,14 @@
   height: 149px;
   background-color: #fff;
   min-width: 300px;
+  border-radius: 0px;
   li {
-    border-top: 2px #fff solid;
+//    border-top: 2px #fff solid;
     z-index: 1000;
     background-color: #fff;
   }
   li:hover{
-    border-top: 2px #fff solid;
+//    border-top: 2px #fff solid;
     z-index: 1000;
   }
 }
@@ -17,13 +18,22 @@
   height: 50px;
   background-color: #000;
   li {
-    border-top: 2px #fff solid;
+//    border-top: 2px #fff solid;
     z-index: 1000;
     background-color: #000;
   }
   li:hover {
-    border-top: 2px #fff solid;
+//    border-top: 2px #fff solid;
     z-index: 1000;
+  }
+}
+
+.navbar .nav > li > a {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-size: 15px;
+  :hover {
+    color: #fff;
   }
 }
 
@@ -98,15 +108,6 @@
 .navbar-inner {
   border-radius: 0;
 //  @include linear-gradient(#000, #111);
-}
-
-.navbar .nav > li > a {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  color: #000;
-  font-size: 15px;
-  :hover {
-    color: #060172;
-  }
 }
 
 // ===== general content area =====
