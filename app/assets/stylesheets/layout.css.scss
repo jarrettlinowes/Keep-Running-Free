@@ -1,13 +1,14 @@
 // ===== nav bar =====
 #site_navbar {
-  height: 149px;
-  background-color: #fff;
+//  height: 149px;
+  height: 79px;
+  background-color: #eee;
   min-width: 300px;
   border-radius: 0px;
   li {
 //    border-top: 2px #fff solid;
     z-index: 1000;
-    background-color: #fff;
+//    background-color: #fff;
   }
   li:hover{
 //    border-top: 2px #fff solid;
@@ -29,9 +30,10 @@
 }
 
 .navbar .nav > li > a {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+//  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   color: #000;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: bold;
   :hover {
     color: #fff;
   }
@@ -45,15 +47,16 @@
   color: #060172;
 }
 .navbar-brand {
-  width: 348px;
-  height: 75px;
+  width: 157px;
+  height: 70px;
   z-index: 1000;
   position: absolute;
   img {
     width: 100%;
     height: auto;
     border: 0;
-    padding-left: 25px;
+    //padding-left: 25px;
+    //padding-top: 8px;
   }
 }
 #slogan {
@@ -66,13 +69,13 @@
   background-image: url("nav_image.png")
 }
 .navbar-brand2 {
-  width: 232px;
+//  width: 232px;
   height: 50px;
   z-index: 1000;
   position: absolute;
   img {
-    width: 100%;
-    height: auto;
+//    width: 100%;
+    height: 100%;
     border: 0;
     padding-left: 25px;
   }
@@ -104,6 +107,11 @@
   padding-left: 150px;
   margin-top: -34px;
 }
+.button_place {
+  padding-top: 10px;
+//  margin-right: -296px;
+  padding-right: 25px;
+}
 
 .navbar-inner {
   border-radius: 0;
@@ -113,7 +121,7 @@
 // ===== general content area =====
 #content {
   min-height: 800px;
-  padding-left: 10px;
+//  padding-left: 10px;
   border: 0px solid #ddd;
 }
 

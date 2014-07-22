@@ -21,17 +21,25 @@ a:hover {
 }
 
 .navbar .nav > li > a {
-padding: 11px 10px 11px;
-line-height: 34px;
-color: #000;
+//  padding: 11px 10px 11px;
+  line-height: 34px;
+  color: #000;
+}
+.navbar .nav > li > a:hover {
+//  background-color: #ddd;
 }
 
 .navbar .nav .active > a{
   color: #060172;
-  background-color: #eee;
+//  background-color: #ddd;
 } 
 .navbar .nav .active > a:hover {
   color: #060172;
+//  background-color: #ccc;
+}
+
+#nav_button {
+  border-right: 5px #eee solid;
 }
 
 .input-append button.add-on {
@@ -52,7 +60,7 @@ color: #000;
 }
 
 .navbar .nav > li > a {
-  padding: 11px 10px 11px;
+//  padding: 11px 10px 11px;
   line-height: 34px;
   color: silver;
 }
